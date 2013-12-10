@@ -1,0 +1,8 @@
+%tr(class="#{cycle 'odd', 'even'}")
+
+  %td(width="10%")= link_to "##{order.id}", order
+
+  %td(width="80%")<
+    = order.created_at.strftime(' %B %d, %Y at %I:%M %p')
+
+  %td(width="10%" style="text-align: right;")= number_to_currency order.cart.total_price

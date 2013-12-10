@@ -1,0 +1,12 @@
+- provide :title, @category.name
+
+#products.block.clear
+  %h1= @category.name
+  %table#results
+    - rows = @items.each_slice(4).to_a
+    - rows.each do |row|
+      %tr
+        - row.each do |item|
+          = render item
+
+  .clear

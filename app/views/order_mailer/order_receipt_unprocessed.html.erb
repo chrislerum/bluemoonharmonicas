@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Blue Moon Harmonicas Receipt</title>
+    <style type="text/css">
+      body {
+        background: black url('http://i.imgur.com/rr706Ar.png') repeat-x bottom left;
+        color: white;
+        font: 1em Arial;
+        text-align: center;
+      }
+      body>table {
+        text-align: left;
+        width: 800px;
+        margin: 0 auto;
+      }
+
+      body>img {
+        margin: 0 -200px;
+      }
+      body table table tr td {
+        padding: 6px 0px;
+      }
+      h4 {
+        margin: 0;
+      }
+      h3 {
+        margin: 0;
+      }
+      h1 {
+        font-style: normal;
+        border-bottom: 1px solid #666;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      a img {
+        border: 0;
+      }
+      #thanks {
+        color: #ccc;
+      }
+
+      .rounded_box {
+        border-radius: 10px;
+        background: black;
+        padding: 10px;
+        margin: 20px 0 10px 0;
+        background: rgba(0,0,0,.3);
+      }
+      td img {
+        margin-right: 3px;
+      }
+
+      a {
+        color: white;
+      }
+
+      .total {
+        font-weight: bold;
+        text-align: right;
+        font-size: 1.1em;
+      }
+      .quantity {
+        text-align: center;
+      }
+      #footer p {
+        margin-bottom: 6px;
+      }
+      #address {
+        width: 200px;
+      }
+
+    </style>
+  </head>
+  
+  <body>
+    
+    <%= link_to image_tag('http://i.imgur.com/C98W7nI.png'), 'http://bluemoonharmonicas.com' %>
+    
+    <table>
+      <tr>
+        <td><h1>Your order (#<%= @order.id %>)</h1></td>
+      </tr>
+      <tr>
+        <td><p id="thanks">Thanks for shopping with us! This email will serve as your receipt.</p></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded_box">
+            <table width="100%">
+              <tr>
+                <th colspan="2">Item</th>
+                <th>Price</th>
+                <th class="quantity">Quantity</th>
+              </tr>
+              <% @order.cart.line_items.each do |line_item| %>
+                <tr>
+                  <td>
+                    <% if line_item.purchasable.photos.any? %>
+                      <img src="<%= line_item.purchasable.photos.first.src %>" width="50" style="border-radius: 4px" alt="<%= line_item.purchasable.name %>" />
+                    <% end %>
+                  </td>
+                  <td>
+                    <h4><%= line_item.purchasable.name %></h4>
+                    <% if line_item.variant %>
+                      <p><%= "#{line_item.variant.option.title.titleize}: #{line_item.variant.option_value.title}" %></p>
+                    <% end %>
+
+                    <% line_item.upgrades.each do |upgrade| %>
+                      <p><%= "#{upgrade.variant.option.title}: #{upgrade.variant.option_value.title}" %></p>
+                    <% end %>
+                  </td>
+                  <td><%= number_to_currency line_item.unit_price %></td>
+                  <td class="quantity"><%= line_item.quantity %></td>
+                </tr>
+              <% end %>
+            </table>
+          </div>
+        </td>
+      </tr>  
+      
+      <tr>
+        <td>
+          <div class="rounded_box" id="address">
+            <h3>Ship-to Address</h3>
+            <p><%= @order.address['Name'] %></p>
+            <p><%= @order.address['Street1'] %></p>
+            <% unless @order.address['Street2'].blank? %>
+              <p><%= @order.address['Street2'] %></p>
+            <% end %>
+            <p><%= @order.address['CityName']%>, <%= @order.address['StateOrProvince'] %> <%= @order.address['PostalCode'] %></p>
+
+          </div>
+        </td>
+        <td>
+          <p class="total">Shipping price: <%= number_to_currency @order.shipping_price %></p>
+          <p class="total">Total: <%= number_to_currency @order.price_with_shipping %></p>
+        </td>
+      </tr>    
+
+      <tr>
+        <td>
+          <div class="rounded_box" id="footer">
+            <h3>100% Money Back Guarantee</h3>
+
+            <p>We stand behind every product we offer with a 100% Unconditional Money Back Guarantee. If you are not completely satisfied with your purchase, we will gladly refund your money including shipping expenses.</p>
+
+            <p>We have been offering our products on eBay since December, 2010. You can visit our <a href="http://stores.ebay.com/Blue-Moon-Harmonicas-LLC">eBay Store</a> where you will find that our customers have expressed their satisfaction by giving us a 100% Positive Feedback Rating and have recently elevated us to a "Top Rated Seller" and "Power Seller" status.</p>
+          </div>
+        </td>
+      </tr>
+    
+    </table>
+    
+  </body>
+</html>

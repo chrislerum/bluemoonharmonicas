@@ -1,0 +1,483 @@
+@import "compass"
+@import compass/reset
+
+@mixin center
+  width: 1200px
+  margin-left: auto
+  margin-right: auto
+@mixin inner-center
+  @include center
+  width: 1150px
+@mixin shadow-center
+  @include center
+  width: 1230px
+
+@mixin perfect-margin
+  margin-bottom: 25px !important
+
+h1,h2,h3,h4,h5,h6,p,ul,li,div
+  margin: 0
+  padding: 0
+
+body
+  background: url(<%= asset_path 'bg-mountains.png' %>) fixed no-repeat bottom center, url(<%= asset_path 'bg-noise.png' %>) fixed, #0d222f url(<%= asset_path 'body-gradient.png' %>) fixed repeat-x bottom center
+
+  padding: 0
+  margin: 0
+  min-width: 1280px
+
+  font: 18px "Helvetica Neue", "Helvetica", Arial, sans-serif
+  color: #eee
+
+a
+  color: white
+  text-decoration: none
+
+#header
+  background: url(<%= asset_path 'header-and-nav.png' %>) no-repeat top center
+  height: 234px
+  margin-bottom: -75px
+  #main
+    height: 234px
+    display: block
+    margin-top: -1px
+    img
+      border: 0
+
+#navigation
+  @include center 
+  @include perfect-margin
+  height: 50px
+  vertical-align: middle
+  font-weight: bold
+  line-height: 50px
+  .wrap
+    margin: 0 15px
+
+  #navigation_links
+    list-style: none
+    li
+      float: left
+
+      a
+        display: block
+        padding: 0 15px
+        text-shadow: 0px 1px 0px rgba(255,255,255,.4), 0px 0px 10px rgba(255,255,255,.3)
+        color: rgba(0,0,0,1) !important
+        border-right: 1px solid rgba(0,0,0,.2)
+        border-left: 1px solid rgba(255,255,255,.1)
+        -webkit-transition: all 150ms ease-out
+
+        &:hover
+          background: rgba(255,255,255,.1)
+
+        &:active, &.dropdown_present
+          background: none
+          border-left-color: #2a2a2a // gets rid of ugly white line
+          box-shadow: inset 0px 0px 6px rgba(0,0,0,.8)
+
+      &:first-child a
+        border-left: none
+      &:nth-child(5)
+        a
+          border-right: none
+    #control-panel
+      float: right
+      li:nth-child(3)
+        border-right: none !important
+      #search
+        margin-left: 15px
+
+      #cart_link a
+        height: 50px
+        vertical-align: middle
+        img
+          float: left
+        span
+          line-height: 50px
+          padding-left: 10px
+          float: right
+          vertical-align: middle
+          display: table-cell
+
+
+  #search
+    float: right
+    margin-top: -3px
+    input
+      margin: 0px
+      border-radius: 3px
+      border: 1px solid rgba(0,0,0,.8)
+      padding: 4px
+      line-height: 15px
+      width: 255px
+      &:focus
+        outline: 0
+
+#products
+  ul
+    list-style: none
+
+  background: rgba(0,0,0,.3)
+  padding: 10px
+  border-radius: 5px
+  h3
+    border-bottom: 1px solid rgba(255,255,255,.2)
+  h4
+    font-weight: bold
+
+  ul ul
+    margin-left: 20px
+
+  ul#roots>li
+    float: left
+    margin-right: 20px
+
+.link,.faq
+  list-style: none !important
+  clear: both
+
+#slides
+  @include center
+  margin-bottom: 15px
+
+.block
+  @include border-radius(3px)
+  @include perfect-margin
+
+  ul
+    list-style: disc
+    margin-bottom: 15px
+    margin-left: 40px
+
+
+
+  clear: both
+
+  h1, h2, h3
+    font-weight: bold
+    em
+      font-size: .6em
+      opacity: .75
+  h1
+    border-bottom: 1px solid rgba(255,255,255,.2)
+    margin-bottom: 10px
+    font-weight: normal
+    font-size: 1.5em
+    a
+      font-weight: normal !important
+
+  .controls
+    font-size: .5em
+    a
+      font-weight: normal !important
+  h2
+    font-size: 1.2em
+
+    .controls
+      font-size: .75em
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+  h3
+    font-size: 1em
+  p
+    line-height: 1.4
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+  .wrap
+    padding: 15px
+  &.white
+    @include shadow-center
+    color: #222
+    z-index: 99
+    text-shadow: 0px 2px 0px rgb(255,255,255)
+    position: relative
+
+    a
+      text-decoration: underline
+      font-weight: bold
+      color: #222
+
+    .top
+      background: url(<%= asset_path 'block-white-top.png' %>) no-repeat top center
+      height: 30px
+    .main
+      background: url(<%= asset_path 'block-white-middle.png' %>) repeat-y top center
+      .wrap
+        padding: 0 15px
+        margin: 0 15px
+    .bottom
+      background: url(<%= asset_path 'block-white-bottom.png' %>) no-repeat bottom center
+      height: 30px
+
+    &.css3
+      @include center
+      background: white
+      border-radius: 2px
+      box-shadow: 0px 0px 15px 0px black
+      background-color: rgb(255,255,255)
+      @include filter-gradient(#ffffff, #efefef, vertical)
+      @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%))
+
+  &.clear
+    @include inner-center
+    text-shadow: 0px 3px 4px rgba(0,0,0,1)
+
+  &.clear, &.black
+    a
+      text-decoration: underline
+      font-weight: bold
+      &:hover 
+        text-decoration: none
+
+  &.black
+    @include center
+    background: rgba(0,0,0,.6)
+    color: white
+    border-top: 2px solid black
+    border-bottom: 1px solid rgba(255,255,255,.2)
+
+.clear
+  clear: both
+
+#footer
+  @include inner-center
+  color: rgba(255, 255, 255, .4)
+  font-size: 1em
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, .8)
+  margin-bottom: 200px
+
+  line-height: 1.5
+
+  strong
+    font-weight: bold
+  a
+    -webkit-transition: all 250ms ease-out
+    color: inherit
+    font-weight: bold
+    text-decoration: underline
+
+    &:hover
+      color: white
+
+  #contact_link
+    -webkit-transition: all 250ms ease-out
+    background: rgba(255,255,255,.6)
+    text-decoration: none
+    padding: 8px 30px
+    float: right
+    border-radius: 5px
+    text-shadow: none
+    color: black
+
+    &:hover
+      background: rgba(255,255,255,.8)
+
+form.dark
+  color: rgba(255, 255, 255, .6)
+  @include perfect-margin
+
+  .field
+    display: block
+    margin-bottom: 14px
+
+    textarea
+      height: 200px
+      font: inherit
+
+  label
+    text-shadow: 0px 1px 15px rgba(0, 0, 0, 1)
+    display: block
+    em
+      color: rgba(255, 255, 255, .9)
+
+  input, select, textarea
+    background: rgba(0,0,0,.46)
+    color: white
+    font-size: 17px
+    width: 100%
+    border: none
+    border-top: 2px solid black
+    border-bottom: 1px solid rgba(255,255,255, .23)
+    border-radius: 5px
+    padding: 10px
+    height: 42px
+    &:focus
+      outline: 0
+      background: rgba(10, 10, 10, .46)
+    &.error
+      background: rgba(155, 10, 10, .36)
+
+
+.submit, a.submit, .block.clear a.submit
+  background: blue
+  border: none
+  text-decoration: none !important
+  color: white
+  font-weight: bold
+  font-size: 21px
+  padding: 10px 30px !important
+  text-shadow: 0px -2px 0px black
+  line-height: 44px !important
+  cursor: pointer
+  height: 64px !important
+  border-radius: 4px
+  border-top: 1px solid #ccc
+  border-bottom: 2px solid #000
+
+  background-color: rgb(64,130,170)
+  @include filter-gradient(#4082aa, #054261, vertical)
+  @include background-image(linear-gradient(top, rgba(64,130,170,1) 0%,rgba(40,102,136,1) 49%,rgba(25,90,126,1) 50%,rgba(5,66,97,1) 100%))
+
+  &:focus
+    outline: 0
+
+  &:active
+    outline: 0
+    border-bottom: 1px solid rgba(255,255,255,.6)
+    border-top: 2px solid black
+    @include filter-gradient(#054261, #4082aa, vertical)
+    @include background-image(linear-gradient(top, rgba(5,66,97,1) 0%,rgba(25,90,126,1) 49%,rgba(40,102,136,1) 50%,rgba(64,130,170,1) 100%))
+
+.submit[disabled="disabled"]
+  opacity: .5
+  cursor: default
+  pointer-events: none
+
+
+aside
+  &.left
+    float: left
+    width: 500px
+  &.right
+    float: right
+    padding-left: 10px
+    border-left: 1px solid rgba(255,255,255,.2)
+    width: 600px
+    p
+      margin-bottom: 25px
+
+@mixin navigation_dropdown
+  z-index: 99
+  position: absolute
+  top: 208px
+  width: 300px
+  background: rgb(20,20,20)
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
+  box-shadow: 0px 5px 20px rgba(0,0,0,1)
+  border: 1px solid rgba(150,170,255,.2)
+  border-top: none
+  padding: 10px
+  display: none
+  color: #eee
+
+  h3
+    font-size: 1.2em
+    font-weight: bold
+
+  >ul
+    margin: -10px
+      bottom: 0px
+    ul
+      font-size: .9em
+      li a 
+        padding: 5px
+        padding-left: 40px
+    li a
+      display: block
+      padding: 10px 15px
+      &:hover
+        background: rgba(255,255,255,.15)
+
+#cart
+  width: 100%
+  margin-top: 25px
+  @include perfect-margin
+
+  th, td
+    padding: 14px
+    &.total
+      font-weight: bold
+
+    &.left
+      text-align: left
+  th
+    background: rgba(0,0,0,.6)
+    text-align: center
+
+  tr
+    &.odd
+      border-radius: 3px
+      background: rgba(255,255,255,.1)
+      td:first-child
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+      td:last-child
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px
+
+      &:last-child
+        td:last-child
+          border-bottom-right-radius: 0px !important
+    td
+      text-align: center
+      a
+        font-weight: bold
+      .options
+        font-size: 0.9em
+        margin-bottom: 0px
+        color: rgba(255, 255, 255, .65)
+
+  #total_price
+    border-radius: 5px
+    color: black
+    border-bottom: 2px solid black
+    background-color: #ffffff
+    font-weight: bold
+    text-shadow: 0px 2px 0px white
+    @include filter-gradient(#ffffff, #e8e8e8, vertical)
+    @include background-image(linear-gradient(top, #ffffff 0%,#e8e8e8 100%))
+
+#checkout a
+  background: white
+  padding: 10px
+    bottom: 0px
+  border-radius: 5px
+  @include filter-gradient(#ffffff, #e8e8e8, vertical)
+  @include background-image(linear-gradient(top, #ffffff 0%,#e8e8e8 100%))
+
+.noshadows
+  text-shadow: none        !important
+  box-shadow: none         !important
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none    !important
+
+#notice, #error
+  text-shadow: 0px 2px 4px rgba(0,0,0,.8)
+  text-align: center
+
+#notice
+  background: rgba(0, 100, 0, .3)
+
+#error
+  background: rgba(255, 0, 0, .3)
+
+#products_dropdown
+  @include navigation_dropdown
+
+<% if Rails.env.development? %>
+.debug_dump
+  padding: 10px
+  background: rgba(255,255,255,.1)
+  color: rgba(255,255,255, .8)
+  font-weight: bold
+  font-size: 12px
+  margin-top: 10px
+  border-radius: 5px
+  font-family: "Bitstream Vera Sans Mono", "Lucida console", mono
+<% end %>

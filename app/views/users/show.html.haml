@@ -1,0 +1,48 @@
+-provide :title, 'Your Account'
+
+.block.clear
+  %h1
+    - if @user == current_user
+      My Account
+      %em 
+        (#{@user.name})
+    - else
+      = @user.name
+      %em
+        = raw @user.admin? ? '&ndash; Administrator' : ''
+
+.block.white
+  %h2
+    Account Details
+    %span.controls
+      = link_to "Edit", edit_account_path()
+  #tiles
+    .tile
+      %h3 Name
+      %p= @user.name
+    .tile
+      %h3 Email
+      %p=  mail_to truncate(@user.email, length: 23)
+    .tile
+      %h3 Member as of
+      %p #{time_ago_in_words @user.created_at} ago
+    .tile
+      %h3 Status
+      %p Verified
+
+  .clear
+
+
+.block.white#order_list
+  %h2 Recent Orders
+
+  - if @orders.any?
+    %table(Width="100%")
+      %tbody
+        = render @orders
+  - else
+    %p 
+      - if @user == current_user
+        You haven't placed any yet! What a shame.
+      - else
+        User hasn't yet placed any orders.

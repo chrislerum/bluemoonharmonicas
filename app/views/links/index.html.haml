@@ -1,0 +1,10 @@
+- provide :title, 'Links'
+
+.block.clear
+  %h1
+    Links
+    - if admin?
+      %span.controls= link_to 'New', new_link_path
+
+%ul#links
+  = render @links

@@ -1,0 +1,3 @@
+= content_tag_for :li, photo do
+  = link_to "x", admin_item_photo_path(@item || item, photo), remote: true, method: :delete, class: "delete"
+  %img{:src => photo.src, :width => 120}

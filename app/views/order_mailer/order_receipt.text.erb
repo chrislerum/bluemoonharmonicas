@@ -1,0 +1,30 @@
+======
+Blue Moon Harmonicas, LLC
+  Injecting color and fun into the harmonica world!
+======
+
+Thank you for your purchase. Here is your receipt.
+
+
+======
+Your Order (#<%= @order.id %>)
+======
+
+<% @order.cart.line_items.each do |line_item| %>
+  -----
+  <%= "#{line_item.purchasable.name} #{number_to_currency line_item.unit_price}" %>
+    <% if line_item.variant %>
+    <%= "#{line_item.variant.option.title}: #{line_item.variant.option_value.title}" %>
+    <% end %>
+    <%= "Quantity: #{line_item.quantity}" %>
+  -----
+<% end %>
+
+Total: <%= number_to_currency @order.cart.total_price %>
+
+======
+100% Money Back Guarantee
+======
+We stand behind every product we offer with a 100% Unconditional Money Back Guarantee. If you are not completely satisfied with your purchase, we will gladly refund your money including shipping expenses.
+
+We have been offering our products on eBay since December, 2010. You can visit our eBay Store (http://stores.ebay.com/Blue-Moon-Harmonicas-LLC) where you will find that our customers have expressed their satisfaction by giving us a 100% Positive Feedback Rating and have recently elevated us to a "Top Rated Seller" and "Power Seller" status.

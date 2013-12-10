@@ -1,0 +1,22 @@
+- provide :title, 'Confirm your Order'
+
+.block.clear
+  %h1 Confirm Your Order
+  %p #{@order.first_name}, please confirm and complete your order.
+
+  = render 'carts/cart'
+
+.block.black
+  %p(style="text-align:right;")
+    %strong(style="font-weight:bold;") Shipping:
+    = number_to_currency @order.shipping_price
+  %p(style="text-align:right;")
+    %strong(style="font-weight:bold;") Total:
+    = number_to_currency @order.price_with_shipping
+
+.block.clear
+
+  = form_for(@order, html: {class: 'dark'}) do |f|
+    = f.hidden_field :express_token
+    = button_tag 'Place Order', class: 'submit', style: 'float: right; border-radius: 4px'
+    .clear

@@ -1,0 +1,20 @@
+= form_for @user, :html => {class:'dark'} do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email, html: {autocomplete: 'off'}
+  .field
+    = f.label :password
+    = f.password_field :password, autocomplete: 'off'
+  - if @user.new_record?
+    .field
+      = f.label :password_confirmation, 'Confirm your Password'
+      = f.password_field :password_confirmation, autocomplete: 'off'
+  
+  .field
+    - if @user.new_record?
+      = f.button 'Create an Account', class: 'submit'
+    - else
+      = f.button 'Save', class: 'submit'

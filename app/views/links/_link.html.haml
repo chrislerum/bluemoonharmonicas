@@ -1,0 +1,4 @@
+= content_tag_for :li, link do
+  .block.white
+    %h2= link_to link.title, link.link, target: "_blank"
+    = markdown_and_replace link.description

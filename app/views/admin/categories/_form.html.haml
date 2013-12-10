@@ -1,0 +1,4 @@
+#new-photo
+  = form_for [:admin, category], remote: true do |f|
+    = hidden_field_tag :item_ids
+    = f.text_field :name, placeholder: "Category Name"

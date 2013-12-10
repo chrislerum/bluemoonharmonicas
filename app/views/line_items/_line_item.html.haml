@@ -1,0 +1,17 @@
+%tr(class="#{cycle 'odd', 'even' }")
+  %td.left
+    = link_to line_item.purchasable.name, line_item.purchasable
+    - unless line_item.variant.nil?
+      %p.options #{line_item.variant.option.title.titleize}: #{line_item.variant.option_value.title}
+    - line_item.upgrades.each do |upgrade|
+      %p.options= text_for_upgrade(upgrade)
+    %p.options= special_instructions(line_item)
+  %td
+    = number_to_currency line_item.unit_price
+  %td
+    = line_item.quantity
+  %td.total
+    = number_to_currency line_item.total_price
+  - if params[:controller] == 'carts'
+    %td
+      = link_to 'Remove', line_item_path(line_item), method: :delete

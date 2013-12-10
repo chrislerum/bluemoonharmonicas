@@ -1,0 +1,215 @@
+@import "compass/css3/images"
+
+@mixin center
+  width: 1200px
+  margin-left: auto
+  margin-right: auto
+@mixin inner-center
+  @include center
+  width: 1150px
+@mixin shadow-center
+  @include center
+  width: 1230px
+
+@mixin perfect-margin
+  margin-bottom: 25px !important
+
+#main_product
+  @include inner-center
+
+  &.photos
+    margin-bottom: -50px
+
+  #product_main_photo
+    @include perfect-margin
+    float: left
+    img
+      border-radius: 5px
+      box-shadow: 0px 0px 15px 0px black
+
+  #product_information
+    @include perfect-margin
+    // margin-top: 50px
+    float: right
+    width: 680px
+
+    #title_pricetag
+      margin: 0 -30px 0 -30px
+      padding: 30px
+      padding-left: 50px
+      font-family: Georgia
+      font-style: italic
+      background-repeat: no-repeat
+
+      h1
+        font-size: 29px
+        width: 410px
+        float: left
+        text-shadow: 0px 2px 2px rgba(0,0,0,.7)
+
+      h2
+        float: right
+        width: 240px
+        color: #0a1922
+        font-size: 60px
+        text-align: center
+        text-shadow: 0px 2px 0px #fff
+
+      @include perfect-margin
+      &.lines_1
+        background-image: url(<%= asset_path 'header-1-line.png' %>)
+        height: 46px
+        h2
+          line-height: 36px
+          font-size: 40px
+      &.lines_2
+        background-image: url(<%= asset_path 'header-2-lines.png' %>)
+        height: 75px
+        h2
+          line-height: 65px
+      &.lines_3
+        background-image: url(<%= asset_path 'header-3-lines.png' %>)
+        height: 140px
+        h2
+          line-height: 100px
+
+    form
+      input
+        font-size: 19px
+      @include perfect-margin
+      label
+        display: block
+        font-weight: bold
+      #fields
+        width: 428px
+        float: left
+        padding-right: 5px
+        border-right: 1px solid rgba(255,255,255,.05)
+
+        .field
+          margin-bottom: 14px
+          p.select
+            height: 65px
+            line-height: 65px
+            width: 408px
+            padding-left: 20px
+            background: url(<%= asset_path 'dark-select-field.png' %>)
+            color: rgba(255,255,255,.8)
+            text-shadow: 0px 1px 15px rgba(0, 0, 0, 1)
+            margin-bottom: -64px
+          select
+            width: 100%
+            height: 64px
+            padding: 10px
+            color: black
+            cursor: pointer
+            border: none
+            opacity: .01
+
+        #remaining
+          span
+            font-size: 2em
+          float: right
+          font-weight: bold
+          background: rgba(0,0,0,.4)
+          border-bottom: 1px solid rgba(255,255,255,.2)
+          border-radius: 5px
+          margin-top: 23px
+          padding: 10px 20px
+          color: rgb(200,200,200)
+
+      #quantity_and_add
+        float: right
+        width: 240px
+
+        #quantity-field
+          width: 60px
+          margin: 0
+          padding: 0
+          #quantity
+            float: left
+            padding: 10px
+            height: 42px
+            text-align: center
+
+        button
+          float: right
+          width: 150px
+          padding: 10px 0px !important
+          border-radius: 3px
+
+  #photos
+    list-style: none
+    float: left
+    clear: both
+    width: 450px
+    height: 130px
+    margin-bottom: 22px
+    overflow: hidden
+
+    #photos-inner
+      height: 400px
+
+    #add_photo
+      background: rgba(0,0,0, .5)
+      text-align: center
+      width: 40px
+      font-size: 2em
+      display: block
+      height: 40px
+      border-radius: 5px
+
+    li
+      float: left
+      margin-right: 15px
+      display: block
+
+      img
+        border-radius: 5px
+
+#photo_form
+  padding: 8px
+  border-radius: 4px
+  background: white
+  box-shadow: 0px 0px 10px black
+  width: 200px
+  text-align: center
+  position: absolute
+  z-index: 99
+  input
+    padding: 3px
+    width: 190px
+    display: block
+
+
+#description
+  textarea
+    width: 100%
+    font: inherit
+    overflow-y: hidden
+    background: none
+    border: none
+    outline: 0
+
+table#results
+  h3
+    border-bottom: none !important
+    a
+      text-decoration: none !important
+    .controls
+      font-size: 1em !important
+      font-weight: bold!important
+      float: right
+      text-shadow: none
+      background-color: white
+      color: black
+      padding: 5px 9px
+      border-radius: 3px
+      margin-left: 5px
+  td
+    max-width: 250px
+    padding: 1em
+    vertical-align: top
+    img
+      border-radius: 10px
+      text-align: center

@@ -1,0 +1,14 @@
+admin ->
+  $('#faqs').sortable
+    axis: 'y'
+    cursor: 'move'
+    opacity: .5
+    scroll: true
+    update: (e, ui) ->
+      sort_faqs(e, ui)
+
+  sort_faqs = (e, ui) ->
+    $.put(
+      "/faqs/sort", 
+      $('#faqs').sortable('serialize', key: 'faqs[]')
+    )

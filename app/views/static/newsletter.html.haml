@@ -1,0 +1,39 @@
+- provide :title, 'Newsletter'
+
+.block.clear
+  %h1 Newsletter
+  %aside.left
+    %form.dark(method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup6077" accept-charset="UTF-8")
+      #fields
+        %input(type="hidden" name="redirect" value="http://www.icontact.com/www/signup/thanks.html")
+        %input(type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html")
+        %input(type="hidden" name="listid" value="22670")
+        %input(type="hidden" name="specialid:22670" value="RQ09")
+        %input(type="hidden" name="clientid" value="936715")
+        %input(type="hidden" name="formid" value="6077")
+        %input(type="hidden" name="reallistid" value="1")
+        %input(type="hidden" name="doubleopt" value="0")
+
+        .field
+          %label(for="fields_email") Email
+          %input(type="text" name="fields_email") 
+        .field
+          %label(for="fields_email") First Name
+          %input(type="text" name="fields_fname") 
+        .field
+          %label(for="fields_email") Last Name
+          %input(type="text" name="fields_lname") 
+        .field
+          %button(type="submit" class="submit") Sign Up
+          = link_to image_tag('icontact.png', style: 'float: right'), 'http://www.icontact.com/'
+
+  %aside.right(style="margin-top: 15px")
+    %h2 What are the benefits?
+    %p After signing up for our newsletter, you'll receive access to:
+
+    %ul
+      %li Discount promo codes
+      %li News concerning unreleased products
+      %li Product giveaways and prizes
+
+    %p We send out emails monthly. You can unsubscribe instantly, at any time.

@@ -1,0 +1,23 @@
+- provide :title, @item.shortname || @item.name
+
+#main_product.photos
+  #product_information
+    #title_pricetag
+      %h1= @item.name
+      %h2= number_to_currency @item.price, unit: "$"
+    = render 'line_items/form'
+
+  #product_main_photo
+    = render(@item.photos.first) unless @item.photos.empty?
+
+  %ul#photos(data-id="#{@item.id}" class="#{admin? ? 'admin': ''}")
+    #photos-inner
+      = render partial: 'photos/tile', collection: @item.photos, as: 'photo'
+      - if admin?
+        %li.photo.new
+          = link_to '+', new_item_photo_path(@item), remote: true, id: 'add_photo'
+    .clear
+  .clear
+
+.block.white#description
+  = markdown_and_replace @item.description

@@ -1,0 +1,2177 @@
+
+---
+admin_users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - petryk.steven@gmail.com
+    - $2a$10$HqxutGfoI/DVuDT7B.56TexLEPS4LSwjnQDXdNeJvkO.wowZJt8ae
+    - 
+    - 
+    - '2013-01-04 16:34:28.379581'
+    - '2'
+    - '2013-01-05 21:06:04.492775'
+    - '2013-01-04 16:34:28.397644'
+    - 96.252.128.160
+    - 96.252.128.160
+    - '2013-01-04 16:25:20.288043'
+    - '2013-01-05 21:06:04.495117'
+  - - '2'
+    - thalchak@tampabay.rr.com
+    - $2a$10$XceN9tKQRbg64R1HC.d1VuPaDhC5Y0xJrsJ6r1PT5UEamH59usv3G
+    - 
+    - 
+    - '2013-01-05 21:38:26.052208'
+    - '1'
+    - '2013-01-05 21:38:26.069634'
+    - '2013-01-05 21:38:26.069634'
+    - 65.33.178.253
+    - 65.33.178.253
+    - '2013-01-04 16:25:20.406967'
+    - '2013-01-05 21:38:26.070844'
+
+---
+categories:
+  columns:
+  - id
+  - name
+  - parent_id
+  records: 
+  - - '1'
+    - Combs
+    - 
+  - - '2'
+    - Wood
+    - '1'
+  - - '3'
+    - Acrylic
+    - '1'
+  - - '4'
+    - DuPont™ Corian®
+    - '1'
+  - - '5'
+    - Aluminum
+    - '1'
+  - - '6'
+    - Cover Plates
+    - 
+  - - '7'
+    - Reed Plates
+    - 
+  - - '8'
+    - Assembled Harmonicas
+    - 
+  - - '9'
+    - Harmonica Creations
+    - '8'
+  - - '10'
+    - Pre-War Restorations
+    - '8'
+  - - '11'
+    - Vintage Harmonicas
+    - '8'
+  - - '12'
+    - Miscellaneous Harmonicas
+    - '8'
+
+---
+items:
+  columns:
+  - id
+  - name
+  - shortname
+  - description
+  - price
+  - category_id
+  - quantity
+  - manages_inventory
+  records: 
+  - - '1'
+    - Wood Hohner Marine Band Deluxe Harmonica Combs
+    - Wood MBD Combs
+    - ! "Beautiful solid wood combs custom made for the Hohner Marine Band Deluxe
+      Harmonica.\n\nThe wood has been precision CNC Laser Cut using CAD (Computer
+      Aided Design) Software to be a perfect fit for the Marine Band Deluxe reed plates
+      and covers. The ends of the tines of the combs (the part that goes in your mouth)
+      have been slightly rounded to provide maximum playing comfort. There are no
+      rough or protruding sharp edges that might rub against your lips or tongue while
+      playing.\n\nAvailable in:\n\n* Maple (white wood)\n* Cherry (light
+      red wood)\n* Rosewood (dark brown wood)\n* Padauk (dark red wood)\n\nThe
+      wood is sealed with multiple coats of all-natural, non-toxic and hypoallergenic
+      Zinsser Bulls Eye Shellac making it resistant to moisture. The end result is
+      a beautiful solid wood comb that will enable you to upgrade your Marine Band
+      Deluxe harmonicas."
+    - '21.95'
+    - '2'
+    - 
+    - false
+  - - '2'
+    - Wood Hohner Marine Band 1896 Harmonica Combs
+    - Wood MB1896 Combs
+    - ! "Beautiful solid wood combs custom made for the Hohner Marine Band 1896 Harmonica.
+      These combs are un-drilled - no holes. The Marine Band 1896 is assembled with
+      nails which attach the reed plates and cover plates to the comb. When retrofitting
+      a Marine Band 1896 most people replace the nails with screws. If that is what
+      you plan to do then you can either drill holes yourself (in the reed plates,
+      comb and cover plates) using one of these un-drilled MB 1896 combs or you might
+      prefer the Marine Band Deluxe combs which are pre-drilled. The combs for the
+      MB Deluxe and the MB 1896 are interchangeable.\n\nThe wood has been precision
+      CNC Laser Cut using CAD (Computer Aided Design) Software to be a perfect fit
+      for the Marine Band reed plates and covers. The ends of the tines of the combs
+      (the part that goes in your mouth) have been slightly rounded to provide maximum
+      playing comfort. There are no rough or protruding sharp edges that might rub
+      against your lips or tongue while playing.\n\nAvailable in:\n\n* Maple
+      (white wood)\n* Cherry (light red wood)\n* Rosewood (dark brown wood)\n*
+      Paduak (dark red wood)\n\nThe wood is sealed with multiple coats of all-natural,
+      non-toxic and hypoallergenic Zinsser Bulls Eye Shellac making it resistant to
+      moisture. The end result is a beautiful solid wood comb that will enable you
+      to upgrade your Marine Band 1896 harmonicas."
+    - '21.95'
+    - '2'
+    - 
+    - false
+  - - '3'
+    - Wood Hohner Special 20 Harmonica Combs
+    - Wood Special 20 Combs
+    - ! "Beautiful solid wood combs custom made for the Hohner Special 20.\n\nThe
+      wood has been precision CNC Laser Cut using CAD (Computer Aided Design) Software
+      to be a perfect fit for the Special 20 reed plates and covers. The ends of the
+      tines of the combs (the part that goes in your mouth) have been slightly rounded
+      to provide maximum playing comfort. There are no rough or protruding sharp edges
+      that might rub against your lips or tongue while playing.\n\nAvailable in:\n\n*
+      Maple (white wood)\n* Cherry (light red wood)\n* Rosewood (dark brown wood)\n*
+      Paduak (dark red wood)\n\nThe wood is sealed with multiple coats of all-natural,
+      non-toxic and hypoallergenic Zinsser Bulls Eye Shellac making it resistant to
+      moisture. The end result is a beautiful solid wood comb that will enable you
+      to upgrade your Special 20 Harmonicas."
+    - '21.95'
+    - '2'
+    - 
+    - false
+  - - '4'
+    - Wood Hohner Golden Melody Harmonica Combs
+    - Wood GM Combs
+    - ! "Beautiful solid wood combs custom made for the Hohner Golden Melody Harmonica.\n\nThe
+      wood has been precision CNC Laser Cut using CAD (Computer Aided Design) Software
+      to be a perfect fit for the Golden Melody reed plates and covers. The ends of
+      the tines of the combs have been slightly rounded to provide maximum playing
+      comfort. There are no rough or protruding sharp edges that might rub against
+      your lips or tongue while playing.\n\nThe wood is sealed with multiple coats
+      of all-natural, non-toxic and hypoallergenic Zinsser Bulls Eye Shellac making
+      it resistant to moisture. The end result is a beautiful solid wood comb that
+      will enable you to upgrade your Golden Melody harmonicas.\n\nAvailable in
+      the following wood varieties:\n\n* Maple (white wood)\n* Cherry (light
+      red wood)\n* Rosewood (dark brown wood)\n* Paduak (dark red wood)\n\nThe
+      Golden Melody is one of Hohner's most popular 10-hole diatonic harmonicas. It
+      comes new \"out of the box\" with a red plastic comb. Harmonica manufacturers
+      often use plastic to make combs because it lowers their cost of production.
+      Plastic is also impervious to moisture, which eliminates the possibility of
+      swelling or warping. However, many harmonica enthusiasts believe that the tonal
+      quality of wood combs is superior to that of a plastic combs. Hohner and Suzuki
+      are two of the most successful harmonica manufactures in the world. Hohner recently
+      introduced a new version of the Marine Band 1896 called the Crossover. The Crossover
+      is made with a laminated bamboo comb. Suzuki came out with a model called the
+      Manji M-20 which is named after the founder of Suzuki Musical Instruments Manufacturing
+      Co. Ltd. - Mr. Manji Suzuki. The Manji is built with a comb made from a wood/resin
+      composite which looks and feels like wood. Both of these harmonicas have received
+      rave reviews. The fact that these two leaders in the harmonica world have released
+      new models with wood or wood composite combs suggests that regardless of what
+      others might believe, Hohner and Suzuki still believe that the tonal qualities
+      of wood are very desirable to harmonica enthusiasts."
+    - '21.95'
+    - '2'
+    - 
+    - false
+  - - '5'
+    - Wood Hohner MS-Series Harmonica Combs
+    - Wood MS-Series Combs
+    - ! "Beautiful solid wood combs custom made for the Hohner MS-Series Harmonicas.\n\nThe
+      MS Series includes the following models:\n\n* Hohner 532 Blues Harp MS-Series
+      Harmonica\n* Hohner 562 Pro Harp MS-Series Harmonica\n* Hohner 590 Big River
+      MS-Series Harmonica\n* Hohner 565 Cross Harp MS-Series Harmonica\n* Hohner
+      580 Meisterklasse MS-Series Harmonica\nThe wood has been precision CNC Laser
+      Cut using CAD (Computer Aided Design) Software to be a perfect fit for the MS-Series
+      reed plates and covers. The ends of the tines of the combs (the part that goes
+      in your mouth) have been slightly rounded to provide maximum playing comfort.
+      There are no rough or protruding sharp edges that might rub against your lips
+      or tongue while playing.\n\nAvailable in:\n\n* Maple (white wood)\n*
+      Cherry (light red wood)\n* Rosewood (dark brown wood)\n* Paduak (dark red
+      wood)\n\nThe wood is sealed with multiple coats of all-natural, non-toxic
+      and hypoallergenic Zinsser Bulls Eye Shellac making it resistant to moisture.
+      The end result is a beautiful solid wood comb that will enable you to upgrade
+      your Hohner MS-Series Harmonicas.\n\nUpgraded Design Feature: The MS-Series
+      reed plates come with five holes drilled in them to accommodate screws. However,
+      some of the designs (i.e. Blues Harp) only use two of those holes to fasten
+      the reed plates to the combs. I have designed these combs to include all five
+      holes which match up with the holes on the reed plates. This allows you to use
+      a full complement of screws, if you wish, to make your harp more air tight."
+    - '21.95'
+    - '2'
+    - 
+    - false
+  - - '6'
+    - Wood Lee Oskar Diatonic Harmonica Combs
+    - Wood Lee Oskar Diatonic Combs
+    - ! "Beautiful solid rosewood combs custom made for Lee Oskar Diatonic Harmonicas.\n\nThe
+      wood has been precision CNC Laser Cut using CAD (Computer Aided Design) Software
+      to be a perfect fit for the Lee Oskar reed plates and covers. The ends of the
+      tines of the combs (the part that goes in your mouth) have been slightly rounded
+      to provide maximum playing comfort. There are no rough or protruding sharp edges
+      that might rub against your lips or tongue while playing.\n\nThe wood is
+      sealed with multiple coats of all-natural, non-toxic and hypoallergenic Zinsser
+      Bulls Eye Shellac making it resistant to moisture. The end result is a beautiful
+      solid wood comb that will enable you to upgrade your Lee Oskar Harmonicas."
+    - '21.95'
+    - '2'
+    - 
+    - false
+  - - '7'
+    - Acrylic Hohner Marine Band 1896 Harmonica Combs
+    - Acrylic MB1896 Combs
+    - ! "Solid acrylic combs for the Hohner Marine Band 1896 Harmonicas. They are
+      CAD designed and CNC laser cut. Stock acrylic sheets are extremely smooth and
+      flat which helps make an air tight the seal between the reed plates and the
+      combs. The laser does a fantastic job at not only cutting the acrylic but also
+      literally gazing the edges as it cuts. The result is a flawless comb every time.
+      These combs are .220 - thick, which is essentially an exact match of the Marine
+      Band 1896 stock combs which measures anywhere from .210\" to .235\". Please
+      note that I have added a little extra reinforcement toward the tips of the #3
+      and #7 tines. If you would like to drill two more holes to accommodate two additional
+      screws, this will lessen the chances of breaking the tines.\n\nThese combs
+      are available in ten colors:\n\n* Opaque Black\n* Opaque White\n* Crystal
+      Clear\n* Fluorescent Yellow\n* Fluorescent Blue\n* Fluorescent Red\n*
+      Fluorescent Orange\n* Opaque Blue\n* Opaque Green\n* Opaque Purple"
+    - '14.95'
+    - '3'
+    - 
+    - false
+  - - '8'
+    - Acrylic Hohner Special 20 Harmonica Combs
+    - Acrylic SP-20 Combs
+    - ! "Solid acrylic combs for the Hohner Special 20 Harmonica. They are CAD designed
+      and CNC laser cut. Stock acrylic sheets are extremely smooth and flat which
+      helps make an airtight seal between the Special 20 reed plates the combs. The
+      laser does a fantastic job at not only cutting the acrylic but also literally
+      gazing the edges as it cuts. The result is a flawless comb every time.\n\nThese
+      combs are available in ten colors:\n\n* Opaque Black\n* Opaque White\n*
+      Crystal Clear\n* Fluorescent Yellow\n* Fluorescent Blue\n* Fluorescent
+      Red\n* Fluorescent Orange\n* Opaque Blue\n* Opaque Green\n* Opaque Purple\n\nFull
+      Disclosure Statement\n---\nIn the interest of full disclosure, the thickness
+      of these combs measures .220\" - .230\". The stock plastic comb on a Special
+      20 is about .250\". I do not believe a difference of .015 to .025\" will make
+      a difference in the way the harmonica will play, but I do want to be up front
+      about this detail. When you purchase acrylic, it is really .220\" - .230\",
+      much the same as when you purchase a 2 X 4 at the lumber yard, the dimensions
+      are really 1 ½”X 3 ½” ."
+    - '14.95'
+    - '3'
+    - 
+    - false
+  - - '9'
+    - Acrylic Hohner Golden Melody Harmonica Combs
+    - Acrylic GM Combs
+    - ! "Solid acrylic combs for the Hohner Golden Melody Harmonica. They are CAD
+      designed and CNC laser cut. Stock acrylic sheets are extremely smooth and flat
+      which helps make an air tight seal between the reed plates and the combs. The
+      laser does a fantastic job at not only cutting the acrylic but also literally
+      gazing the edges as it cuts. The result is a flawless comb every time.\n\nAs
+      of right now, I have seven colors to offer:\n\n* Opaque Black\n* Opaque
+      White\n* Crystal Clear\n* Fluorescent Yellow\n* Fluorescent Blue\n*
+      Fluorescent Red\n* Fluorescent Orange\n* Opaque Blue\n* Opaque Green\n*
+      Opaque Purple"
+    - '14.95'
+    - '3'
+    - 
+    - false
+  - - '10'
+    - Acrylic Hohner MS-Series Harmonica Combs
+    - Acrylic MS-Series Combs
+    - ! "Solid acrylic combs for the Hohner MS Series Harmonicas. The MS-Series includes:\n\n*
+      Hohner 532 Blues Harp MS-Series Harmonica\n* Hohner 562 Pro Harp MS-Series
+      Harmonica\n* Hohner 590 Big River MS-Series Harmonica\n* Hohner 565 Cross
+      Harp MS-Series Harmonica\n* Hohner 580 Meisterklasse MS-Series Harmonica\n\nThey
+      are CAD designed and CNC laser cut. Stock acrylic sheets are extremely smooth
+      and flat which helps make an air tight seal between the MS-Series reed plates
+      and these combs. The laser does a fantastic job at not only cutting the acrylic
+      but also literally gazing the edges as it cuts. The result is a flawless comb
+      every time.\n\nThese combs are available in seven colors:\n\n* Opaque
+      Black\n* Opaque White\n* Crystal Clear\n* Fluorescent Yellow\n* Fluorescent
+      Blue\n* Fluorescent Red\n* Fluorescent Orange\n* Opaque Blue\n* Opaque
+      Green\n* Opaque Purple\n\nUpgraded Design Feature:\n---\nThe MS-Series
+      reed plates come with five holes drilled in them to accommodate screws. However,
+      some of the designs (i.e. Blues Harp) only use two of those holes to fasten
+      the reed plates to the combs. I have designed these combs to include all five
+      holes which match up with the holes on the reed plates. This allows you to use
+      a full complement of screws, if you wish, to make your harp more air tight."
+    - '14.95'
+    - '3'
+    - 
+    - false
+  - - '11'
+    - Acrylic Suzuki HarpMaster 10-Hole Diatonic Harmonica Combs
+    - Acrylic Suzuki Diatonic Combs
+    - ! "Solid acrylic replacement combs for Suzuki 10 hole diatonic harmonicas. These
+      combs will fit:\n\n* Suzuki BluesMaster\n* Suzuki FolkMaster\n* Suzuki
+      ProMaster\n\nThey are CAD designed and CNC laser cut. Stock acrylic sheets
+      are extremely smooth and flat which helps make an airtight seal between the
+      reed plates the combs. The laser does a fantastic job at not only cutting the
+      acrylic but also literally gazing the edges as it cuts. The result is a flawless
+      comb every time.\n\nThese combs are available in ten colors:\n\n* Opaque
+      Black\n* Opaque White\n* Crystal Clear\n* Fluorescent Yellow\n* Fluorescent
+      Blue\n* Fluorescent Red\n* Fluorescent Orange\n* Opaque Blue\n* Opaque
+      Green\n* Opaque Purple"
+    - '14.95'
+    - '3'
+    - 
+    - false
+  - - '12'
+    - Acrylic Lee Oskar Diatonic Harmonica Combs
+    - Acrylic Lee Oskar Diatonic Combs
+    - ! "Solid acrylic replacement combs for Lee Oskar 10-hole diatonic harmonicas.
+      They are CAD designed and CNC laser cut. Stock acrylic sheets are extremely
+      smooth and flat which helps make an airtight seal between the reed plates the
+      combs. The laser does a fantastic job at not only cutting the acrylic but also
+      literally gazing the edges as it cuts. The result is a flawless comb every time.\n\nThese
+      combs are available in ten colors:\n\n* Opaque Black\n* Opaque White\n*
+      Crystal Clear\n* Fluorescent Yellow\n* Fluorescent Blue\n* Fluorescent
+      Red\n* Fluorescent Orange\n* Opaque Blue\n* Opaque Green\n* Opaque Purple"
+    - '14.95'
+    - '3'
+    - 
+    - false
+  - - '13'
+    - DuPont™ Corian® Hohner Marine Band Deluxe Harmonica Combs
+    - DuPont™ Corian® MBD Combs
+    - ! "Beautiful Precision CNC Milled Dupont™ Corian® Combs for the Hohner Marine
+      Band Deluxe Harmonica. These combs are perfectly flat, air tight and impervious
+      to moisture. They are fantastic creations. I'd like to take credit for making
+      them but that would not be entirely accurate. I contracted out the milling because
+      I wanted them to be professional grade products.\n\nCurrently available
+      in six colors:\n\n* Nocturne (Black)\n* Festival (White with Multi-Colored
+      Speckles)\n* Mandarin (Orange)\n* Atlantic (Blue with Grey and White Flakes)\n*
+      Sanded Beach (Medium Red with Red, White and Black Flecks)\n* Sanded Pine
+      (Medium Green with Green and Black Flecks)"
+    - '21.95'
+    - '4'
+    - 
+    - false
+  - - '14'
+    - DuPont™ Corian® Hohner Marine Band 1896 Harmonica Combs
+    - DuPont™ Corian® MB1896 Combs
+    - ! "Beautiful Precision CNC Milled Dupont™ Corian® Combs for the Hohner Marine
+      Band 1896 Harmonica. These combs are perfectly flat, air tight and impervious
+      to moisture. They are fantastic creations. I'd like to take credit for making
+      them but that would not be entirely accurate. I contracted out the milling because
+      I wanted them to be professional grade products.\n\nCurrently available
+      in six colors:\n\n* Nocturne (Black)\n* Festival (White with Multi-Colored
+      Speckles)\n* Mandarin (Orange)\n* Atlantic (Blue with Grey and White Flakes)\n*
+      Sanded Beach (Medium Red with Red, White and Black Flecks)\n* Sanded Pine
+      (Medium Green with Green and Black Flecks)"
+    - '21.95'
+    - '4'
+    - 
+    - false
+  - - '15'
+    - DuPont™ Corian® Hohner Special 20 Harmonica Combs
+    - DuPont™ Corian® SP-20 Combs
+    - ! "Beautiful Precision CNC Milled Dupont™ Corian® Combs for the Hohner Special
+      20 Harmonica. These combs are perfectly flat, air tight and impervious to moisture.
+      They are fantastic creations. I'd like to take credit for making them but that
+      would not be entirely accurate. I contracted out the milling because I wanted
+      them to be professional grade products.\n\nCurrently available in six colors:\n\n*
+      Nocturne (Black)\n* Festival (White with Multi-Colored Speckles)\n* Mandarin
+      (Orange)\n* Atlantic (Blue with Grey and White Flakes)\n* Sanded Beach (Medium
+      Red with Red, White and Black Flecks)\n* Sanded Pine (Medium Green with Green
+      and Black Flecks)"
+    - '21.95'
+    - '4'
+    - 
+    - false
+  - - '16'
+    - DuPont™ Corian® Hohner Golden Melody Harmonica Combs
+    - DuPont™ Corian® GM Combs
+    - ! "Beautiful Precision CNC Milled Dupont™ Corian® Combs for the Hohner Golden
+      Melody Harmonica. These combs are perfectly flat, air tight and impervious to
+      moisture. They are fantastic creations. I'd like to take credit for making them
+      but that would not be entirely accurate. I contracted out the milling because
+      I wanted them to be professional grade products.\n\nCurrently available
+      in six colors:\n\n* Nocturne (Black)\n* Festival (White with Multi-Colored
+      Speckles)\n* Mandarin (Orange)\n* Atlantic (Blue with Grey and White Flakes)\n*
+      Sanded Beach (Medium Red with Red, White and Black Flecks)\n* Sanded Pine
+      (Medium Green with Green and Black Flecks)"
+    - '21.95'
+    - '4'
+    - 
+    - false
+  - - '17'
+    - DuPont™ Corian® Hohner MS-Series Harmonica Combs
+    - DuPont™ Corian® MS-Series Combs
+    - ! "Beautiful Precision CNC Milled Dupont™ Corian® Combs for the Hohner MS-Series
+      Harmonica. These combs are perfectly flat, air tight and impervious to moisture.
+      They are fantastic creations. I'd like to take credit for making them but that
+      would not be entirely accurate. I contracted out the milling because I wanted
+      them to be professional grade products.\n\nCurrently available in six colors:\n\n*
+      Nocturne (Black)\n* Festival (White with Multi-Colored Speckles)\n* Mandarin
+      (Orange)\n* Atlantic (Blue with Grey and White Flakes)\n* Sanded Beach (Medium
+      Red with Red, White and Black Flecks)\n* Sanded Pine (Medium Green with Green
+      and Black Flecks)"
+    - '21.95'
+    - '4'
+    - 
+    - false
+  - - '18'
+    - Aluminum Hohner Marine Band Deluxe Harmonica Combs
+    - Aluminum MBD Combs
+    - ! "Precision CNC-Milled Aluminum Combs made for Hohner Marine Band Harmonicas.
+      These combs will fit all Marine Bands including the Marine Band 1896, Marine
+      Band Deluxe and Marine Band Crossover. The cover plate holes are capsule shaped
+      which enable this comb to fit the reed plates and cover plates for all of the
+      above listed models.\n\nThe combs are made from 6061 aluminum and have been
+      professionally anodized. These combs are fantastic creations. I'd like to take
+      credit for making them but that would not be entirely accurate. I contracted
+      out the milling and the anodizing because I wanted them to be professional grade
+      products."
+    - '21.95'
+    - '5'
+    - 
+    - false
+  - - '19'
+    - Aluminum Hohner Marine Band 1896 Harmonica Combs
+    - Aluminum MB1896 Combs
+    - ! "Precision CNC-Milled Aluminum Combs made for Hohner Marine Band Harmonicas.
+      These combs will fit all Marine Bands including the Marine Band 1896, Marine
+      Band Deluxe and Marine Band Crossover. The cover plate holes are capsule shaped
+      which enable this comb to fit the reed plates and cover plates for all of the
+      above listed models.\n\nThe combs are made from 6061 aluminum and have been
+      professionally anodized. These combs are fantastic creations. I'd like to take
+      credit for making them but that would not be entirely accurate. I contracted
+      out the milling and the anodizing because I wanted them to be professional grade
+      products."
+    - '21.95'
+    - '5'
+    - 
+    - false
+  - - '20'
+    - Aluminum Hohner Special 20 Harmonica Combs
+    - Aluminum SP-20 Combs
+    - ! "Beautiful Precision CNC-Milled Aluminum Combs made for the Hohner Special
+      20 series of harmonica.\n\nThe combs are made from 6061 aluminum and have
+      been professionally anodized. These combs are fantastic creations. I'd like
+      to take credit for making them but that would not be entirely accurate. I contracted
+      out the milling and the anodizing because I wanted them to be professional grade
+      products.\n\nThe Special 20 combs are .250” thick as it is on the stock
+      comb. The stock comb on a Special 20 is an injection molded comb with a recessed
+      cavity that allows the reed plates to sit down into the comb and back a little
+      from the front edge of the harp. It literally forms a mouthpiece on the front
+      of the harmonica. When the stock comb is replaced with a wood, acrylic or metal
+      comb you will lose that mouthpiece and will create what is commonly known as
+      a “Tin Sandwich”. Personally, I do not find that to be at all negative, but
+      there are Special 20 Purists who absolutely hate that entire notion. There are
+      usually 6 screws holding the reed plates to the comb and two additional holes
+      should you want to add two more. These Special 20 combs will accommodate all
+      8 screws. If you have a very old Special 20 that is made with nails, you're
+      going to have to replace them with screws. If you need some screws, let me know
+      and I will send them to you along with the combs."
+    - '21.95'
+    - '5'
+    - 
+    - false
+  - - '21'
+    - Aluminum Hohner Golden Melody Harmonica Combs
+    - Aluminum GM Combs
+    - ! "Beautiful, Precision CNC-Milled Aluminum Combs made for the Hohner Golden
+      Melody series of harmonicas.\n\nThe combs are made from 6061 aluminum and
+      have been professionally anodized. These combs are fantastic creations. I'd
+      like to take credit for making them but that would not be entirely accurate.
+      I contracted out the milling and the anodizing because I wanted them to be professional
+      grade products.\n\nThe Golden Melody combs are .250” thick, which is the
+      thickness of the stock injection molded plastic GM comb. There have been several
+      iterations of the Golden Melody comb over the years. The most common arrangement
+      of screws is 4 from the top (blow) reed plate through the bottom (draw) reed
+      plate and 3 from the bottom (draw) reed plate through the top (blow) reed plate.
+      The holes on these Golden Melody combs follow the standard 4-3 pattern."
+    - '21.95'
+    - '5'
+    - 
+    - false
+  - - '22'
+    - Cover Plates for Hohner Marine Band 1896 Harmonicas
+    - MB1896 Cover Plates
+    - ! "You are looking at some beautiful Powder Coated Cover plates for the Hohner
+      Marine Band 1896 Harmonica. Powder coating is a process of applying a dry powder
+      to electrostatically charged metal. The metal is then cured under heat to allow
+      the powder to flow and form a skin. The resulting finish is harder and tougher
+      than conventional paint.\n\nThe Powder Coating was done by a professional
+      Powder Coating company that does powder coating on an industrial level (not
+      in somebody's garage in a toaster oven).\n\nThe Cover Plates are available
+      in eight (8) colors:\n\n* Gloss Black\n* Gloss White\n* Sapphire Blue\n*
+      Ruby Red\n* Moon Stone\n* Gloss White\n* Purple\n* Gold\n* Green"
+    - '21.95'
+    - '6'
+    - 
+    - false
+  - - '23'
+    - Cover Plates for Hohner Special 20 Harmonicas
+    - SP20 Cover Plates
+    - ! "You are looking at some beautiful Powder Coated Cover plates for the Hohner
+      Special 20 Harmonica. Powder coating is a process of applying a dry powder to
+      electrostatically charged metal. The metal is then cured under heat to allow
+      the powder to flow and form a skin. The resulting finish is harder and tougher
+      than conventional paint.\n\nThe Powder Coating was done by a professional
+      Powder Coating company that does powder coating on an industrial level (not
+      in somebody\\'s garage in a toaster oven).\n\nThe Cover Plates are available
+      in eight (8) colors:\n\n* Gloss Black\n* Gloss White\n* Sapphire Blue\n*
+      Ruby Red\n* Moon Stone\n* Gloss White\n* Purple\n* Gold\n* Green"
+    - '21.95'
+    - '6'
+    - 
+    - false
+  - - '24'
+    - Cover Plates for Hohner Golden Melody Harmonicas
+    - Golden Melody Cover Plates
+    - ! "You are looking at some beautiful Powder Coated Cover plates for the Hohner
+      Golden Melody Harmonica. Powder coating is a process of applying a dry powder
+      to electrostatically charged metal. The metal is then cured under heat to allow
+      the powder to flow and form a skin. The resulting finish is harder and tougher
+      than conventional paint.\n\nThe Powder Coating was done by a professional
+      Powder Coating company that does powder coating on an industrial level (not
+      in somebody's garage in a toaster oven).\n\nThe Cover Plates are available
+      in eight (8) colors:\n\n* Gloss Black\n* Gloss White\n* Sapphire Blue\n*
+      Ruby Red\n* Moon Stone\n* Gloss White\n* Purple\n* Gold\n* Green"
+    - '21.95'
+    - '6'
+    - 
+    - false
+  - - '25'
+    - Cover Plates for Hohner MS-Series Harmonicas
+    - MS-Series Cover Plates
+    - ! "You are looking at some beautiful Powder Coated Cover plates for the Hohner
+      MS-Series Harmonica. Powder coating is a process of applying a dry powder to
+      electrostatically charged metal. The metal is then cured under heat to allow
+      the powder to flow and form a skin. The resulting finish is harder and tougher
+      than conventional paint.\n\nThe Powder Coating was done by a professional
+      Powder Coating company that does powder coating on an industrial level (not
+      in somebody's garage in a toaster oven).\n\nThe Cover Plates are available
+      in eight (8) colors:\n\n* Gloss Black\n* Gloss White\n* Sapphire Blue\n*
+      Ruby Red\n* Moon Stone\n* Gloss White\n* Purple\n* Gold\n* Green"
+    - '21.95'
+    - '6'
+    - 
+    - false
+  - - '26'
+    - Cover Plates for Suzuki HarpMaster 10-Hole Diatonic Harmonicas
+    - HarpMaster 10-Hole Diatonic Cover Plates
+    - BLANK
+    - '21.95'
+    - '6'
+    - 
+    - false
+  - - '27'
+    - Reed Plates for Hohner Marine Band 1896 Harmonicas
+    - MB1896 Reed Plates
+    - Please be aware that the majority of the reed plates we offer are previously
+      owned reed plates that have been cleaned, tested for playability and sanitized.
+      They are not new reed plates unless specifically stated. To see the new and
+      never-before-reed plates we have available please visit the "Miscellaneous Harmonicas"
+      section of our website.
+    - '21.95'
+    - '7'
+    - 
+    - false
+  - - '28'
+    - Reed Plates for Hohner Special 20 Harmonicas
+    - SP20 Reed Plates
+    - Please be aware that the majority of the reed plates we offer are previously
+      owned reed plates that have been cleaned, tested for playability and sanitized.
+      They are not new reed plates unless specifically stated. To see the new and
+      never-before-reed plates we have available please visit the "Miscellaneous Harmonicas"
+      section of our website.
+    - '21.95'
+    - '7'
+    - 
+    - false
+  - - '29'
+    - Reed Plates for Hohner Golden Melody Harmonicas
+    - Golden Melody Reed Plates
+    - Please be aware that the majority of the reed plates we offer are previously
+      owned reed plates that have been cleaned, tested for playability and sanitized.
+      They are not new reed plates unless specifically stated. To see the new and
+      never-before-reed plates we have available please visit the "Miscellaneous Harmonicas"
+      section of our website.
+    - '21.95'
+    - '7'
+    - 
+    - false
+  - - '30'
+    - Reed Plates for Hohner MS-Series Harmonicas
+    - MS-Series Reed Plates
+    - Please be aware that the majority of the reed plates we offer are previously
+      owned reed plates that have been cleaned, tested for playability and sanitized.
+      They are not new reed plates unless specifically stated. To see the new and
+      never-before-reed plates we have available please visit the "Miscellaneous Harmonicas"
+      section of our website.
+    - '21.95'
+    - '7'
+    - 
+    - false
+  - - '31'
+    - Reed Plates for Suzuki HarpMaster 10-Hole Diatonic Harmonicas
+    - HarpMaster Reed Plates
+    - Please be aware that the majority of the reed plates we offer are previously
+      owned reed plates that have been cleaned, tested for playability and sanitized.
+      They are not new reed plates unless specifically stated. To see the new and
+      never-before-reed plates we have available please visit the "Miscellaneous Harmonicas"
+      section of our website.
+    - '21.95'
+    - '7'
+    - 
+    - false
+  - - '32'
+    - ! '#416 Marine Band Deluxe in B♭'
+    - ''
+    - ! "Marine Band Deluxe in B♭. Custom CNC.\nMilled Mandarin Orange Corian Comb
+      and Gloss Black Covers. Reed plates are refurbished and play well."
+    - '40'
+    - '9'
+    - '1'
+    - true
+
+---
+line_items:
+  columns:
+  - id
+  - unit_price
+  - item_id
+  - cart_id
+  - quantity
+  - variant_id
+  records: 
+  - - '1'
+    - '17.95'
+    - '2'
+    - '2'
+    - '1'
+    - '6'
+  - - '2'
+    - '21.95'
+    - '14'
+    - '3'
+    - '1'
+    - '91'
+  - - '3'
+    - '21.95'
+    - '21'
+    - '5'
+    - '3'
+    - '129'
+  - - '4'
+    - '17.95'
+    - '1'
+    - '6'
+    - '3'
+    - '1'
+  - - '5'
+    - '14.95'
+    - '8'
+    - '8'
+    - '1'
+    - '35'
+  - - '6'
+    - '21.95'
+    - '24'
+    - '9'
+    - '1'
+    - '149'
+  - - '7'
+    - '21.95'
+    - '24'
+    - '10'
+    - '1'
+    - '149'
+  - - '8'
+    - '21.95'
+    - '20'
+    - '9'
+    - '1'
+    - '125'
+  - - '9'
+    - '21.95'
+    - '24'
+    - '9'
+    - '1'
+    - '153'
+
+---
+option_values:
+  columns:
+  - id
+  - title
+  - price_diff
+  - option_id
+  records: 
+  - - '1'
+    - Maple
+    - '0'
+    - '1'
+  - - '2'
+    - Cherry
+    - '0'
+    - '1'
+  - - '3'
+    - Padauk
+    - '0'
+    - '1'
+  - - '4'
+    - Rosewood
+    - '0'
+    - '1'
+  - - '5'
+    - Opaque Black
+    - '0'
+    - '2'
+  - - '6'
+    - Opaque White
+    - '0'
+    - '2'
+  - - '7'
+    - Crystal Clear
+    - '0'
+    - '2'
+  - - '8'
+    - Fluorescent Yellow
+    - '0'
+    - '2'
+  - - '9'
+    - Fluorescent Blue
+    - '0'
+    - '2'
+  - - '10'
+    - Fluorescent Red
+    - '0'
+    - '2'
+  - - '11'
+    - Fluorescent Orange
+    - '0'
+    - '2'
+  - - '12'
+    - Opaque Blue
+    - '0'
+    - '2'
+  - - '13'
+    - Opaque Green
+    - '0'
+    - '2'
+  - - '14'
+    - Opaque Purple
+    - '0'
+    - '2'
+  - - '15'
+    - Nocturne (Black)
+    - '0'
+    - '3'
+  - - '16'
+    - Festival (White with Multi-Colored Speckles)
+    - '0'
+    - '3'
+  - - '17'
+    - Mandarin (Orange)
+    - '0'
+    - '3'
+  - - '18'
+    - Atlantic (Blue with Grey and White Flakes)
+    - '0'
+    - '3'
+  - - '19'
+    - Sanded Beach (Medium Red with Red, White and Black Flecks)
+    - '0'
+    - '3'
+  - - '20'
+    - Sanded Pine (Medium Green with Green and Black Flecks)
+    - '0'
+    - '3'
+  - - '21'
+    - Natural (Silver)
+    - '0'
+    - '4'
+  - - '22'
+    - Red
+    - '0'
+    - '4'
+  - - '23'
+    - Black
+    - '0'
+    - '4'
+  - - '24'
+    - Blue
+    - '0'
+    - '4'
+  - - '25'
+    - Gloss Black
+    - '0'
+    - '5'
+  - - '26'
+    - Gloss White
+    - '0'
+    - '5'
+  - - '27'
+    - Sapphire Blue
+    - '0'
+    - '5'
+  - - '28'
+    - Ruby Red
+    - '0'
+    - '5'
+  - - '29'
+    - Moon Stone
+    - '0'
+    - '5'
+  - - '30'
+    - Gloss White
+    - '0'
+    - '5'
+  - - '31'
+    - Purple
+    - '0'
+    - '5'
+  - - '32'
+    - Gold
+    - '0'
+    - '5'
+  - - '33'
+    - Green
+    - '0'
+    - '5'
+  - - '34'
+    - C
+    - '0'
+    - '6'
+  - - '35'
+    - G
+    - '0'
+    - '6'
+  - - '36'
+    - D
+    - '0'
+    - '6'
+  - - '37'
+    - A
+    - '0'
+    - '6'
+  - - '38'
+    - E
+    - '0'
+    - '6'
+  - - '39'
+    - B
+    - '0'
+    - '6'
+  - - '40'
+    - Gb/F#
+    - '0'
+    - '6'
+  - - '41'
+    - Db
+    - '0'
+    - '6'
+  - - '42'
+    - Ab
+    - '0'
+    - '6'
+  - - '43'
+    - Eb
+    - '0'
+    - '6'
+  - - '44'
+    - Bb
+    - '0'
+    - '6'
+  - - '45'
+    - F
+    - '0'
+    - '6'
+
+---
+photos:
+  columns:
+  - id
+  - caption
+  - src
+  - href
+  - item_id
+  - position
+  records: 
+  - - '1'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/MBDHarpscombs.jpg
+    - http://media.beta.photobucket.com/image/marine%20band%20deluxe/bluemoonharmonicas/MBDHarpscombs.jpg
+    - '1'
+    - 
+  - - '2'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/MBwithwood2.jpg
+    - http://media.beta.photobucket.com/image/marine%20band%201896/bluemoonharmonicas/MBwithwood2.jpg
+    - '2'
+    - 
+  - - '3'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/SP20withwood.jpg
+    - http://media.beta.photobucket.com/image/special%2020%20combs/bluemoonharmonicas/SP20withwood.jpg
+    - '3'
+    - 
+  - - '4'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/GoldenMelodyswithWoodCombs2.jpg
+    - http://media.beta.photobucket.com/image/golden%20melody%20combs/bluemoonharmonicas/GoldenMelodyswithWoodCombs2.jpg
+    - '4'
+    - 
+  - - '5'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/MSHarpswoodcombs.jpg
+    - http://media.beta.photobucket.com/image/ms%20series/bluemoonharmonicas/MSHarpswoodcombs.jpg
+    - '5'
+    - '2'
+  - - '6'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/MBacrylic2.jpg
+    - http://media.beta.photobucket.com/image/marine%20band%201896%20acrylic/bluemoonharmonicas/MBacrylic2.jpg
+    - '7'
+    - 
+  - - '7'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/SP20Acrylic.jpg
+    - http://media.beta.photobucket.com/image/acrylic%20special%2020/bluemoonharmonicas/SP20Acrylic.jpg
+    - '8'
+    - 
+  - - '8'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/GMwithacrylic.jpg
+    - http://media.beta.photobucket.com/image/golden%20melody%20acrylic/bluemoonharmonicas/GMwithacrylic.jpg
+    - '9'
+    - '2'
+  - - '9'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/MSwithacrylic2.jpg
+    - http://media.beta.photobucket.com/image/acrylic%20ms%20series/bluemoonharmonicas/MSwithacrylic2.jpg
+    - '10'
+    - 
+  - - '10'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/100_2116.jpg
+    - http://media.beta.photobucket.com/image/acrylic%20lee%20oskar/bluemoonharmonicas/100_2116.jpg
+    - '12'
+    - 
+  - - '11'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4864.jpg
+    - http://media.beta.photobucket.com/image/corian%20marine%20band%20deluxe/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4864.jpg
+    - '13'
+    - 
+  - - '12'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4864.jpg
+    - http://media.beta.photobucket.com/image/corian%20marine%20band%20deluxe/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4864.jpg
+    - '14'
+    - 
+  - - '13'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4657.jpg
+    - http://media.beta.photobucket.com/image/corian%20special%2020/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4657.jpg
+    - '15'
+    - 
+  - - '14'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4830.jpg
+    - http://media.beta.photobucket.com/image/golden%20melody%20corian/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4830.jpg
+    - '16'
+    - 
+  - - '15'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_5028.jpg
+    - http://media.beta.photobucket.com/image/corian%20ms%20series/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_5028.jpg
+    - '17'
+    - 
+  - - '16'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Harmonica%20Creations/100_5116.jpg
+    - http://media.beta.photobucket.com/image/aluminum%20marine%20band%20deluxe/bluemoonharmonicas/Harmonica%20Creations/100_5116.jpg
+    - '18'
+    - 
+  - - '17'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Harmonica%20Creations/100_5113.jpg
+    - http://media.beta.photobucket.com/image/aluminum%20marine%20band/bluemoonharmonicas/Harmonica%20Creations/100_5113.jpg
+    - '19'
+    - 
+  - - '18'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/SP20Alum1.jpg
+    - http://media.beta.photobucket.com/image/special%2020%20aluminum/bluemoonharmonicas/SP20Alum1.jpg
+    - '20'
+    - '1'
+  - - '19'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4707.jpg
+    - http://media.beta.photobucket.com/image/aluminum%20golden%20melody/bluemoonharmonicas/New%20CNC%20Milled%20Combs/100_4707.jpg
+    - '21'
+    - 
+  - - '20'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Harmonica%20Creations/17.jpg
+    - http://media.beta.photobucket.com/image/cover%20plates%20marine%20band/bluemoonharmonicas/Harmonica%20Creations/17.jpg
+    - '22'
+    - 
+  - - '21'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Harmonica%20Creations/33.jpg
+    - http://media.beta.photobucket.com/image/special%2020%20cover/bluemoonharmonicas/Harmonica%20Creations/33.jpg
+    - '23'
+    - 
+  - - '22'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Harmonica%20Creations/100_5188.jpg
+    - http://media.beta.photobucket.com/image/golden%20melody%20cover%20plates/bluemoonharmonicas/Harmonica%20Creations/100_5188.jpg
+    - '24'
+    - 
+  - - '23'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/SP20Alum2.jpg
+    - http://media.beta.photobucket.com/image/special%2020%20aluminum/bluemoonharmonicas/SP20Alum2.jpg
+    - '20'
+    - '2'
+  - - '24'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Creation%20Pics%20for%20Website/GoldenMelodyAcrylic.jpg
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/Creation%20Pics%20for%20Website/GoldenMelodyAcrylic.jpg.html
+    - '9'
+    - '1'
+  - - '25'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Creation%20Pics%20for%20Website/SuzukiCovers.gif
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/Creation%20Pics%20for%20Website/SuzukiCovers.gif.html
+    - '26'
+    - 
+  - - '26'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Creation%20Pics%20for%20Website/MSCovers.gif
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/Creation%20Pics%20for%20Website/MSCovers.gif.html
+    - '25'
+    - 
+  - - '27'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/Creation%20Pics%20for%20Website/LORosewood.gif
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/Creation%20Pics%20for%20Website/LORosewood.gif.html
+    - '6'
+    - 
+  - - '28'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/MSWood3.jpg
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/MSWood3.jpg.html
+    - '5'
+    - '1'
+  - - '29'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/December%202012%20Harps/416TopBoxOpen.jpg
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/December%202012%20Harps/416TopBoxOpen.jpg.html
+    - '32'
+    - '1'
+  - - '30'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/December%202012%20Harps/416FrontTopBox.jpg
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/December%202012%20Harps/416FrontTopBox.jpg.html
+    - '32'
+    - '2'
+  - - '31'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/December%202012%20Harps/416FrontEdge.jpg
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/December%202012%20Harps/416FrontEdge.jpg.html
+    - '32'
+    - '4'
+  - - '32'
+    - 
+    - http://i1089.photobucket.com/albums/i354/bluemoonharmonicas/December%202012%20Harps/416FrontEdge2.jpg
+    - http://s1089.beta.photobucket.com/user/bluemoonharmonicas/media/December%202012%20Harps/416FrontEdge2.jpg.html
+    - '32'
+    - '3'
+
+---
+variants:
+  columns:
+  - id
+  - option_value_id
+  - quantity
+  - item_id
+  records: 
+  - - '1'
+    - '1'
+    - '7'
+    - '1'
+  - - '2'
+    - '2'
+    - '10'
+    - '1'
+  - - '3'
+    - '3'
+    - '10'
+    - '1'
+  - - '4'
+    - '4'
+    - '10'
+    - '1'
+  - - '5'
+    - '1'
+    - '10'
+    - '2'
+  - - '6'
+    - '2'
+    - '10'
+    - '2'
+  - - '7'
+    - '3'
+    - '10'
+    - '2'
+  - - '8'
+    - '4'
+    - '10'
+    - '2'
+  - - '9'
+    - '1'
+    - '10'
+    - '3'
+  - - '10'
+    - '2'
+    - '10'
+    - '3'
+  - - '11'
+    - '3'
+    - '10'
+    - '3'
+  - - '12'
+    - '4'
+    - '10'
+    - '3'
+  - - '13'
+    - '1'
+    - '10'
+    - '4'
+  - - '14'
+    - '2'
+    - '10'
+    - '4'
+  - - '15'
+    - '3'
+    - '10'
+    - '4'
+  - - '16'
+    - '4'
+    - '10'
+    - '4'
+  - - '17'
+    - '1'
+    - '10'
+    - '5'
+  - - '18'
+    - '2'
+    - '10'
+    - '5'
+  - - '19'
+    - '3'
+    - '10'
+    - '5'
+  - - '20'
+    - '4'
+    - '10'
+    - '5'
+  - - '21'
+    - '1'
+    - '10'
+    - '6'
+  - - '22'
+    - '2'
+    - '10'
+    - '6'
+  - - '23'
+    - '3'
+    - '10'
+    - '6'
+  - - '24'
+    - '4'
+    - '10'
+    - '6'
+  - - '25'
+    - '5'
+    - '10'
+    - '7'
+  - - '26'
+    - '6'
+    - '10'
+    - '7'
+  - - '27'
+    - '7'
+    - '10'
+    - '7'
+  - - '28'
+    - '8'
+    - '10'
+    - '7'
+  - - '29'
+    - '9'
+    - '10'
+    - '7'
+  - - '30'
+    - '10'
+    - '10'
+    - '7'
+  - - '31'
+    - '11'
+    - '10'
+    - '7'
+  - - '32'
+    - '12'
+    - '10'
+    - '7'
+  - - '33'
+    - '13'
+    - '10'
+    - '7'
+  - - '34'
+    - '14'
+    - '10'
+    - '7'
+  - - '35'
+    - '5'
+    - '9'
+    - '8'
+  - - '36'
+    - '6'
+    - '10'
+    - '8'
+  - - '37'
+    - '7'
+    - '10'
+    - '8'
+  - - '38'
+    - '8'
+    - '10'
+    - '8'
+  - - '39'
+    - '9'
+    - '10'
+    - '8'
+  - - '40'
+    - '10'
+    - '10'
+    - '8'
+  - - '41'
+    - '11'
+    - '10'
+    - '8'
+  - - '42'
+    - '12'
+    - '10'
+    - '8'
+  - - '43'
+    - '13'
+    - '10'
+    - '8'
+  - - '44'
+    - '14'
+    - '10'
+    - '8'
+  - - '45'
+    - '5'
+    - '10'
+    - '9'
+  - - '46'
+    - '6'
+    - '10'
+    - '9'
+  - - '47'
+    - '7'
+    - '10'
+    - '9'
+  - - '48'
+    - '8'
+    - '10'
+    - '9'
+  - - '49'
+    - '9'
+    - '10'
+    - '9'
+  - - '50'
+    - '10'
+    - '10'
+    - '9'
+  - - '51'
+    - '11'
+    - '10'
+    - '9'
+  - - '52'
+    - '12'
+    - '10'
+    - '9'
+  - - '53'
+    - '13'
+    - '10'
+    - '9'
+  - - '54'
+    - '14'
+    - '10'
+    - '9'
+  - - '55'
+    - '5'
+    - '10'
+    - '10'
+  - - '56'
+    - '6'
+    - '10'
+    - '10'
+  - - '57'
+    - '7'
+    - '10'
+    - '10'
+  - - '58'
+    - '8'
+    - '10'
+    - '10'
+  - - '59'
+    - '9'
+    - '10'
+    - '10'
+  - - '60'
+    - '10'
+    - '10'
+    - '10'
+  - - '61'
+    - '11'
+    - '10'
+    - '10'
+  - - '62'
+    - '12'
+    - '10'
+    - '10'
+  - - '63'
+    - '13'
+    - '10'
+    - '10'
+  - - '64'
+    - '14'
+    - '10'
+    - '10'
+  - - '65'
+    - '5'
+    - '10'
+    - '11'
+  - - '66'
+    - '6'
+    - '10'
+    - '11'
+  - - '67'
+    - '7'
+    - '10'
+    - '11'
+  - - '68'
+    - '8'
+    - '10'
+    - '11'
+  - - '69'
+    - '9'
+    - '10'
+    - '11'
+  - - '70'
+    - '10'
+    - '10'
+    - '11'
+  - - '71'
+    - '11'
+    - '10'
+    - '11'
+  - - '72'
+    - '12'
+    - '10'
+    - '11'
+  - - '73'
+    - '13'
+    - '10'
+    - '11'
+  - - '74'
+    - '14'
+    - '10'
+    - '11'
+  - - '75'
+    - '5'
+    - '10'
+    - '12'
+  - - '76'
+    - '6'
+    - '10'
+    - '12'
+  - - '77'
+    - '7'
+    - '10'
+    - '12'
+  - - '78'
+    - '8'
+    - '10'
+    - '12'
+  - - '79'
+    - '9'
+    - '10'
+    - '12'
+  - - '80'
+    - '10'
+    - '10'
+    - '12'
+  - - '81'
+    - '11'
+    - '10'
+    - '12'
+  - - '82'
+    - '12'
+    - '10'
+    - '12'
+  - - '83'
+    - '13'
+    - '10'
+    - '12'
+  - - '84'
+    - '14'
+    - '10'
+    - '12'
+  - - '85'
+    - '15'
+    - '10'
+    - '13'
+  - - '86'
+    - '16'
+    - '10'
+    - '13'
+  - - '87'
+    - '17'
+    - '10'
+    - '13'
+  - - '88'
+    - '18'
+    - '10'
+    - '13'
+  - - '89'
+    - '19'
+    - '10'
+    - '13'
+  - - '90'
+    - '20'
+    - '10'
+    - '13'
+  - - '91'
+    - '15'
+    - '10'
+    - '14'
+  - - '92'
+    - '16'
+    - '10'
+    - '14'
+  - - '93'
+    - '17'
+    - '10'
+    - '14'
+  - - '94'
+    - '18'
+    - '10'
+    - '14'
+  - - '95'
+    - '19'
+    - '10'
+    - '14'
+  - - '96'
+    - '20'
+    - '10'
+    - '14'
+  - - '97'
+    - '15'
+    - '10'
+    - '15'
+  - - '98'
+    - '16'
+    - '10'
+    - '15'
+  - - '99'
+    - '17'
+    - '10'
+    - '15'
+  - - '100'
+    - '18'
+    - '10'
+    - '15'
+  - - '101'
+    - '19'
+    - '10'
+    - '15'
+  - - '102'
+    - '20'
+    - '10'
+    - '15'
+  - - '103'
+    - '15'
+    - '10'
+    - '16'
+  - - '104'
+    - '16'
+    - '10'
+    - '16'
+  - - '105'
+    - '17'
+    - '10'
+    - '16'
+  - - '106'
+    - '18'
+    - '10'
+    - '16'
+  - - '107'
+    - '19'
+    - '10'
+    - '16'
+  - - '108'
+    - '20'
+    - '10'
+    - '16'
+  - - '109'
+    - '15'
+    - '10'
+    - '17'
+  - - '110'
+    - '16'
+    - '10'
+    - '17'
+  - - '111'
+    - '17'
+    - '10'
+    - '17'
+  - - '112'
+    - '18'
+    - '10'
+    - '17'
+  - - '113'
+    - '19'
+    - '10'
+    - '17'
+  - - '114'
+    - '20'
+    - '10'
+    - '17'
+  - - '115'
+    - '21'
+    - '10'
+    - '18'
+  - - '116'
+    - '22'
+    - '10'
+    - '18'
+  - - '117'
+    - '23'
+    - '10'
+    - '18'
+  - - '118'
+    - '24'
+    - '10'
+    - '18'
+  - - '119'
+    - '21'
+    - '10'
+    - '19'
+  - - '120'
+    - '22'
+    - '10'
+    - '19'
+  - - '121'
+    - '23'
+    - '10'
+    - '19'
+  - - '122'
+    - '24'
+    - '10'
+    - '19'
+  - - '123'
+    - '21'
+    - '10'
+    - '20'
+  - - '124'
+    - '22'
+    - '10'
+    - '20'
+  - - '125'
+    - '23'
+    - '10'
+    - '20'
+  - - '126'
+    - '24'
+    - '10'
+    - '20'
+  - - '127'
+    - '21'
+    - '10'
+    - '21'
+  - - '128'
+    - '22'
+    - '10'
+    - '21'
+  - - '129'
+    - '23'
+    - '7'
+    - '21'
+  - - '130'
+    - '24'
+    - '10'
+    - '21'
+  - - '131'
+    - '25'
+    - '10'
+    - '22'
+  - - '132'
+    - '26'
+    - '10'
+    - '22'
+  - - '133'
+    - '27'
+    - '10'
+    - '22'
+  - - '134'
+    - '28'
+    - '10'
+    - '22'
+  - - '135'
+    - '29'
+    - '10'
+    - '22'
+  - - '136'
+    - '30'
+    - '10'
+    - '22'
+  - - '137'
+    - '31'
+    - '10'
+    - '22'
+  - - '138'
+    - '32'
+    - '10'
+    - '22'
+  - - '139'
+    - '33'
+    - '10'
+    - '22'
+  - - '140'
+    - '25'
+    - '10'
+    - '23'
+  - - '141'
+    - '26'
+    - '10'
+    - '23'
+  - - '142'
+    - '27'
+    - '10'
+    - '23'
+  - - '143'
+    - '28'
+    - '10'
+    - '23'
+  - - '144'
+    - '29'
+    - '10'
+    - '23'
+  - - '145'
+    - '30'
+    - '10'
+    - '23'
+  - - '146'
+    - '31'
+    - '10'
+    - '23'
+  - - '147'
+    - '32'
+    - '10'
+    - '23'
+  - - '148'
+    - '33'
+    - '10'
+    - '23'
+  - - '149'
+    - '25'
+    - '10'
+    - '24'
+  - - '150'
+    - '26'
+    - '10'
+    - '24'
+  - - '151'
+    - '27'
+    - '10'
+    - '24'
+  - - '152'
+    - '28'
+    - '10'
+    - '24'
+  - - '153'
+    - '29'
+    - '10'
+    - '24'
+  - - '154'
+    - '30'
+    - '10'
+    - '24'
+  - - '155'
+    - '31'
+    - '10'
+    - '24'
+  - - '156'
+    - '32'
+    - '10'
+    - '24'
+  - - '157'
+    - '33'
+    - '10'
+    - '24'
+  - - '158'
+    - '25'
+    - '10'
+    - '25'
+  - - '159'
+    - '26'
+    - '10'
+    - '25'
+  - - '160'
+    - '27'
+    - '10'
+    - '25'
+  - - '161'
+    - '28'
+    - '10'
+    - '25'
+  - - '162'
+    - '29'
+    - '10'
+    - '25'
+  - - '163'
+    - '30'
+    - '10'
+    - '25'
+  - - '164'
+    - '31'
+    - '10'
+    - '25'
+  - - '165'
+    - '32'
+    - '10'
+    - '25'
+  - - '166'
+    - '33'
+    - '10'
+    - '25'
+  - - '167'
+    - '25'
+    - '10'
+    - '26'
+  - - '168'
+    - '26'
+    - '10'
+    - '26'
+  - - '169'
+    - '27'
+    - '10'
+    - '26'
+  - - '170'
+    - '28'
+    - '10'
+    - '26'
+  - - '171'
+    - '29'
+    - '10'
+    - '26'
+  - - '172'
+    - '30'
+    - '10'
+    - '26'
+  - - '173'
+    - '31'
+    - '10'
+    - '26'
+  - - '174'
+    - '32'
+    - '10'
+    - '26'
+  - - '175'
+    - '33'
+    - '10'
+    - '26'
+  - - '176'
+    - '34'
+    - '10'
+    - '27'
+  - - '177'
+    - '35'
+    - '10'
+    - '27'
+  - - '178'
+    - '36'
+    - '10'
+    - '27'
+  - - '179'
+    - '37'
+    - '10'
+    - '27'
+  - - '180'
+    - '38'
+    - '10'
+    - '27'
+  - - '181'
+    - '39'
+    - '10'
+    - '27'
+  - - '182'
+    - '40'
+    - '10'
+    - '27'
+  - - '183'
+    - '41'
+    - '10'
+    - '27'
+  - - '184'
+    - '42'
+    - '10'
+    - '27'
+  - - '185'
+    - '43'
+    - '10'
+    - '27'
+  - - '186'
+    - '44'
+    - '10'
+    - '27'
+  - - '187'
+    - '45'
+    - '10'
+    - '27'
+  - - '188'
+    - '34'
+    - '10'
+    - '28'
+  - - '189'
+    - '35'
+    - '10'
+    - '28'
+  - - '190'
+    - '36'
+    - '10'
+    - '28'
+  - - '191'
+    - '37'
+    - '10'
+    - '28'
+  - - '192'
+    - '38'
+    - '10'
+    - '28'
+  - - '193'
+    - '39'
+    - '10'
+    - '28'
+  - - '194'
+    - '40'
+    - '10'
+    - '28'
+  - - '195'
+    - '41'
+    - '10'
+    - '28'
+  - - '196'
+    - '42'
+    - '10'
+    - '28'
+  - - '197'
+    - '43'
+    - '10'
+    - '28'
+  - - '198'
+    - '44'
+    - '10'
+    - '28'
+  - - '199'
+    - '45'
+    - '10'
+    - '28'
+  - - '200'
+    - '34'
+    - '10'
+    - '29'
+  - - '201'
+    - '35'
+    - '10'
+    - '29'
+  - - '202'
+    - '36'
+    - '10'
+    - '29'
+  - - '203'
+    - '37'
+    - '10'
+    - '29'
+  - - '204'
+    - '38'
+    - '10'
+    - '29'
+  - - '205'
+    - '39'
+    - '10'
+    - '29'
+  - - '206'
+    - '40'
+    - '10'
+    - '29'
+  - - '207'
+    - '41'
+    - '10'
+    - '29'
+  - - '208'
+    - '42'
+    - '10'
+    - '29'
+  - - '209'
+    - '43'
+    - '10'
+    - '29'
+  - - '210'
+    - '44'
+    - '10'
+    - '29'
+  - - '211'
+    - '45'
+    - '10'
+    - '29'
+  - - '212'
+    - '34'
+    - '10'
+    - '30'
+  - - '213'
+    - '35'
+    - '10'
+    - '30'
+  - - '214'
+    - '36'
+    - '10'
+    - '30'
+  - - '215'
+    - '37'
+    - '10'
+    - '30'
+  - - '216'
+    - '38'
+    - '10'
+    - '30'
+  - - '217'
+    - '39'
+    - '10'
+    - '30'
+  - - '218'
+    - '40'
+    - '10'
+    - '30'
+  - - '219'
+    - '41'
+    - '10'
+    - '30'
+  - - '220'
+    - '42'
+    - '10'
+    - '30'
+  - - '221'
+    - '43'
+    - '10'
+    - '30'
+  - - '222'
+    - '44'
+    - '10'
+    - '30'
+  - - '223'
+    - '45'
+    - '10'
+    - '30'
+  - - '224'
+    - '34'
+    - '10'
+    - '31'
+  - - '225'
+    - '35'
+    - '10'
+    - '31'
+  - - '226'
+    - '36'
+    - '10'
+    - '31'
+  - - '227'
+    - '37'
+    - '10'
+    - '31'
+  - - '228'
+    - '38'
+    - '10'
+    - '31'
+  - - '229'
+    - '39'
+    - '10'
+    - '31'
+  - - '230'
+    - '40'
+    - '10'
+    - '31'
+  - - '231'
+    - '41'
+    - '10'
+    - '31'
+  - - '232'
+    - '42'
+    - '10'
+    - '31'
+  - - '233'
+    - '43'
+    - '10'
+    - '31'
+  - - '234'
+    - '44'
+    - '10'
+    - '31'
+  - - '235'
+    - '45'
+    - '10'
+    - '31'
+
+---
+items_options:
+  columns:
+  - item_id
+  - option_id
+  records: 
+  - - '1'
+    - '1'
+  - - '2'
+    - '1'
+  - - '3'
+    - '1'
+  - - '4'
+    - '1'
+  - - '5'
+    - '1'
+  - - '6'
+    - '1'
+  - - '7'
+    - '2'
+  - - '8'
+    - '2'
+  - - '9'
+    - '2'
+  - - '10'
+    - '2'
+  - - '11'
+    - '2'
+  - - '12'
+    - '2'
+  - - '13'
+    - '3'
+  - - '14'
+    - '3'
+  - - '15'
+    - '3'
+  - - '16'
+    - '3'
+  - - '17'
+    - '3'
+  - - '18'
+    - '4'
+  - - '19'
+    - '4'
+  - - '20'
+    - '4'
+  - - '21'
+    - '4'
+  - - '22'
+    - '5'
+  - - '23'
+    - '5'
+  - - '24'
+    - '5'
+  - - '25'
+    - '5'
+  - - '26'
+    - '5'
+  - - '27'
+    - '6'
+  - - '28'
+    - '6'
+  - - '29'
+    - '6'
+  - - '30'
+    - '6'
+  - - '31'
+    - '6'
+
+---
+options:
+  columns:
+  - id
+  - title
+  - sentence
+  records: 
+  - - '1'
+    - material
+    - Choose a *material*.
+  - - '2'
+    - acrylic color
+    - Choose a *color*.
+  - - '3'
+    - DuPont™ Corian® color
+    - Choose a *color*.
+  - - '4'
+    - aluminum color
+    - Choose a *color*.
+  - - '5'
+    - cover plate color
+    - Choose a *color*.
+  - - '6'
+    - key
+    - Choose a *key*.
+
+---
+users:
+  columns:
+  - id
+  - name
+  - email
+  - password_digest
+  - created_at
+  - updated_at
+  - admin
+  records: 
+  - - '1'
+    - Steven Petryk
+    - petryk.steven@gmail.com
+    - $2a$10$ZeU1kM3Z0tIGfVlM1a3VM.EaRHPSeClkl3ORRl.aBWB4TGAf3lP7u
+    - '2013-01-04 16:25:19.931271'
+    - '2013-01-04 16:25:19.951348'
+    - true
+  - - '2'
+    - Tom Halchak
+    - thalchak@tampabay.rr.com
+    - $2a$10$WmYemsc89NL65V1Ef3Mb4umPAxwNle7K5ZIl4f/JPywMwRg4L1SDS
+    - '2013-01-04 16:25:20.063771'
+    - '2013-01-04 16:25:20.13856'
+    - true

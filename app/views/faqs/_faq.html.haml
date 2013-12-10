@@ -1,0 +1,5 @@
+= content_tag_for :li, faq do
+  .block.white
+    %h2<
+      = faq.question
+    = markdown_and_replace faq.answer

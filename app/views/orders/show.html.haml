@@ -1,0 +1,44 @@
+- provide :title, "Order ##{@order.id}"
+
+.block.clear
+  %h1
+    = link_to 'Your Account', account_path
+    &raquo; Order ##{@order.id}
+    %span.controls 
+      - if admin?
+        Placed by #{link_to @order.user.name, @order.user} on 
+      -else
+        Placed on
+      #{@order.created_at.strftime('%B %d, %Y at %I:%M %p')}.
+
+.block.white#order_info
+  %h2 Payment &amp; Shipping Information
+  #tiles
+    .tile#address
+      %h3 Ship-to Address
+
+      %p= @order.address['Name']
+      %p= @order.address['Street1']
+      - unless @order.address['Street2'].blank?
+        %p= @order.address['Street2']
+      %p= "#{@order.address['CityName']}, #{@order.address['StateOrProvince']} #{@order.address['PostalCode']}"
+
+    .tile#cart_info
+      %h3 Purchase
+
+      %p #{pluralize(@order.cart.number_of_items, 'product')} purchased
+      %p Total: #{number_to_currency @order.cart.total_price}
+
+    .tile#paypal
+      %h3 PayPal
+
+      %p Payer: #{mail_to @order.email, truncate(@order.email, length: 25)}
+      %p Payer ID: #{@order.express_payer_id}
+      %p Express Token: #{@order.express_token}
+
+  .clear
+
+.block.clear
+  = render @cart
+
+  .clear

@@ -1,0 +1,22 @@
+%table#cart
+  -if @cart.line_items.empty?
+    %p The cart is empty. Add some products!
+  -else
+    = render @cart.line_items
+    %tr
+      %td 
+      %td 
+      %td Subtotal:
+      %td#total_price= number_to_currency @cart.total_price
+    %tr
+      %td 
+      %td 
+      %td Shipping (domestic/intl.):
+      %td#total_price= shipping_costs(@cart)
+    %tr
+      %td 
+      %td 
+      %td Total (domestic/intl.):
+      %td#total_price= total_costs(@cart)
+      -unless params[:controller] == 'orders'
+        %td

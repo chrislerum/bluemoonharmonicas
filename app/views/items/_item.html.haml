@@ -1,0 +1,7 @@
+%td
+  = link_to item do 
+    = image_tag item.photos.first.try(:src) || 'no-image.png', width: 250
+    %h3
+      %span.controls
+        = inventory_or_price_string_for(item)
+      = link_to item.name, item

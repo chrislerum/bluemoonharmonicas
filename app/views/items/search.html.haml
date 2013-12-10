@@ -1,0 +1,14 @@
+#products.block.clear
+  %h1 Search results for "#{params[:search]}"
+
+  %table#results
+    - if @items.empty?
+      %p No items were found.
+    %table#results
+      - rows = @items.each_slice(4).to_a
+      - rows.each do |row|
+        %tr
+          - row.each do |item|
+            = render item
+
+    .clear

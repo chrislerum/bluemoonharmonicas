@@ -1,0 +1,5 @@
+maxHeight = 0
+$('#tiles .tile').each ->
+  maxHeight = Math.max( $(this).height(), maxHeight )
+
+$('#tiles .tile').css height: maxHeight+'px'
