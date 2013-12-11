@@ -1,10 +1,8 @@
 new_button = $('#photos li.new')
-
 coords = new_button.offset()
 coords =
   top: coords.top + new_button.outerHeight()-15
   left: coords.left + new_button.outerWidth()/2 - 50
-
 $('body').append("<%= j render("form", item: @item, photo: @photo) %>")
 console.log(coords)
 $('#new-photo').css(coords).fadeIn(100)

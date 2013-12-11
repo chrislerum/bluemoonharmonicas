@@ -4,6 +4,4 @@
     = f.text_field :price, placeholder: "Price"
     = f.text_field :description, placeholder: "Description"
     = f.collection_select :category_ids, :category_ids, Category.all, :id, :name
-
   .clear
-

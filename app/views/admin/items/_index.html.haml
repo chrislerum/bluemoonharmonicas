@@ -4,5 +4,4 @@
     = link_to "+", new_admin_category_path, remote: true, class: "new"
     = link_to "New Item", new_admin_item_path, remote: true, class: "new"
     .clear
-
   %ul{"data-update-path" => sort_admin_categories_path}= render Category.roots

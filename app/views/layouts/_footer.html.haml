@@ -1,23 +1,15 @@
-
 .block.black
   %h3 100% Money Back Guarantee
   %p We stand behind every product we offer with a 100% Unconditional Money Back Guarantee. If you are not completely satisfied with your purchase, we will gladly refund your money including shipping expenses.
-
   %h3 Worldwide Shipping
   %p We are happy to ship to anywhere that mail is delivered.  U.S. shipping is $4.95 for the first item and $1.00 per additional item.  International shipping is $10.00 for the first item and $1.00 per additional item.  Shipping charges are automatically calculated when you complete your purchase.
-  
   %p
-    We have been offering our products on eBay since December, 2010. You can visit our 
+    We have been offering our products on eBay since December, 2010. You can visit our
     = link_to "eBay Store", "http://stores.ebay.com/Blue-Moon-Harmonicas-LLC"
     where you will find that our customers have expressed their satisfaction by giving us a 100% Positive Feedback Rating and have recently elevated us to a "Top Rated Seller" and "Power Seller" status.
-
-#footer
   = link_to "Contact Us", "mailto:info@bluemoonharmonicas.com", id: 'contact_link'
-
   %p<
     Graphics, styles and code
     %strong &copy; #{Time.now.year} Blue Moon Harmonicas, LLC.
     All rights reserved.
   %p Site built by #{link_to 'Steven Petryk', 'http://stevenpetryk.com'}.
-      
-  = debug params if Rails.env.development?

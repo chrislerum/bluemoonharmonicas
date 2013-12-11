@@ -1,19 +1,15 @@
 !!! 5
-
 %html
   %head
-    %title 
+    %title
       = full_title yield :title
-
     = stylesheet_link_tag    "application", :media => "all"
     /[if lte IE 8]
       = stylesheet_link_tag  "ie", :media => "screen"
     = csrf_meta_tags
-
   %body(class="#{admin? ? 'admin' : ''}")
     #header
       = link_to '', root_path, id:'main'
-
     #navigation
       .wrap
         %ul#navigation_links
@@ -22,31 +18,22 @@
           %li= link_to "Newsletter", newsletter_path
           %li= link_to "FAQs", faqs_path if Faq.all.any?
           %li= link_to "Links", links_path
-
           #control-panel
             %li#cart_link
               = link_to current_cart_path, id: "cart_button" do
                 = image_tag(asset_path('cart.png'))
-
-                = content_tag :span, data: { quantity: current_cart.number_of_items }, id: "number_of_items" do 
+                = content_tag :span, data: { quantity: current_cart.number_of_items }, id: "number_of_items" do
                   = "(#{current_cart.number_of_items})"
-
             #search
               %form(method="get" action="/items")
                 %input(type="search" name="search" placeholder="Search..." value="#{params[:search]}")
-
-
     - if flash.now[:notice]
       #notice.block.black
         = raw flash.now[:notice]
     - if flash.now[:error]
       #error.block.black
         = raw flash.now[:error]
-
-
     = yield
-
-
     #products_dropdown
       %ul#roots
         - Category.roots.each do |category|
@@ -56,7 +43,5 @@
               %ul
                 - category.children.each do |child|
                   %li= link_to child.name, category_list_path(child.id)
-
     = render 'layouts/footer'
-
     = javascript_include_tag "application"

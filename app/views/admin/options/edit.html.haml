@@ -1,17 +1,14 @@
 = render 'index'
-
 #detail-view.panel{"data-option-id" => @option.id}
   = form_for [:admin, @option], remote: true do |f|
     .option
       = f.text_field :title, placeholder: "Item name...", id: "item_name"
       .clear
-
-
       .header
-        %h2 
+        %h2
           Variants
           %em the variations of this particular product and their quantities
-        .clear      
+        .clear
       #values
         %ul
           = f.fields_for :values do |builder|

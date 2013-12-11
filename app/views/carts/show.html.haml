@@ -1,16 +1,12 @@
 -provide :title, 'Cart'
-
 .block.clear
   = render 'cart'
-
 .block.white(style="font-size: 0.8em")
   %h3 Worldwide Shipping
   %p We are happy to ship to anywhere that mail is delivered. U.S. shipping is $4.95 for the first item and $1.00 per additional item. International shipping is $10.00 for the first item and $1.00 per additional item. Shipping charges are automatically calculated when you complete your purchase.
-  
   %p
     %span(style="font-weight: bold") Note:
     Although we are able to calculate the shipping price for your order above, we cannot verify whether it requires domestic or international shipping. As a result, please note that PayPal will not display shipping charges when you click "check out". Instead, you will be returned to this page after signing in to PayPal, at which point we will know your location and be able to give you an exact total before you finalize your order.
-
 - if current_cart.line_items.any?
   #checkout.block.clear
     = link_to image_tag(asset_path 'express_checkout.gif'), express_orders_path, style: 'float: right', method: 'post'
