@@ -20,7 +20,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   resources :orders, except: [:index] do
     post :express, on: :collection
   end
-  
+
   # Generic resources
   resources :users
   resources :line_items
@@ -34,7 +34,6 @@ BlueMoonHarmonicas::Application.routes.draw do
 
   # Named routes
   match 'cart' => 'carts#show', as: :current_cart
-  # match 'orders/new_express' => 'orders#express', as: :express_new_order
 
   match 'categories/:category_id' => 'Items#index', as: :category_list
 
@@ -43,20 +42,6 @@ BlueMoonHarmonicas::Application.routes.draw do
 
   match '/login' => 'Sessions#new', as: :login
   match '/register' => 'Users#new', as: :registration
+  match '/logout' => 'sessions#destroy', as: :logout
 
-  namespace :admin do
-    root to: 'Items#index'
-
-    resources :categories do
-      post :sort, on: :collection
-    end
-
-    resources :items do
-      resources :photos do
-        post :sort, on: :collection
-      end
-    end
-
-    resources :options
-  end
 end

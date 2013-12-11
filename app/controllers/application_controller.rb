@@ -31,12 +31,12 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = @current_cart.id
     @current_cart
   end
-  
+
   def admin?
     (current_user && current_user.admin)
   end
 
-  def current_user 
+  def current_user
     if session[:current_user]
       User.try(:find, session[:current_user])
     else

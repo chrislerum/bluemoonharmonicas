@@ -137,16 +137,13 @@ Category.create(name: "Harmonica Skinz")
 ["Pre-War Marine Band 1896", 74.95],
 ["Suzuki Manji", 0],
 ["Suzuki SUB-30", 149.95]].each do |item|
-  Item.create(name: item[0], price: item[0], category_id: complete.id, description: "Dummy description")
+  i = Item.create(name: item[0], price: item[0], description: "Dummy description")
+  i.categories << complete
 end
 
 ### Default users
 
-User.create(email: 'petryk.steven@gmail.com', name: 'Steven Petryk', password: '7ujmko098', password_confirmation: '7ujmko098').promote_to_admin
-User.create(email: 'thalchak@tampabay.rr.com', name: 'Tom Halchak', password: 'bmh2588uf', password_confirmation: 'bmh2588uf').promote_to_admin
-AdminUser.create(email: 'petryk.steven@gmail.com', password: '7ujmko098')
-AdminUser.create(email: 'thalchak@tampabay.rr.com', password: 'bmh2588uf')
+User.create(email: 'chris.lerum@gmail.com', name: 'Chris Lerum', password: 'urururyt', password_confirmation: 'urururyt').promote_to_admin
 
-# TODO delete this
 Cart.create
 Variant.update_all(quantity: 10)
