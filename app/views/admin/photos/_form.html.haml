@@ -1,4 +1,0 @@
-#new-photo
-  = form_for [:admin, item, photo], remote: true do |f|
-    = hidden_field_tag :item_ids
-    = f.text_field :href, placeholder: "Photobucket URL"

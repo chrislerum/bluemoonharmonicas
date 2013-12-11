@@ -1,7 +1,0 @@
-.new-item
-  = form_for [:admin, item], remote: true do |f|
-    = f.text_field :name, placeholder: "Name"
-    = f.text_field :price, placeholder: "Price"
-    = f.text_field :description, placeholder: "Description"
-    = f.collection_select :category_ids, :category_ids, Category.all, :id, :name
-  .clear
