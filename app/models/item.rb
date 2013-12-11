@@ -41,7 +41,7 @@ class Item < ActiveRecord::Base
   def parallel_items
     harp_model_id.present? ? Item.where(harp_model_id: harp_model_id) : Item.where(id: -1)
   end
-  
+
   def load_photos(string)
     new_photos = string.split("\n").map! do |line|
       {src: line.split(' ')[0], href: line.split(' ')[1]}
