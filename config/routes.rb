@@ -1,5 +1,5 @@
 BlueMoonHarmonicas::Application.routes.draw do
-  root :to => 'Static#home'
+  root :to => 'static#home'
 
   # Item with nested, sortable photos
   resources :items do
@@ -26,22 +26,21 @@ BlueMoonHarmonicas::Application.routes.draw do
   resources :line_items
   resource :session
 
-  # Static pages
-  match '/newsletter' => 'Static#newsletter', as: :newsletter
-  match '/about' => 'Static#about', as: :about
+  # static pages
+  match '/newsletter' => 'static#newsletter', as: :newsletter
+  match '/about' => 'static#about', as: :about
 
   resources :products, controller: 'items' # FIXME this resource is unnecessary
 
   # Named routes
   match 'cart' => 'carts#show', as: :current_cart
 
-  match 'categories/:category_id' => 'Items#index', as: :category_list
+  match 'categories/:category_id' => 'items#index', as: :category_list
 
-  match 'account' => 'Users#show', as: :account, id: 'current'
-  match 'account/edit' => 'Users#edit', as: :edit_account, id: 'current'
+  match 'account' => 'users#show', as: :account, id: 'current'
+  match 'account/edit' => 'users#edit', as: :edit_account, id: 'current'
 
-  match '/login' => 'Sessions#new', as: :login
-  match '/register' => 'Users#new', as: :registration
+  match '/login' => 'sessions#new', as: :login
+  match '/register' => 'users#new', as: :registration
   match '/logout' => 'sessions#destroy', as: :logout
-
 end

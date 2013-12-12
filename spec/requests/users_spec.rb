@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Users request" do
-  before :each do 
+  before :each do
     @user = FactoryGirl.create(:user)
   end
 
@@ -18,13 +18,13 @@ describe "Users request" do
       page.should have_content user.name
     end
 
-    it "signs out users" do  
+    it "signs out users" do
       visit login_path
       fill_in :email, with: user.email
       fill_in :password, with: user.password
       click_button "Sign In"
 
-      click_link "Sign Out"
+      click_link "Sign out"
       page.should_not have_content "Account"
     end
   end

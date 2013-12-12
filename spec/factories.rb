@@ -12,7 +12,7 @@ FactoryGirl.define do
   end
 
   factory :category do
-    name "Some category bla bla"
+    name "TheCategoryName"
   end
 
   factory :item do
@@ -20,7 +20,6 @@ FactoryGirl.define do
     sequence(:shortname) { |n| "TI#{n}" }
     price 14.95
     description "This is just an items inventory test."
-    category
     manages_inventory false
     quantity 10
   end
@@ -37,7 +36,7 @@ FactoryGirl.define do
 
   factory :variant do
     item
-    option_value  
+    option_value
   end
 
   factory :line_item do
@@ -72,5 +71,10 @@ FactoryGirl.define do
   factory :faq do
     question "Example Question"
     answer "Example answer"
+  end
+
+  factory :snippet do
+    shortcut Faker::Lorem.word
+    text "This is just a snippet. If there's markdown in here, so be it."
   end
 end
