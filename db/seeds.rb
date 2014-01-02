@@ -2,6 +2,8 @@
 
 ### Combs
 
+puts "SEEDS!"
+
 names = [["Wood Hohner Marine Band Harmonica Combs", "Wood Hohner Special 20 Harmonica Combs", "Wood Hohner Golden Melody Harmonica Combs", "Wood Hohner MS-Series Harmonica Combs", "Wood Suzuki (Manji, ProMaster) Harmonica Combs", "Wood Suzuki SUB-30 – BMH30 Harmonica Combs", ],  [ "Acrylic Hohner Marine Band Harmonica Combs", "Acrylic Hohner Special 20 Harmonica Combs", "Acrylic Hohner Golden Melody Harmonica Combs", "Acrylic Hohner MS-Series Harmonica Combs", "Acrylic Suzuki (Manji, ProMaster) Harmonica Combs", "Acrylic Suzuki SUB-30 – BMH30 Harmonica Combs", ],  [ "Aluminum Hohner Marine Band Harmonica Combs", "Aluminum Hohner Special 20 Harmonica Combs", "Aluminum Hohner Golden Melody Harmonica Combs", "Aluminum Hohner MS-Series Harmonica Combs", "Aluminum Suzuki (Manji, ProMaster) Harmonica Combs", "Aluminum Suzuki SUB-30 – BMH30 Harmonica Combs", ],  [ "Solid Surface Hohner Marine Band Harmonica Combs", "Solid Surface Hohner Special 20 Harmonica Combs", "Solid Surface Hohner Golden Melody Harmonica Combs", "Solid Surface Hohner MS-Series Harmonica Combs", "Solid Surface Suzuki (Manji, ProMaster) Harmonica Combs", "Solid Surface Suzuki SUB-30 – BMH30 Harmonica Combs", ],  [ "Fancy Acrylic Hohner Marine Band Harmonica Combs", "Fancy Acrylic Hohner Special 20 Harmonica Combs", "Fancy Acrylic Hohner Golden Melody Harmonica Combs", "Fancy Acrylic Hohner MS-Series Harmonica Combs", "Fancy Acrylic Suzuki (Manji, ProMaster) Harmonica Combs", "Fancy Acrylic Suzuki SUB-30 – BMH30 Harmonica Combs", ],  [ "Kirinite Hohner Marine Band Harmonica Combs", "Kirinite Hohner Special 20 Harmonica Combs", "Kirinite Hohner Golden Melody Harmonica Combs", "Kirinite Hohner MS-Series Harmonica Combs", "Kirinite Suzuki (Manji, ProMaster) Harmonica Combs", "Kirinite Suzuki SUB-30 – BMH30 Harmonica Combs"],  [ "Brass Hohner Marine Band Harmonica Combs", "Brass Hohner Special 20 Harmonica Combs", "Brass Hohner Golden Melody Harmonica Combs", "Brass Hohner MS-Series Harmonica Combs", "Brass Suzuki (Manji, ProMaster) Harmonica Combs", "Brass Suzuki SUB-30 – BMH30 Harmonica Combs"]]
 prices = [24.95, 19.95, 28.95, 25.95, 29.95, 29.95, 42.95]
 combs_sub_categories = %w[Wood Acrylic Aluminum Solid\ Surface Fancy\ Acrylic Kirinite Brass]
@@ -147,3 +149,5 @@ User.create(email: 'chris.lerum@gmail.com', name: 'Chris Lerum', password: 'urur
 
 Cart.create
 Variant.update_all(quantity: 10)
+
+puts "SEEDS DONE!"
