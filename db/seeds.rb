@@ -146,6 +146,7 @@ end
 ### Default users
 
 User.create(email: 'chris.lerum@gmail.com', name: 'Chris Lerum', password: 'urururyt', password_confirmation: 'urururyt').promote_to_admin
+User.create(email: 'thalchak@tampabay.rr.com', name: 'Tom Halchak', password: 'bmh2588uf', password_confirmation: 'bmh2588uf').promote_to_admin
 
 Cart.create
 Variant.update_all(quantity: 10)
