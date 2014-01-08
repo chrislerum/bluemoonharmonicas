@@ -38,3 +38,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'ffaker'
 end
+group :production do
+  gem 'therubyracer'
+end
