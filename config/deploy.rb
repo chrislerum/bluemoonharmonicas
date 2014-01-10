@@ -22,6 +22,7 @@ namespace :deploy do
     end
   end
 
+  after :deploy, 'deploy:restart'
   after :finishing, 'deploy:cleanup'
 
 end
