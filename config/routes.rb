@@ -38,7 +38,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   # Named routes
   match 'cart' => 'carts#show', as: :current_cart
 
-  match 'categories/:category_id' => 'items#index', as: :category_list
+  match 'harp_models/:harp_model_id' => 'items#index', as: :harp_model_list
 
   match 'account' => 'users#show', as: :account, id: 'current'
   match 'account/edit' => 'users#edit', as: :edit_account, id: 'current'

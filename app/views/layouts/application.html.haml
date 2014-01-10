@@ -36,12 +36,8 @@
     = yield
     #products_dropdown
       %ul#roots
-        - Category.roots.each do |category|
-          - unless category.items.empty? and category.children.empty?
-            %li
-              = link_to category.name, category_list_path(category.id)
-              %ul
-                - category.children.each do |child|
-                  %li= link_to child.name, category_list_path(child.id)
+        -HarpModel.all.each do |harp_model|
+          %li
+            = link_to harp_model.name, harp_model_list_path(harp_model.id)
     = render 'layouts/footer'
     = javascript_include_tag "application"

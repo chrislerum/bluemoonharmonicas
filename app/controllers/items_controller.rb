@@ -4,12 +4,8 @@ class ItemsController < ApplicationController
 
   def index
     if params[:search].blank?
-      @category = Category.find(params[:category_id])
-      if @category.children.any?
-        @items = @category.children.map(&:items).flatten
-      else
-        @items = @category.items.order(:quantity)
-      end
+      @harp_model = HarpModel.find(params[:harp_model_id])
+      @items = @harp_model.items.order(:quantity)
       render 'index'
     else
       @items = Item.search(params[:search])

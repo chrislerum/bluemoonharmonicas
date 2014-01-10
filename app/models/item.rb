@@ -2,7 +2,6 @@ class Item < ActiveRecord::Base
   attr_accessible :harp_model_id, :unique, :description, :name, :price, :shortname, :option_ids, :manages_inventory, :quantity, :photos_attributes, :upgradable, :upgrade_price, :variants_attributes
 
   has_and_belongs_to_many :options, after_add: :create_variants
-  has_and_belongs_to_many :categories
   belongs_to :harp_model
   has_many :photos, as: :photographable
   has_many :line_items, as: :purchasable
