@@ -6,7 +6,7 @@ ps xa \
   | grep #{db_name} \
   | grep -v grep \
   | awk '{print $1}' \
-  | xargs kill
+  | sudo xargs kill
 EOF
   puts `#{sh}`
 end
