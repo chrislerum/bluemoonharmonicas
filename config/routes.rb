@@ -1,5 +1,8 @@
 BlueMoonHarmonicas::Application.routes.draw do
   root :to => 'static#home'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
 
   # Item with nested, sortable photos
   resources :items do

@@ -11,7 +11,7 @@ gem 'acts_as_tree_rails3'
 gem 'haml'
 gem 'yaml_db'
 gem 'guard', '~> 1.0.1'
-gem "jquery-rails"
+gem "jquery-rails", "< 3.0.0"
 gem "jquery-ui-rails"
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'activemerchant'
