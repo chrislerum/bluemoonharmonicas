@@ -7,6 +7,7 @@ set :stage, :production
 # unless any hosts have the primary property set.
 role :app, %w{deployer@162.243.206.232:26111}
 #role :web, %w{deploy@example.com}
+role :db, %w{deployer@162.243.206.232:26111}
 #role :db,  %w{deploy@example.com}
 
 # Extended Server Syntax
