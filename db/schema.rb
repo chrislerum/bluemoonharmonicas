@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140113014812) do
+ActiveRecord::Schema.define(:version => 20140113023059) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -68,6 +68,14 @@ ActiveRecord::Schema.define(:version => 20140113014812) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "item_images", :force => true do |t|
+    t.string   "photo"
+    t.integer  "item_id"
+    t.boolean  "main_image", :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
   create_table "items", :force => true do |t|
     t.string  "name"
     t.string  "shortname"
@@ -78,7 +86,6 @@ ActiveRecord::Schema.define(:version => 20140113014812) do
     t.boolean "upgradable"
     t.integer "harp_model_id"
     t.float   "upgrade_price"
-    t.string  "photo"
   end
 
   add_index "items", ["harp_model_id"], :name => "index_items_on_harp_model_id"

@@ -1,8 +1,8 @@
 class Item < ActiveRecord::Base
-  mount_uploader :photo, PhotoUploader
 
-  attr_accessible :photo, :harp_model_id, :unique, :description, :name, :price, :shortname, :option_ids, :manages_inventory, :quantity, :upgradable, :upgrade_price, :variants_attributes
+  attr_accessible :harp_model_id, :unique, :description, :name, :price, :shortname, :option_ids, :manages_inventory, :quantity, :upgradable, :upgrade_price, :variants_attributes
 
+  has_many :item_images
   has_and_belongs_to_many :options, after_add: :create_variants
   belongs_to :harp_model
   has_many :line_items, as: :purchasable
@@ -12,6 +12,10 @@ class Item < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true, numericality: true
+
+  def main_image
+    item_images.where(main_image: true).first
+  end
 
   def unique?
     if !quantity.nil?

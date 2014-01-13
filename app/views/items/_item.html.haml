@@ -1,6 +1,6 @@
 %td
   = link_to item do
-    = image_tag item.photo, width: 250
+    = image_tag item.main_image.photo, width: 250
     %h3
       %span.controls
         = inventory_or_price_string_for(item)
