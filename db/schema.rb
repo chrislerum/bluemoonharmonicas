@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140110190528) do
+ActiveRecord::Schema.define(:version => 20140113014812) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20140110190528) do
     t.boolean "upgradable"
     t.integer "harp_model_id"
     t.float   "upgrade_price"
+    t.string  "photo"
   end
 
   add_index "items", ["harp_model_id"], :name => "index_items_on_harp_model_id"
@@ -157,18 +158,6 @@ ActiveRecord::Schema.define(:version => 20140110190528) do
 
   add_index "orders", ["cart_id"], :name => "index_orders_on_cart_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
-
-  create_table "photos", :force => true do |t|
-    t.string  "caption"
-    t.string  "src"
-    t.string  "href"
-    t.integer "position"
-    t.integer "photographable_id"
-    t.string  "photographable_type"
-  end
-
-  add_index "photos", ["photographable_id"], :name => "index_photos_on_photographable_id"
-  add_index "photos", ["photographable_type"], :name => "index_photos_on_photographable_type"
 
   create_table "snippets", :force => true do |t|
     t.string "shortcut"
