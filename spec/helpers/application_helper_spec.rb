@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe ApplicationHelper do
 
-  describe '#markdown_and_replace' do 
+  describe '#markdown_and_replace' do
     before :each do
-      @snippet = FactoryGirl.create(:snippet, text: 'example')
+      @snippet = create(:snippet, text: 'example')
     end
     context 'with markdown' do
       it "interprets markdown" do

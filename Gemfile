@@ -41,7 +41,6 @@ group :development, :test do
   gem 'guard-rspec', '~> 0.7.3'
   gem 'launchy'
   gem 'database_cleaner'
-  gem 'ffaker'
 end
 group :production do
   gem 'therubyracer'

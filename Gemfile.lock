@@ -144,7 +144,6 @@ GEM
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
     fastercsv (1.5.5)
-    ffaker (1.18.0)
     ffi (1.9.0)
     ffi (1.9.0-x86-mingw32)
     formtastic (2.2.1)
@@ -334,7 +333,6 @@ DEPENDENCIES
   compass-rails
   database_cleaner
   factory_girl_rails
-  ffaker
   guard (~> 1.0.1)
   guard-rspec (~> 0.7.3)
   haml

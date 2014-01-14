@@ -1,7 +1,15 @@
 FactoryGirl.define do
+
+  factory :harp_model do
+  end
+
+  factory :item_image do
+    photo Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/myfiles/test_harp_image.jpg')))
+  end
+
   factory :user do
-    name Faker::Name.name
-    email Faker::Internet.email
+    name "Bob"
+    email "bob@gmail.com"
     password "foopassword"
     password_confirmation { |u| "#{u.password}" }
     admin false
@@ -9,10 +17,6 @@ FactoryGirl.define do
     factory :admin do
       admin true
     end
-  end
-
-  factory :category do
-    name "TheCategoryName"
   end
 
   factory :item do
@@ -49,10 +53,10 @@ FactoryGirl.define do
     express_token SecureRandom.base64
     ip_address '127.0.0.1'
 
-    first_name Faker::Name.first_name
-    last_name Faker::Name.last_name
-    email Faker::Internet.email
-    address Faker::Address.street_address
+    first_name "Bob"
+    last_name "Jenkins"
+    email "Bob@gmail.com"
+    address "111 Hello St."
   end
 
   factory :order_transaction do
@@ -74,7 +78,7 @@ FactoryGirl.define do
   end
 
   factory :snippet do
-    shortcut Faker::Lorem.word
+    shortcut "hello"
     text "This is just a snippet. If there's markdown in here, so be it."
   end
 end
