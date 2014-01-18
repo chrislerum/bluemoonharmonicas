@@ -1,2 +1,2 @@
-= content_tag_for :li, photo do
-  = link_to image_tag(photo.src, width: 120), photo.href
+= content_tag_for :li, item_image do
+  = link_to image_tag(item_image.photo.url, width: 120), item_image.photo.url

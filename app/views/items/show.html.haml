@@ -8,14 +8,11 @@
     = render 'line_items/form'
 
   #product_main_photo
-    = render(@item.photos.first) unless @item.photos.empty?
+    = image_tag(@item.item_images.first.photo)
 
-  %ul#photos(data-id="#{@item.id}" class="#{admin? ? 'admin': ''}")
+  %ul#photos(data-id="#{@item.id}")
     #photos-inner
-      = render partial: 'photos/tile', collection: @item.photos, as: 'photo'
-      - if admin?
-        %li.photo.new
-          = link_to '+', new_item_photo_path(@item), remote: true, id: 'add_photo'
+      = render partial: 'photos/tile', collection: @item.item_images, as: 'item_image'
     .clear
   .clear
 
