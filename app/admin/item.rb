@@ -1,6 +1,7 @@
 ActiveAdmin.register Item do
 
   index do
+    column :id
     column :name, sortable: :name do |item|
       link_to item.name, admin_item_path(item)
     end
