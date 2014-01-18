@@ -11,6 +11,7 @@ gem 'haml'
 gem 'yaml_db'
 gem 'guard', '~> 1.0.1'
 gem "jquery-rails", "< 3.0.0"
+gem 'mini_magick'
 gem "jquery-ui-rails"
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'activemerchant'
