@@ -2,7 +2,6 @@ ActiveAdmin.register Item do
   config.sort_order = "name_asc"
 
   index do
-    column :id
     column :name, sortable: :name do |item|
       link_to item.name, admin_item_path(item)
     end
@@ -33,7 +32,7 @@ ActiveAdmin.register Item do
       panel "Items" do
         table_for item.item_images do
           column do |item_image|
-            image_tag item_image.photo, width: 200, height: 200
+            image_tag item_image.photo.thumb
           end
         end
       end
