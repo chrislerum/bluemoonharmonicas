@@ -3,17 +3,15 @@ class Item < ActiveRecord::Base
   attr_accessible :item_images_attributes, :harp_model_id, :unique, :description, :name, :price, :shortname, :option_ids, :manages_inventory, :quantity, :upgradable, :upgrade_price, :variants_attributes
 
   has_many :item_images
-  accepts_nested_attributes_for :item_images, allow_destroy: true
-
+  has_many :variants
+  has_many :line_items, as: :purchasable
   has_and_belongs_to_many :options, after_add: :create_variants
   belongs_to :harp_model
-  has_many :line_items, as: :purchasable
-  has_many :variants
   accepts_nested_attributes_for :variants
+  accepts_nested_attributes_for :item_images, allow_destroy: true
 
-  validates :name, presence: true
-  validates :harp_model, :description, presence: true
-  validates :price, presence: true, numericality: true
+  validates :name, :harp_model, :description, presence: true
+  validates :quantity, :price, presence: true, numericality: true
 
   #def unique?
     #if !quantity.nil?

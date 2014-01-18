@@ -2,10 +2,13 @@ ActiveAdmin.register Item do
   config.sort_order = "name_asc"
 
   index do
+    config.paginate = false
     column :name, sortable: :name do |item|
       link_to item.name, admin_item_path(item)
     end
-    column :price
+    column "Images" do |item|
+      item.item_images.count.to_s
+    end
     column :quantity
     default_actions
   end
@@ -15,6 +18,7 @@ ActiveAdmin.register Item do
     f.inputs "Item Details" do
       f.input :harp_model
       f.input :name
+      f.input :quantity
       f.input :description
       f.input :price
       f.has_many :item_images do |i|
@@ -29,7 +33,7 @@ ActiveAdmin.register Item do
     attributes_table do
       row :id
       row :name
-      panel "Items" do
+      panel "Images" do
         table_for item.item_images do
           column do |item_image|
             image_tag item_image.photo.thumb
