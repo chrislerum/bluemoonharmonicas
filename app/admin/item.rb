@@ -1,4 +1,5 @@
 ActiveAdmin.register Item do
+  config.sort_order = "name_asc"
 
   index do
     column :id
