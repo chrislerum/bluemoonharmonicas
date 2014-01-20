@@ -2,11 +2,7 @@
 
 = form_for(@line_item, html: {class:'dark', id:'add_to_cart'}) do |f|
   #fields
-    - if @item.upgradable?
-      = upgrade_field_for(@item, :cover_plate)
-      = upgrade_field_for(@item, :comb)
-
-    - if @item.respond_to?(:options) 
+    - if @item.respond_to?(:options)
       - if @item.options.empty?
         %p#remaining
           %span= @item.quantity
@@ -31,8 +27,7 @@
     .field#quantity-field
       = f.label :quantity
       = f.text_field :quantity, id: 'quantity', value: '1', maxlength: '3'
-    = f.hidden_field :purchasable_id, value: @item.id
-    = f.hidden_field :purchasable_type, value: @item.class
+    = f.hidden_field :item_id, value: @item.id
     .field#add-button
       = f.button "Add to Cart", class: 'submit'
 

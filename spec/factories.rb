@@ -12,11 +12,6 @@ FactoryGirl.define do
     email "bob@gmail.com"
     password "foopassword"
     password_confirmation { |u| "#{u.password}" }
-    admin false
-
-    factory :admin do
-      admin true
-    end
   end
 
   factory :item do
@@ -24,23 +19,7 @@ FactoryGirl.define do
     sequence(:shortname) { |n| "TI#{n}" }
     price 14.95
     description "This is just an items inventory test."
-    manages_inventory false
     quantity 10
-  end
-
-  factory :option do
-    title 'Test Option'
-    sentence 'Choose a material'
-  end
-
-  factory :option_value do
-    title 'Test Value'
-    price_diff 0.0
-  end
-
-  factory :variant do
-    item
-    option_value
   end
 
   factory :line_item do
@@ -72,6 +51,7 @@ FactoryGirl.define do
     link "http://stevenpetryk.com"
     description "The best guy I know."
   end
+
   factory :faq do
     question "Example Question"
     answer "Example answer"

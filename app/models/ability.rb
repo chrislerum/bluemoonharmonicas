@@ -10,7 +10,7 @@ class Ability
 
     # Guests and registered users
     else
-      cannot :manage, [Option, Variant, OptionValue, User, Order, Faq, Link]
+      cannot :manage, [User, Order, Faq, Link]
       can :read, Item
       can [:new, :create, :express], Order, user_id: user.try(:id)
     end

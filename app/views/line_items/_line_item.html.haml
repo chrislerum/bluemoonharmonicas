@@ -1,10 +1,6 @@
 %tr(class="#{cycle 'odd', 'even' }")
   %td.left
-    = link_to line_item.purchasable.name, line_item.purchasable
-    - unless line_item.variant.nil?
-      %p.options #{line_item.variant.option.title.titleize}: #{line_item.variant.option_value.title}
-    - line_item.upgrades.each do |upgrade|
-      %p.options= text_for_upgrade(upgrade)
+    = link_to line_item.item.name, line_item.item
     %p.options= special_instructions(line_item)
   %td
     = number_to_currency line_item.unit_price

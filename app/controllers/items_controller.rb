@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @line_item = @item.line_items.new(purchasable: @item)
+    @line_item = @item.line_items.new
   end
 
   def new

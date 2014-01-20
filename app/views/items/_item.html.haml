@@ -6,5 +6,5 @@
       = image_tag 'default_main_image.jpg', width: 250
     %h3
       %span.controls
-        = inventory_or_price_string_for(item)
+        = item.price
       = link_to item.name, item

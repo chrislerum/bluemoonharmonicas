@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   def create
     @line_item = LineItem.new(params[:line_item])
-    @line_item.unit_price = @line_item.purchasable.price
+    @line_item.unit_price = @line_item.item.price
     @line_item.cart = current_cart
 
     if @line_item.save
@@ -21,11 +21,11 @@ class LineItemsController < ApplicationController
 
   def destroy
     @line_item = LineItem.find(params[:id])
-    unless @line_item.cart.purchased_at 
-      if @line_item.destroy 
+    unless @line_item.cart.purchased_at
+      if @line_item.destroy
         respond_to do |format|
           format.html { redirect_to current_cart_url }
-          format.js 
+          format.js
         end
       end
     end

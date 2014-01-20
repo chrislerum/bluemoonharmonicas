@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114125228) do
+ActiveRecord::Schema.define(:version => 20140119044006) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -82,36 +82,21 @@ ActiveRecord::Schema.define(:version => 20140114125228) do
     t.text    "description"
     t.float   "price"
     t.integer "quantity"
-    t.boolean "manages_inventory"
-    t.boolean "upgradable"
     t.integer "harp_model_id"
-    t.float   "upgrade_price"
   end
 
   add_index "items", ["harp_model_id"], :name => "index_items_on_harp_model_id"
-
-  create_table "items_options", :id => false, :force => true do |t|
-    t.integer "item_id"
-    t.integer "option_id"
-  end
-
-  add_index "items_options", ["item_id", "option_id"], :name => "index_items_options_on_item_id_and_option_id"
 
   create_table "line_items", :force => true do |t|
     t.float   "unit_price"
     t.integer "cart_id"
     t.integer "quantity"
-    t.integer "variant_id"
-    t.integer "purchasable_id"
-    t.string  "purchasable_type"
     t.string  "description"
     t.text    "special_instructions"
+    t.integer "item_id"
   end
 
   add_index "line_items", ["cart_id"], :name => "index_line_items_on_cart_id"
-  add_index "line_items", ["purchasable_id"], :name => "index_line_items_on_purchasable_id"
-  add_index "line_items", ["purchasable_type"], :name => "index_line_items_on_purchasable_type"
-  add_index "line_items", ["variant_id"], :name => "index_line_items_on_variant_id"
 
   create_table "links", :force => true do |t|
     t.string  "title"
@@ -121,19 +106,6 @@ ActiveRecord::Schema.define(:version => 20140114125228) do
   end
 
   add_index "links", ["position"], :name => "index_links_on_position"
-
-  create_table "option_values", :force => true do |t|
-    t.string  "title"
-    t.float   "price_diff"
-    t.integer "option_id"
-  end
-
-  add_index "option_values", ["option_id"], :name => "index_option_values_on_option_id"
-
-  create_table "options", :force => true do |t|
-    t.string "title"
-    t.string "sentence"
-  end
 
   create_table "order_transactions", :force => true do |t|
     t.integer  "order_id"
@@ -171,17 +143,6 @@ ActiveRecord::Schema.define(:version => 20140114125228) do
     t.text   "text"
   end
 
-  create_table "upgrades", :force => true do |t|
-    t.integer  "variant_id"
-    t.integer  "line_item_id"
-    t.string   "upgrade_type"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  add_index "upgrades", ["line_item_id"], :name => "index_upgrades_on_line_item_id"
-  add_index "upgrades", ["variant_id"], :name => "index_upgrades_on_variant_id"
-
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -190,13 +151,5 @@ ActiveRecord::Schema.define(:version => 20140114125228) do
     t.datetime "updated_at",      :null => false
     t.boolean  "admin"
   end
-
-  create_table "variants", :force => true do |t|
-    t.integer "option_value_id"
-    t.integer "item_id"
-    t.integer "quantity"
-  end
-
-  add_index "variants", ["option_value_id"], :name => "index_variants_on_option_value_id"
 
 end
