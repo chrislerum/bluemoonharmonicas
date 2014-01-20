@@ -29,10 +29,14 @@ ActiveAdmin.register Item do
     f.actions
   end
 
-  show do |x|
+  show do
     attributes_table do
-      row :id
       row :name
+      row :quantity
+      row :description
+      row :price do |item|
+        number_to_currency(item.price)
+      end
       panel "Images" do
         table_for item.item_images do
           column do |item_image|
