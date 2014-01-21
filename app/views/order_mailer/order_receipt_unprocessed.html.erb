@@ -74,11 +74,11 @@
 
     </style>
   </head>
-  
+
   <body>
-    
+
     <%= link_to image_tag('http://i.imgur.com/C98W7nI.png'), 'http://bluemoonharmonicas.com' %>
-    
+
     <table>
       <tr>
         <td><h1>Your order (#<%= @order.id %>)</h1></td>
@@ -98,19 +98,12 @@
               <% @order.cart.line_items.each do |line_item| %>
                 <tr>
                   <td>
-                    <% if line_item.purchasable.photos.any? %>
-                      <img src="<%= line_item.purchasable.photos.first.src %>" width="50" style="border-radius: 4px" alt="<%= line_item.purchasable.name %>" />
+                    <% if line_item.item.item_images.any? %>
+                      <img src="<%= line_item.item.item_images.first %>" width="50" style="border-radius: 4px" alt="<%= line_item.item.name %>" />
                     <% end %>
                   </td>
                   <td>
-                    <h4><%= line_item.purchasable.name %></h4>
-                    <% if line_item.variant %>
-                      <p><%= "#{line_item.variant.option.title.titleize}: #{line_item.variant.option_value.title}" %></p>
-                    <% end %>
-
-                    <% line_item.upgrades.each do |upgrade| %>
-                      <p><%= "#{upgrade.variant.option.title}: #{upgrade.variant.option_value.title}" %></p>
-                    <% end %>
+                    <h4><%= line_item.item.name %></h4>
                   </td>
                   <td><%= number_to_currency line_item.unit_price %></td>
                   <td class="quantity"><%= line_item.quantity %></td>
@@ -119,8 +112,8 @@
             </table>
           </div>
         </td>
-      </tr>  
-      
+      </tr>
+
       <tr>
         <td>
           <div class="rounded_box" id="address">
@@ -138,7 +131,7 @@
           <p class="total">Shipping price: <%= number_to_currency @order.shipping_price %></p>
           <p class="total">Total: <%= number_to_currency @order.price_with_shipping %></p>
         </td>
-      </tr>    
+      </tr>
 
       <tr>
         <td>
@@ -151,8 +144,8 @@
           </div>
         </td>
       </tr>
-    
+
     </table>
-    
+
   </body>
 </html>

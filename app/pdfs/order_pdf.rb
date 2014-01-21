@@ -21,8 +21,8 @@ class OrderPdf < Prawn::Document
 
   def header
     position_y = cursor
-    image "#{Rails.root}/app/assets/images/bmh_print.png", position: :left, 
-                                                           width: 600, 
+    image "#{Rails.root}/app/assets/images/bmh_print.png", position: :left,
+                                                           width: 600,
                                                            at: [-120, cursor+40]
     move_down 120
   end
@@ -84,34 +84,19 @@ your purchase price and shipping cost.
   end
 
   def line_item_rows
-    [["Item", "Unit Price", "Quantity", "Total Price"]] + 
+    [["Item", "Unit Price", "Quantity", "Total Price"]] +
       @order.cart.line_items.map do |line_item|
         [line_item_name(line_item),
-         price(line_item.unit_price), 
-         line_item.quantity, 
+         price(line_item.unit_price),
+         line_item.quantity,
          price(line_item.total_price)]
       end
   end
 
   def line_item_name(line_item)
-    ["<b>#{line_item.purchasable.name}</b>",
-     "<font size='10'>#{line_item_variants(line_item)}</font>",
-     "<font size='10'>#{line_item_upgrades(line_item)}</font>",
+    ["<b>#{line_item.item.name}</b>",
      "<font size='10'>Special instructions: #{line_item.special_instructions || "--"}</font>"].join("\n")
   end
-
-  def line_item_variants(line_item)
-    if line_item.variant
-      "#{line_item.variant.option.title.humanize}: #{line_item.variant.option_value.title}"
-    end
-  end
-
-  def line_item_upgrades(line_item)
-    line_item.upgrades.map do |upgrade|
-      "#{upgrade.upgrade_type.humanize} upgrade: #{upgrade.variant.option_value.title}"
-    end.join("\n")
-  end
-
 
   def order_total
     text "<b>Shipping:</b> #{price(@order.shipping_price)}", inline_format: true, align: :right
