@@ -2,13 +2,9 @@
 <html>
   <head>
     <title>Blue Moon Harmonicas Receipt</title>
-    
   </head>
-  
   <body style="background: black url(http://i.imgur.com/rr706Ar.png) repeat-x bottom left;color: white;font: 1em Arial;text-align: center;">
-    
     <%= link_to image_tag('http://i.imgur.com/C98W7nI.png'), 'http://bluemoonharmonicas.com' %>
-    
     <table style="text-align: left;width: 800px;margin: 0 auto;">
       <tr>
         <td><h1 style="font-style: normal;border-bottom: 1px solid #666;margin: 0;">Your order (#<%= @order.id %>)</h1></td>
@@ -28,21 +24,12 @@
               <% @order.cart.line_items.each do |line_item| %>
                 <tr>
                   <td style="padding: 6px 0px;">
-                    <% if line_item.purchasable.photos.any? %>
-                      <img src="<%= line_item.purchasable.photos.first.src %>" width="50" style="border-radius: 4px;margin-right: 3px;" alt="<%= line_item.purchasable.name %>">
+                    <% if line_item.item.item_images.any? %>
+                      <img src="<%= line_item.item.item_images.first %>" width="50" style="border-radius: 4px;margin-right: 3px;" alt="<%= line_item.item.name %>">
                     <% end %>
                   </td>
                   <td style="padding: 6px 0px;">
-                    <h4 style="margin: 0;"><%= line_item.purchasable.name %></h4>
-                    <% if line_item.variant %>
-                      <p style="margin: 0;"><%= "#{line_item.variant.option.title.titleize}: #{line_item.variant.option_value.title}" %></p>
-                    <% end %>
-
-                    <% line_item.upgrades.each do |upgrade| %>
-                      <p style="margin: 0;"><%= "#{upgrade.upgrade_type.humanize} upgrade: #{upgrade.variant.option.title}: #{upgrade.variant.option_value.title}" %></p>
-                    <% end %>
-
-
+                    <h4 style="margin: 0;"><%= line_item.item.name %></h4>
                     <% if line_item.special_instructions.present? %>
                       <p style="margin: 0;"><%= "Special instructions: #{line_item.special_instructions}" %></p>
                     <% end %>
@@ -54,8 +41,7 @@
             </table>
           </div>
         </td>
-      </tr>  
-      
+      </tr>
       <tr>
         <td>
           <div class="rounded_box" id="address" style="border-radius: 10px;background: rgba(0,0,0,.3);padding: 10px;margin: 20px 0 10px 0;width: 200px;">
@@ -66,28 +52,22 @@
               <p><%= @order.address['Street2'] %></p>
             <% end %>
             <p><%= @order.address['CityName']%>, <%= @order.address['StateOrProvince'] %> <%= @order.address['PostalCode'] %></p>
-
           </div>
         </td>
         <td>
           <p class="total" style="margin: 0;font-weight: bold;text-align: right;font-size: 1.1em;">Shipping price: <%= number_to_currency @order.shipping_price %></p>
           <p class="total" style="margin: 0;font-weight: bold;text-align: right;font-size: 1.1em;">Total: <%= number_to_currency @order.price_with_shipping %></p>
         </td>
-      </tr>    
-
+      </tr>
       <tr>
         <td>
           <div class="rounded_box" id="footer" style="border-radius: 10px;background: rgba(0,0,0,.3);padding: 10px;margin: 20px 0 10px 0;">
             <h3 style="margin: 0;">100% Money Back Guarantee</h3>
-
             <p style="margin: 0;margin-bottom: 6px;">We stand behind every product we offer with a 100% Unconditional Money Back Guarantee. If you are not completely satisfied with your purchase, we will gladly refund your money including shipping expenses.</p>
-
             <p style="margin: 0;margin-bottom: 6px;">We have been offering our products on eBay since December, 2010. You can visit our <a href="http://stores.ebay.com/Blue-Moon-Harmonicas-LLC" style="color: white;">eBay Store</a> where you will find that our customers have expressed their satisfaction by giving us a 100% Positive Feedback Rating and have recently elevated us to a "Top Rated Seller" and "Power Seller" status.</p>
           </div>
         </td>
       </tr>
-    
     </table>
-    
   </body>
 </html>

@@ -4,7 +4,7 @@
   #product_information
     #title_pricetag
       %h1= @item.name
-      %h2= number_to_currency @item.price, unit: "$"
+      %h2= number_to_currency @item.price
     = render 'line_items/form'
 
   #product_main_photo

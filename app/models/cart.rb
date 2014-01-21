@@ -16,17 +16,13 @@ class Cart < ActiveRecord::Base
     line_items.to_a.sum(&:quantity)
   end
 
-  #def update_inventory
-    #for line_item in line_items
-      #line_item.upgrades.each { |upgrade| upgrade.variant.remove(line_item.quantity) }
+  def update_inventory
+    for line_item in line_items
+      line_item.item.quantity -= line_item.quantity
+      line_item.item.save!
+    end
+  end
 
-      #if line_item.purchasable.manages_inventory?
-        #line_item.purchasable.quantity -= line_item.quantity
-        #line_item.purchasable.save!
-      #else
-        #line_item.variant.quantity -= line_item.quantity
-        #line_item.variant.save!
-      #end
-    #end
-  #end
+  def check_inventory
+  end
 end

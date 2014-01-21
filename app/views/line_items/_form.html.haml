@@ -1,29 +1,11 @@
-- @item = @bundle unless @bundle.nil?
-
 = form_for(@line_item, html: {class:'dark', id:'add_to_cart'}) do |f|
   #fields
-    - if @item.respond_to?(:options)
-      - if @item.options.empty?
-        %p#remaining
-          %span= @item.quantity
-          in stock
-      -elsif @item.options.any?
-        - @item.options.find_each do |option|
-
-          .field#quantityController
-            %label= process_option_title option.sentence
-
-            %p.select= option.values.first.title
-            %select(name="line_item[variant_id]")
-              - option.values.each do |option_value|
-                - unless option_value.variants.where(item_id: @item.id).empty?
-                  %option{:disabled => remaining(@item, option_value) < 1 ? "disabled" : nil, :value =>"#{variant_id_for @item, option_value}", "data-quantity" => "#{remaining(@item, option_value)}"}
-                    = option_value.title
-                    = remaining_in_words @item, option_value
-
+    %span= @item.quantity
+    in stock
+    .field#quantityController
+      %select(name="line_item")
   #quantity_and_add
-    - if @item.respond_to?(:manages_inventory?) and @item.manages_inventory?
-      #manages_inventory(data-amount="#{@item.quantity}")
+    #manages_inventory(data-amount="#{@item.quantity}")
     .field#quantity-field
       = f.label :quantity
       = f.text_field :quantity, id: 'quantity', value: '1', maxlength: '3'

@@ -5,10 +5,9 @@ class LineItemsController < ApplicationController
     @line_item.cart = current_cart
 
     if @line_item.save
-      undo_link = view_context.link_to "Undo", line_item_path(@line_item), method: :delete
       respond_to do |format|
         format.html do
-          flash[:notice] = "Item has been added to your cart. #{undo_link}."
+          flash[:notice] = "The item has been added to your cart."
           redirect_to current_cart_url
         end
         format.js
