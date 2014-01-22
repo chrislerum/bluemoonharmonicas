@@ -1,8 +1,8 @@
 ActiveAdmin.register Item do
   config.sort_order = "name_asc"
+  config.paginate = false
 
   index do
-    config.paginate = false
     column :name, sortable: :name do |item|
       link_to item.name, admin_item_path(item)
     end
