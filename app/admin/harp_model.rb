@@ -1,7 +1,7 @@
 ActiveAdmin.register HarpModel do
+  config.paginate = false
 
   index do
-    config.paginate = false
     column :name, sortable: :name do |harp_model|
       link_to harp_model.name, admin_harp_model_path(harp_model)
     end

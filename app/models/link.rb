@@ -1,5 +1,5 @@
 class Link < ActiveRecord::Base
-  attr_accessible :description, :link, :title
+  attr_accessible :description, :link, :title, :position
 
   validates_presence_of :title, :link, :description
 

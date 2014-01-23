@@ -7,7 +7,7 @@
     /[if lte IE 8]
       = stylesheet_link_tag "ie", :media => "screen"
     = csrf_meta_tags
-  %body(class="#{admin? ? 'admin' : ''}")
+  %body
     #header
       = link_to '', root_path, id:'main'
     #navigation
@@ -16,7 +16,6 @@
           %li= link_to "Home", root_path
           %li= link_to "Products", '#', id:"products_link"
           %li= link_to "Newsletter", newsletter_path
-          %li= link_to "FAQs", faqs_path if Faq.all.any?
           %li= link_to "Links", links_path
           #control-panel
             %li#cart_link
