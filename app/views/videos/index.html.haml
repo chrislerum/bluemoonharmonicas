@@ -1,0 +1,10 @@
+.block.clear
+  %h1
+    Videos
+  -@videos.each do |video|
+    .block.clear
+    .video=video.snippet.html_safe
+    .video_text
+      %span.name=video.name
+      %br
+      %span.description=video.description

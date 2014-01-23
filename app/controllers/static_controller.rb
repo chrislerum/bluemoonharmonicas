@@ -7,7 +7,4 @@ class StaticController < ApplicationController
 
   def newsletter
   end
-
-  def video
-  end
 end
