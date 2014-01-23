@@ -31,6 +31,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   # static pages
   match '/newsletter' => 'static#newsletter', as: :newsletter
   match '/about' => 'static#about', as: :about
+  match '/video' => 'static#video', as: :video
 
   resources :products, controller: 'items' # FIXME this resource is unnecessary
 
