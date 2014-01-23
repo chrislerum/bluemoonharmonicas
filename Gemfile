@@ -16,10 +16,10 @@ gem "jquery-ui-rails"
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'activemerchant'
 gem 'activeadmin'
-gem 'capistrano', git: 'git@github.com:capistrano/capistrano.git'
+gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
-gem 'capistrano-rvm', github: 'capistrano/rvm'
+gem 'capistrano-rvm'#, github: 'capistrano/rvm'
 gem 'roadie'
 gem 'carrierwave'
 group :assets do

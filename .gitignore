@@ -1,6 +1,5 @@
 /.bundle
 /push*.dat
-*.psd
 .bundle
 db/*.sqlite3
 log/*.log
