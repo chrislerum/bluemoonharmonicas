@@ -1,22 +1,19 @@
 BlueMoonHarmonicas::Application.routes.draw do
   resources :videos
 
-
   resources :item_images
-
 
   root :to => 'static#home'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-
-  # Item with nested, sortable photos
   resources :items
 
   # Links and FAQs are sortable
   resources :links, except: [:show] do
     put :sort, on: :collection
   end
+
   resources :faqs, except: [:show] do
     put :sort, on: :collection
   end

@@ -1,6 +1,9 @@
 ActiveAdmin.register Item do
   config.sort_order = "name_asc"
-  config.paginate = false
+
+  action_item only:[:show] do
+    link_to "New", new_admin_item_path
+  end
 
   index do
     column :name, sortable: :name do |item|
@@ -23,6 +26,7 @@ ActiveAdmin.register Item do
       f.input :price
       f.has_many :item_images do |i|
         i.input :photo, :as => :file, :label => "Image", hint: image_tag(i.object.photo.thumb.url)
+        i.input :display_order
         i.input :_destroy, as: :boolean, label: 'Remove'
       end
     end
@@ -38,10 +42,11 @@ ActiveAdmin.register Item do
         number_to_currency(item.price)
       end
       panel "Images" do
-        table_for item.item_images do
+        table_for item.item_images.order(:display_order) do
           column do |item_image|
             image_tag item_image.photo.thumb
           end
+          column :display_order
         end
       end
     end

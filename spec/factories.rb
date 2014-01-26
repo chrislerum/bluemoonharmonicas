@@ -23,8 +23,8 @@ FactoryGirl.define do
   end
 
   factory :line_item do
-    quantity 1
-    unit_price 14.95
+    quantity 7
+    unit_price 14.85
   end
 
   factory :order do

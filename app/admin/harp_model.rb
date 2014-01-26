@@ -1,5 +1,4 @@
 ActiveAdmin.register HarpModel do
-  config.paginate = false
 
   index do
     column :name, sortable: :name do |harp_model|
