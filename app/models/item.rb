@@ -1,13 +1,15 @@
 class Item < ActiveRecord::Base
 
-  attr_accessible :item_images_attributes, :harp_model_id, :description, :name, :price, :shortname, :quantity
+  attr_accessible :key_id, :color_id, :item_images_attributes, :harp_model_id, :description, :name, :price, :shortname, :quantity
 
   has_many :item_images
   has_many :line_items
   belongs_to :harp_model
+  belongs_to :color
+  belongs_to :key
   accepts_nested_attributes_for :item_images, allow_destroy: true
 
-  validates :name, :harp_model, :description, presence: true
+  validates :key, :color, :name, :harp_model, :description, presence: true
   validates :quantity, :price, presence: true, numericality: true
 
   def self.search(query)

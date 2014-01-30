@@ -1,0 +1,2 @@
+class KeysController < ApplicationController
+end

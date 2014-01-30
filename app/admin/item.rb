@@ -9,6 +9,12 @@ ActiveAdmin.register Item do
     column :name, sortable: :name do |item|
       link_to item.name, admin_item_path(item)
     end
+    column "Color" do |item|
+      item.color && item.color.name
+    end
+    column "Key" do |item|
+      item.key && item.key.name
+    end
     column "Images" do |item|
       item.item_images.count.to_s
     end
@@ -20,6 +26,8 @@ ActiveAdmin.register Item do
     f.semantic_errors *f.object.errors.keys
     f.inputs "Item Details" do
       f.input :harp_model
+      f.input :color
+      f.input :key
       f.input :name
       f.input :quantity
       f.input :description
@@ -36,6 +44,12 @@ ActiveAdmin.register Item do
   show do
     attributes_table do
       row :name
+      row :color do |item|
+        item.color && item.color.name
+      end
+      row :key do |item|
+        item.key && item.key.name
+      end
       row :quantity
       row :description
       row :price do |item|

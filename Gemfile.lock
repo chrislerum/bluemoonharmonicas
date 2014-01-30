@@ -62,9 +62,6 @@ GEM
     awesome_print (1.2.0)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
-    better_errors (1.0.1)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bourbon (3.1.8)
@@ -101,7 +98,6 @@ GEM
       railties (>= 3.0)
       sass-rails (>= 3.2)
     chunky_png (1.2.8)
-    coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -312,7 +308,6 @@ DEPENDENCIES
   acts_as_tree_rails3
   awesome_print
   bcrypt-ruby (~> 3.0.0)
-  better_errors
   binding_of_caller
   cancan
   capistrano

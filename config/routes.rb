@@ -1,4 +1,10 @@
 BlueMoonHarmonicas::Application.routes.draw do
+  resources :keys
+
+
+  resources :colors
+
+
   resources :videos
 
   resources :item_images
