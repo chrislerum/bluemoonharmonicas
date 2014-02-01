@@ -10,6 +10,8 @@
  *
  *= require_self
  *= require_tree ./front
- *= require chosen
  *= require videos
  */
+
+
+/*= require chosen
