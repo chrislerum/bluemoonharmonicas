@@ -4,14 +4,14 @@
   %h1
     - if @user == current_user
       My Account
-      %em 
+      %em
         (#{@user.name})
     - else
       = @user.name
       %em
         = raw @user.admin? ? '&ndash; Administrator' : ''
 
-.block.white
+.block.white.css3
   %h2
     Account Details
     %span.controls
@@ -33,7 +33,7 @@
   .clear
 
 
-.block.white#order_list
+.block.white.css3#order_list
   %h2 Recent Orders
 
   - if @orders.any?
@@ -41,7 +41,7 @@
       %tbody
         = render @orders
   - else
-    %p 
+    %p
       - if @user == current_user
         You haven't placed any yet! What a shame.
       - else

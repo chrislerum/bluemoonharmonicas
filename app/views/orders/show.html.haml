@@ -4,14 +4,14 @@
   %h1
     = link_to 'Your Account', account_path
     &raquo; Order ##{@order.id}
-    %span.controls 
+    %span.controls
       - if admin?
-        Placed by #{link_to @order.user.name, @order.user} on 
+        Placed by #{link_to @order.user.name, @order.user} on
       -else
         Placed on
       #{@order.created_at.strftime('%B %d, %Y at %I:%M %p')}.
 
-.block.white#order_info
+.block.white.css3#order_info
   %h2 Payment &amp; Shipping Information
   #tiles
     .tile#address

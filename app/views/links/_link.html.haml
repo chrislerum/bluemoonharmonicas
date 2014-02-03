@@ -1,4 +1,4 @@
 = content_tag_for :li, link do
-  .block.white
+  .block.white.css3{style: 'padding: 10px;'}
     %h2= link_to link.title, link.link, target: "_blank"
     = markdown_and_replace link.description
