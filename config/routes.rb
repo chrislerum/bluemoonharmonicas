@@ -1,27 +1,22 @@
 BlueMoonHarmonicas::Application.routes.draw do
-  resources :material_types
-
-
-  resources :brands
-
-
-  resources :harmonicas
-
-
-  resources :powder_coated_covers
-
-
-  resources :combs
-
-
   root :to => 'static#home'
+  resources :harmonica_images
+  resources :powder_coated_cover_images
+  resources :material_types
+  resources :brands
+  resources :harmonicas
+  resources :powder_coated_covers
+  resources :combs
   resources :keys
   resources :colors
   resources :videos
-  resources :item_images
+  resources :comb_images
+  resources :harmonica_images
+  resources :powder_coated_cover_images
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :items
+
   resources :links, except: [:show] do
     put :sort, on: :collection
   end

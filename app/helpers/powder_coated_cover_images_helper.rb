@@ -1,0 +1,2 @@
+module PowderCoatedCoverImagesHelper
+end

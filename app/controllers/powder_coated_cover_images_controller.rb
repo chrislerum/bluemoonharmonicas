@@ -1,0 +1,2 @@
+class PowderCoatedCoverImagesController < ApplicationController
+end

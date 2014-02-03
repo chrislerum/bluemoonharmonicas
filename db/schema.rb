@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140203064645) do
+ActiveRecord::Schema.define(:version => 20140203154954) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,6 +65,14 @@ ActiveRecord::Schema.define(:version => 20140203064645) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "comb_images", :force => true do |t|
+    t.string   "photo"
+    t.integer  "comb_id"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "display_order", :default => 0
+  end
+
   create_table "combs", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -86,6 +94,14 @@ ActiveRecord::Schema.define(:version => 20140203064645) do
 
   add_index "faqs", ["position"], :name => "index_faqs_on_position"
 
+  create_table "harmonica_images", :force => true do |t|
+    t.string   "photo"
+    t.integer  "harmonica_id"
+    t.integer  "display_order", :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
   create_table "harmonicas", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -96,24 +112,6 @@ ActiveRecord::Schema.define(:version => 20140203064645) do
     t.datetime "updated_at",                 :null => false
     t.integer  "price",       :default => 0, :null => false
     t.integer  "quantity",    :default => 0, :null => false
-  end
-
-  create_table "item_images", :force => true do |t|
-    t.string   "photo"
-    t.integer  "item_id"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.integer  "display_order", :default => 0
-  end
-
-  create_table "items", :force => true do |t|
-    t.string  "name"
-    t.string  "shortname"
-    t.text    "description"
-    t.float   "price"
-    t.integer "quantity"
-    t.integer "color_id"
-    t.integer "key_id"
   end
 
   create_table "keys", :force => true do |t|
@@ -184,6 +182,14 @@ ActiveRecord::Schema.define(:version => 20140203064645) do
 
   add_index "orders", ["cart_id"], :name => "index_orders_on_cart_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
+
+  create_table "powder_coated_cover_images", :force => true do |t|
+    t.string   "photo"
+    t.integer  "powder_coated_cover_id"
+    t.integer  "display_order",          :default => 0
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
 
   create_table "powder_coated_covers", :force => true do |t|
     t.string   "name"

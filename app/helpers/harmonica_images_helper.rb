@@ -1,0 +1,2 @@
+module HarmonicaImagesHelper
+end

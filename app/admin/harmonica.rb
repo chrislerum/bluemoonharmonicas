@@ -1,29 +1,26 @@
-ActiveAdmin.register Comb do
+ActiveAdmin.register Harmonica do
 
   config.sort_order = "name_asc"
 
   action_item only:[:show] do
-    link_to "New", new_admin_comb_path
+    link_to "New", new_admin_harmonica_path
   end
 
   index do
-    column :name, sortable: :name do |comb|
-      link_to comb.name, admin_comb_path(comb)
+    column :name, sortable: :name do |harmonica|
+      link_to harmonica.name, admin_harmonica_path(harmonica)
     end
-    column "Brand" do |comb|
-      comb.brand.name
+    column "Brand" do |harmonica|
+      harmonica.brand.name
     end
-    column "Model" do |comb|
-      comb.model.name
+    column "Model" do |harmonica|
+      harmonica.model.name
     end
-    column "Material Type" do |comb|
-      comb.material_type.name
+    column "Key" do |harmonica|
+      harmonica.key.name
     end
-    column "Color" do |comb|
-      comb.color.name
-    end
-    column "Images" do |comb|
-      comb.comb_images.count.to_s
+    column "Images" do |harmonica|
+      harmonica.harmonica_images.count.to_s
     end
     column :quantity
     default_actions
@@ -31,16 +28,15 @@ ActiveAdmin.register Comb do
 
   form html: {multipart: true} do |f|
     f.semantic_errors *f.object.errors.keys
-    f.inputs "Comb Details" do
+    f.inputs "Harmonica Details" do
       f.input :name
       f.input :description
       f.input :price
       f.input :quantity
       f.input :brand
       f.input :model
-      f.input :material_type
-      f.input :color
-      f.has_many :comb_images do |i|
+      f.input :key
+      f.has_many :harmonica_images do |i|
         i.input :photo, :as => :file, :label => "Image", hint: image_tag(i.object.photo.thumb.url)
         i.input :display_order
         i.input :_destroy, as: :boolean, label: 'Remove'
@@ -57,20 +53,17 @@ ActiveAdmin.register Comb do
         number_to_currency(item.price)
       end
       row :quantity
-      row :brand do |comb|
-        comb.brand.name
+      row :brand do |harmonica|
+        harmonica.brand.name
       end
-      row :model do |comb|
-        comb.model.name
+      row :model do |harmonica|
+        harmonica.model.name
       end
-      row :material_type do |comb|
-        comb.material_type.name
-      end
-      row :color do |item|
-        item.color.name
+      row :key do |harmonica|
+        harmonica.key.name
       end
       panel "Images" do
-        table_for comb.comb_images.order(:display_order) do
+        table_for harmonica.harmonica_images.order(:display_order) do
           column do |image|
             image_tag image.photo.thumb
           end
@@ -79,4 +72,5 @@ ActiveAdmin.register Comb do
       end
     end
   end
+
 end

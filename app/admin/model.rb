@@ -4,10 +4,9 @@ ActiveAdmin.register Model do
     column :name, sortable: :name do |model|
       link_to model.name, admin_model_path(model)
     end
-    column :brand
-    column "Items" do |model|
-      model.items.count.to_s
-    end
+    #column "Items" do |model|
+      #model.items.count.to_s
+    #end
     default_actions
   end
 
