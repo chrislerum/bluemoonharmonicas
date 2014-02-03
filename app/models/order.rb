@@ -2,13 +2,13 @@ class Order < ActiveRecord::Base
   belongs_to :cart
   belongs_to :user
   has_many :transactions, class_name: 'OrderTransaction'
-  attr_accessible :express_payer_id, 
-                  :express_token, 
-                  :ip_address, 
-                  
-                  :first_name, 
-                  :last_name, 
-                  :email, 
+  attr_accessible :express_payer_id,
+                  :express_token,
+                  :ip_address,
+
+                  :first_name,
+                  :last_name,
+                  :email,
                   :address
   attr_accessor :total
 
@@ -22,7 +22,7 @@ class Order < ActiveRecord::Base
     cart.total_price + shipping_price
   end
 
-  def order_number 
+  def order_number
     id + 4123
   end
 
