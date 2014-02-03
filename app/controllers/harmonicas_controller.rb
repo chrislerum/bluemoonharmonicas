@@ -1,0 +1,2 @@
+class HarmonicasController < ApplicationController
+end

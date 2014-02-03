@@ -1,0 +1,2 @@
+module PowderCoatedCoversHelper
+end

@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :harp_model do
+  factory :model do
   end
 
   factory :item_image do

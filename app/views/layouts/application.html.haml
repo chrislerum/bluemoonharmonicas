@@ -36,8 +36,8 @@
     = yield
     #products_dropdown
       %ul#roots
-        -HarpModel.all.each do |harp_model|
+        -Model.all.each do |model|
           %li
-            = link_to harp_model.name, harp_model_list_path(harp_model.id)
+            = link_to model.name, model_list_path(model.id)
     = render 'layouts/footer'
     = javascript_include_tag "application"

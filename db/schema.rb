@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140130023923) do
+ActiveRecord::Schema.define(:version => 20140203064645) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,12 @@ ActiveRecord::Schema.define(:version => 20140130023923) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "brands", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "carts", :force => true do |t|
     t.datetime "purchased_at"
     t.datetime "created_at",   :null => false
@@ -59,6 +65,19 @@ ActiveRecord::Schema.define(:version => 20140130023923) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "combs", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "brand_id"
+    t.integer  "model_id"
+    t.integer  "material_type_id"
+    t.integer  "color_id"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "price",            :default => 0, :null => false
+    t.integer  "quantity",         :default => 0, :null => false
+  end
+
   create_table "faqs", :force => true do |t|
     t.text    "question"
     t.text    "answer"
@@ -67,11 +86,16 @@ ActiveRecord::Schema.define(:version => 20140130023923) do
 
   add_index "faqs", ["position"], :name => "index_faqs_on_position"
 
-  create_table "harp_models", :force => true do |t|
+  create_table "harmonicas", :force => true do |t|
     t.string   "name"
-    t.string   "brand"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "description"
+    t.integer  "brand_id"
+    t.integer  "model_id"
+    t.integer  "key_id"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "price",       :default => 0, :null => false
+    t.integer  "quantity",    :default => 0, :null => false
   end
 
   create_table "item_images", :force => true do |t|
@@ -88,12 +112,9 @@ ActiveRecord::Schema.define(:version => 20140130023923) do
     t.text    "description"
     t.float   "price"
     t.integer "quantity"
-    t.integer "harp_model_id"
     t.integer "color_id"
     t.integer "key_id"
   end
-
-  add_index "items", ["harp_model_id"], :name => "index_items_on_harp_model_id"
 
   create_table "keys", :force => true do |t|
     t.string   "name"
@@ -120,6 +141,18 @@ ActiveRecord::Schema.define(:version => 20140130023923) do
   end
 
   add_index "links", ["position"], :name => "index_links_on_position"
+
+  create_table "material_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "models", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "order_transactions", :force => true do |t|
     t.integer  "order_id"
@@ -151,6 +184,18 @@ ActiveRecord::Schema.define(:version => 20140130023923) do
 
   add_index "orders", ["cart_id"], :name => "index_orders_on_cart_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
+
+  create_table "powder_coated_covers", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "brand_id"
+    t.integer  "model_id"
+    t.integer  "color_id"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "price",       :default => 0, :null => false
+    t.integer  "quantity",    :default => 0, :null => false
+  end
 
   create_table "snippets", :force => true do |t|
     t.string "shortcut"

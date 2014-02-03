@@ -25,7 +25,7 @@ ActiveAdmin.register Item do
   form html: {multipart: true} do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs "Item Details" do
-      f.input :harp_model
+      f.input :model
       f.input :color
       f.input :key
       f.input :name

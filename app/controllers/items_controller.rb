@@ -4,8 +4,8 @@ class ItemsController < ApplicationController
 
   def index
     if params[:search].blank?
-      @harp_model = HarpModel.find(params[:harp_model_id])
-      @items = @harp_model.items.order(:quantity)
+      @model = Model.find(params[:model_id])
+      @items = @model.items.order(:quantity)
       render 'index'
     else
       @items = Item.search(params[:search])

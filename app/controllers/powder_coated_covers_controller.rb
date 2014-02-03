@@ -1,0 +1,2 @@
+class PowderCoatedCoversController < ApplicationController
+end
