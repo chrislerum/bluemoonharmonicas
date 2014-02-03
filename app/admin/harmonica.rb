@@ -11,13 +11,13 @@ ActiveAdmin.register Harmonica do
       link_to harmonica.name, admin_harmonica_path(harmonica)
     end
     column "Brand" do |harmonica|
-      harmonica.brand.name
+      harmonica.brand && harmonica.brand.name
     end
     column "Model" do |harmonica|
-      harmonica.model.name
+      harmonica.model && harmonica.model.name
     end
     column "Key" do |harmonica|
-      harmonica.key.name
+      harmonica.key && harmonica.key.name
     end
     column "Images" do |harmonica|
       harmonica.harmonica_images.count.to_s

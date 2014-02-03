@@ -11,13 +11,13 @@ ActiveAdmin.register PowderCoatedCover do
       link_to powder_coated_cover.name, admin_powder_coated_cover_path(powder_coated_cover)
     end
     column "Brand" do |powder_coated_cover|
-      powder_coated_cover.brand.name
+      powder_coated_cover.brand && powder_coated_cover.brand.name
     end
     column "Model" do |powder_coated_cover|
-      powder_coated_cover.model.name
+      powder_coated_cover.model && powder_coated_cover.model.name
     end
     column "Color" do |powder_coated_cover|
-      powder_coated_cover.color.name
+      powder_coated_cover.color && powder_coated_cover.color.name
     end
     column "Images" do |powder_coated_cover|
       powder_coated_cover.powder_coated_cover_images.count.to_s

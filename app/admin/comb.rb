@@ -11,16 +11,16 @@ ActiveAdmin.register Comb do
       link_to comb.name, admin_comb_path(comb)
     end
     column "Brand" do |comb|
-      comb.brand.name
+      comb.brand && comb.brand.name
     end
     column "Model" do |comb|
-      comb.model.name
+      comb.model && comb.model.name
     end
     column "Material Type" do |comb|
-      comb.material_type.name
+      comb.material_type && comb.material_type.name
     end
     column "Color" do |comb|
-      comb.color.name
+      comb.color && comb.color.name
     end
     column "Images" do |comb|
       comb.comb_images.count.to_s
