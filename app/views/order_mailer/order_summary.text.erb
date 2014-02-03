@@ -6,7 +6,7 @@ A packing slip is attached, but here's the order at-a-glance:
 
 <% @order.cart.line_items.each do |line_item| %>
   -----
-  <%= "#{line_item.item.name} #{number_to_currency line_item.unit_price}" %>
+  <%= "#{line_item.comb.name} #{number_to_currency line_item.unit_price}" %>
     <% if line_item.special_instructions.present? %>
       <%= "Special instructions: #{line_item.special_instructions}" %>
     <% end %>

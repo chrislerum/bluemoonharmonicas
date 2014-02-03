@@ -33,7 +33,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   match '/about' => 'static#about', as: :about
   resources :products, controller: 'items' # FIXME this resource is unnecessary
   match 'cart' => 'carts#show', as: :current_cart
-  match 'models/:model_id' => 'items#index', as: :model_list
+  match 'models/:model_id' => 'combs#index', as: :model_list
   match 'account' => 'users#show', as: :account, id: 'current'
   match 'account/edit' => 'users#edit', as: :edit_account, id: 'current'
   match '/login' => 'sessions#new', as: :login

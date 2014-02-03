@@ -1,15 +1,15 @@
 = form_for(@line_item, html: {class:'dark', id:'add_to_cart'}) do |f|
   #fields
-    %span= @item.quantity
+    %span= @comb.quantity
     in stock
     .field#quantityController
       %select(name="line_item")
   #quantity_and_add
-    #manages_inventory(data-amount="#{@item.quantity}")
+    #manages_inventory(data-amount="#{@comb.quantity}")
     .field#quantity-field
       = f.label :quantity
       = f.text_field :quantity, id: 'quantity', value: '1', maxlength: '3'
-    = f.hidden_field :item_id, value: @item.id
+    = f.hidden_field :comb_id, value: @comb.id
     .field#add-button
       = f.button "Add to Cart", class: 'submit'
 

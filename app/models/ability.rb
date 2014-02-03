@@ -6,6 +6,7 @@ class Ability
 
     cannot :manage, [User, Order, Faq, Link]
     can :read, Item
+    can :read, Comb
     can [:new, :create, :express], Order, user_id: user.try(:id)
 
     if user.id

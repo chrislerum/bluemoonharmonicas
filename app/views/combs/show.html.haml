@@ -1,0 +1,20 @@
+- provide :title, @comb.name
+
+#main_product.photos
+  #product_information
+    #title_pricetag
+      %h1= @comb.name
+      %h2= number_to_currency @comb.price
+    = render 'line_items/form'
+
+  #product_main_photo
+    = image_tag(@comb.comb_images.first.photo)
+
+  %ul#photos(data-id="#{@comb.id}")
+    #photos-inner
+      = render partial: 'photos/tile', collection: @comb.comb_images, as: 'comb_image'
+    .clear
+  .clear
+
+.block.white.css3#description{style: 'padding: 10px;'}
+  = markdown_and_replace @comb.description

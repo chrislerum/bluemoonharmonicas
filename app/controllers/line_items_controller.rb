@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   def create
     @line_item = LineItem.new(params[:line_item])
-    @line_item.unit_price = @line_item.item.price
+    @line_item.unit_price = @line_item.comb.price
     @line_item.cart = current_cart
 
     if @line_item.save

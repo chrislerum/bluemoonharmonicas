@@ -1,6 +1,6 @@
 %tr(class="#{cycle 'odd', 'even' }")
   %td.left
-    = link_to line_item.item.name, line_item.item
+    = link_to line_item.comb.name, line_item.comb
     %p.options= special_instructions(line_item)
   %td
     = number_to_currency line_item.unit_price

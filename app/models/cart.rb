@@ -18,8 +18,8 @@ class Cart < ActiveRecord::Base
 
   def update_inventory
     for line_item in line_items
-      line_item.item.quantity -= line_item.quantity
-      line_item.item.save!
+      line_item.comb.quantity -= line_item.quantity
+      line_item.comb.save!
     end
   end
 
