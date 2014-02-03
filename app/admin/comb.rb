@@ -25,6 +25,9 @@ ActiveAdmin.register Comb do
     column "Images" do |comb|
       comb.comb_images.count.to_s
     end
+    column "Price" do |comb|
+      number_to_currency(comb.price)
+    end
     column :quantity
     default_actions
   end
@@ -53,8 +56,8 @@ ActiveAdmin.register Comb do
     attributes_table do
       row :name
       row :description
-      row :price do |item|
-        number_to_currency(item.price)
+      row :price do |comb|
+        number_to_currency(comb.price)
       end
       row :quantity
       row :brand do |comb|
@@ -66,8 +69,8 @@ ActiveAdmin.register Comb do
       row :material_type do |comb|
         comb.material_type.name
       end
-      row :color do |item|
-        item.color.name
+      row :color do |comb|
+        comb.color.name
       end
       panel "Images" do
         table_for comb.comb_images.order(:display_order) do

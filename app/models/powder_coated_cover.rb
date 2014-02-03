@@ -1,4 +1,5 @@
 class PowderCoatedCover < ActiveRecord::Base
+  monetize :price_cents
   attr_accessible :price, :quantity, :brand_id, :color_id, :description, :model_id, :name, :powder_coated_cover_images_attributes
   belongs_to :brand
   belongs_to :model

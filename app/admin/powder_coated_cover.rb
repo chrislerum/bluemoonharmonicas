@@ -22,6 +22,9 @@ ActiveAdmin.register PowderCoatedCover do
     column "Images" do |powder_coated_cover|
       powder_coated_cover.powder_coated_cover_images.count.to_s
     end
+    column "Price" do |powder_coated_cover_images|
+      number_to_currency(powder_coated_cover_images.price)
+    end
     column :quantity
     default_actions
   end
@@ -49,8 +52,8 @@ ActiveAdmin.register PowderCoatedCover do
     attributes_table do
       row :name
       row :description
-      row :price do |item|
-        number_to_currency(item.price)
+      row :price do |powder_coated_cover|
+        number_to_currency(powder_coated_cover.price)
       end
       row :quantity
       row :brand do |powder_coated_cover|

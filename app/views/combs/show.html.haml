@@ -8,7 +8,10 @@
     = render 'line_items/form'
 
   #product_main_photo
-    = image_tag(@comb.comb_images.first.photo)
+    - if @comb.comb_images.any?
+      = image_tag(@comb.comb_images.first.photo)
+    - else
+      = image_tag("default_main_image.jpg")
 
   %ul#photos(data-id="#{@comb.id}")
     #photos-inner

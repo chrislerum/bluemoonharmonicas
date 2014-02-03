@@ -22,6 +22,9 @@ ActiveAdmin.register Harmonica do
     column "Images" do |harmonica|
       harmonica.harmonica_images.count.to_s
     end
+    column "Price" do |harmonica|
+      number_to_currency(harmonica.price)
+    end
     column :quantity
     default_actions
   end
@@ -49,8 +52,8 @@ ActiveAdmin.register Harmonica do
     attributes_table do
       row :name
       row :description
-      row :price do |item|
-        number_to_currency(item.price)
+      row :price do |harmonica|
+        number_to_currency(harmonica.price)
       end
       row :quantity
       row :brand do |harmonica|

@@ -1,4 +1,5 @@
 class Harmonica < ActiveRecord::Base
+  monetize :price_cents
   attr_accessible :brand_id, :description, :key_id, :model_id, :name, :price, :quantity, :harmonica_images_attributes
   belongs_to :brand
   belongs_to :model
