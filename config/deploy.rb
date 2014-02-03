@@ -2,8 +2,8 @@ set :application, 'bluemoonharmonicas'
 set :repo_url, 'git@github.com:chrislerum/bluemoonharmonicas.git'
 set :deploy_to, '/home/deployer/sites/bluemoonharmonicas'
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
-#set :assets_roles, [:app]
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/assets vendor/bundle public/system public/uploads}
+set :assets_roles, [:app]
 
 namespace :deploy do
 
