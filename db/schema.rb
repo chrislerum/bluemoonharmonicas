@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140203230949) do
+ActiveRecord::Schema.define(:version => 20140204152413) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -126,7 +126,8 @@ ActiveRecord::Schema.define(:version => 20140203230949) do
     t.integer "quantity"
     t.string  "description"
     t.text    "special_instructions"
-    t.integer "comb_id"
+    t.integer "purchasable_id"
+    t.string  "purchasable_type"
   end
 
   add_index "line_items", ["cart_id"], :name => "index_line_items_on_cart_id"

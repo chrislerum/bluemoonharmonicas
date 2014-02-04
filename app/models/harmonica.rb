@@ -5,6 +5,7 @@ class Harmonica < ActiveRecord::Base
   belongs_to :model
   belongs_to :key
   has_many :harmonica_images
+  has_many :line_items, as: :purchasable
   accepts_nested_attributes_for :harmonica_images, allow_destroy: true
   validates :price, :quantity, :name, :description, :brand_id, :model_id, :key_id, presence: true
   validates :price, :quantity, numericality: true

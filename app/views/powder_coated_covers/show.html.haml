@@ -1,0 +1,23 @@
+- provide :title, @powder_coated_cover.name
+
+#main_product.photos
+  #product_information
+    #title_pricetag
+      %h1= @powder_coated_cover.name
+      %h2= number_to_currency @powder_coated_cover.price
+    = render 'line_items/form'
+
+  #product_main_photo
+    - if @powder_coated_cover.powder_coated_cover_images.any?
+      = image_tag(@powder_coated_cover.powder_coated_cover_images.first.photo)
+    - else
+      = image_tag("default_main_image.jpg")
+
+  %ul#photos(data-id="#{@powder_coated_cover.id}")
+    #photos-inner
+      = render partial: 'photos/tile', collection: @powder_coated_cover.powder_coated_cover_images, as: 'powder_coated_cover_image'
+    .clear
+  .clear
+
+.block.white.css3#description{style: 'padding: 10px;'}
+  = markdown_and_replace @powder_coated_cover.description

@@ -94,7 +94,7 @@ your purchase price and shipping cost.
   end
 
   def line_item_name(line_item)
-    ["<b>#{line_item.comb.name}</b>",
+    ["<b>#{line_item.purchasable.name}</b>",
      "<font size='10'>Special instructions: #{line_item.special_instructions || "--"}</font>"].join("\n")
   end
 

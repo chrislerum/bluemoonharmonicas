@@ -1,0 +1,23 @@
+- provide :title, @harmonica.name
+
+#main_product.photos
+  #product_information
+    #title_pricetag
+      %h1= @harmonica.name
+      %h2= number_to_currency @harmonica.price
+    = render 'line_items/form'
+
+  #product_main_photo
+    - if @harmonica.harmonica_images.any?
+      = image_tag(@harmonica.harmonica_images.first.photo)
+    - else
+      = image_tag("default_main_image.jpg")
+
+  %ul#photos(data-id="#{@harmonica.id}")
+    #photos-inner
+      = render partial: 'photos/tile', collection: @harmonica.harmonica_images, as: 'harmonica_image'
+    .clear
+  .clear
+
+.block.white.css3#description{style: 'padding: 10px;'}
+  = markdown_and_replace @harmonica.description

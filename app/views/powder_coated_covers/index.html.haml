@@ -1,0 +1,12 @@
+- provide :title, @model.name
+
+#products.block.clear
+  %h1= @model.name
+  %table#results
+    - rows = @powder_coated_covers.each_slice(4).to_a
+    - rows.each do |row|
+      %tr
+        - row.each do |powder_coated_cover|
+          = render powder_coated_cover
+
+  .clear

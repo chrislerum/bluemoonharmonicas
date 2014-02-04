@@ -36,8 +36,23 @@
     = yield
     #products_dropdown
       %ul#roots
-        -Model.all.each do |model|
-          %li
-            = link_to model.name, model_list_path(model.id)
+        %li
+          Combs
+          %ul
+            -Model.all.each do |model|
+              %li
+                = link_to model.name, combs_model_list_path(model.id)
+        %li
+          Harmonicas
+          %ul
+            -Model.all.each do |model|
+              %li
+                = link_to model.name, harmonicas_model_list_path(model.id)
+        %li
+          Powder Coated Covers
+          %ul
+            -Model.all.each do |model|
+              %li
+                = link_to model.name, powder_coated_covers_model_list_path(model.id)
     = render 'layouts/footer'
     = javascript_include_tag "application"

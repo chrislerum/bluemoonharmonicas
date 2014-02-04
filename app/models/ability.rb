@@ -6,6 +6,8 @@ class Ability
 
     cannot :manage, [User, Order, Faq, Link]
     can :read, Comb
+    can :read, Harmonica
+    can :read, PowderCoatedCover
     can [:new, :create, :express], Order, user_id: user.try(:id)
 
     if user.id

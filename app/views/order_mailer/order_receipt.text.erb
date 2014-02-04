@@ -12,7 +12,7 @@ Your Order (#<%= @order.id %>)
 
 <% @order.cart.line_items.each do |line_item| %>
   -----
-  <%= "#{line_item.comb.name} #{number_to_currency line_item.unit_price}" %>
+  <%= "#{line_item.purchasable.name} #{number_to_currency line_item.unit_price}" %>
     <%= "Quantity: #{line_item.quantity}" %>
   -----
 <% end %>

@@ -17,19 +17,19 @@
           <div class="rounded_box" style="border-radius: 10px;background: rgba(0,0,0,.3);padding: 10px;margin: 20px 0 10px 0;">
             <table width="100%">
               <tr>
-                <th colspan="2">Comb</th>
+                <th colspan="2">Product</th>
                 <th>Price</th>
                 <th class="quantity" style="text-align: center;">Quantity</th>
               </tr>
               <% @order.cart.line_items.each do |line_item| %>
                 <tr>
                   <td style="padding: 6px 0px;">
-                    <% if line_item.comb.comb_images.any? %>
-                      <img src="<%= line_item.comb.comb_images.first %>" width="50" style="border-radius: 4px;margin-right: 3px;" alt="<%= line_item.comb.name %>">
-                    <% end %>
+                    <%#<% if line_item.purchasable.purchasable_images.any? %>%>
+                      <%#<img src="<%= line_item.purchasable.purchasable_images.first %>" width="50" style="border-radius: 4px;margin-right: 3px;" alt="<%= line_item.purchasable.name %>">%>
+                    <%#<% end %>%>
                   </td>
                   <td style="padding: 6px 0px;">
-                    <h4 style="margin: 0;"><%= line_item.comb.name %></h4>
+                    <h4 style="margin: 0;"><%= line_item.purchasable.name %></h4>
                     <% if line_item.special_instructions.present? %>
                       <p style="margin: 0;"><%= "Special instructions: #{line_item.special_instructions}" %></p>
                     <% end %>

@@ -1,0 +1,10 @@
+%td
+  = link_to harmonica do
+    - if harmonica.harmonica_images.first
+      = image_tag harmonica.harmonica_images.first.photo, width: 250
+    - else
+      = image_tag 'default_main_image.jpg', width: 250
+    %h3
+      %span.controls
+        = humanized_money_with_symbol harmonica.price
+      = link_to harmonica.name, harmonica

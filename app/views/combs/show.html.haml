@@ -6,7 +6,6 @@
       %h1= @comb.name
       %h2= number_to_currency @comb.price
     = render 'line_items/form'
-
   #product_main_photo
     - if @comb.comb_images.any?
       = image_tag(@comb.comb_images.first.photo)

@@ -1,8 +1,9 @@
 class LineItem < ActiveRecord::Base
-  belongs_to :cart
-  belongs_to :comb
 
-  attr_accessible :quantity, :cart, :cart_id, :special_instructions, :description, :comb_id
+  belongs_to :cart
+  belongs_to :purchasable, polymorphic: true
+
+  attr_accessible :quantity, :cart, :cart_id, :special_instructions, :description, :comb_id, :harmonica_id, :powder_coated_cover_id, :purchasable_id, :purchasable_type
 
   validates :unit_price, presence: true, numericality: true
   validates :cart_id, presence: true
@@ -32,11 +33,11 @@ class LineItem < ActiveRecord::Base
   end
 
   def amount_in_stock
-    Comb.find(comb_id).quantity
+    self.purchasable.class.find(purchasable_id).quantity
   end
 
   def combine_if_duplicate
-    duplicate = self.cart.line_items.find_by_comb_id(comb_id)
+    duplicate = self.cart.line_items.find_by_purchasable_id_and_purchasable_type(purchasable_id, purchasable_type)
     if duplicate && duplicate != self
       write_attribute(:quantity, quantity + duplicate.quantity)
       duplicate.destroy
