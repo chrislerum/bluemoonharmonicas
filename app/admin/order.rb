@@ -6,7 +6,7 @@ ActiveAdmin.register Order do
     column :last_name
     column :email
     column "# Items" do |order|
-      order.cart.line_items.any? && order.cart.line_items.count.to_s
+      order.cart && order.cart.line_items.count.to_s
     end
     default_actions
   end
