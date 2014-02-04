@@ -1,4 +1,7 @@
 BlueMoonHarmonicas::Application.routes.draw do
+  resources :custom_htmls
+
+
   root :to => 'static#home'
   resources :harmonica_images
   resources :powder_coated_cover_images

@@ -1,0 +1,2 @@
+class CustomHtmLsController < ApplicationController
+end

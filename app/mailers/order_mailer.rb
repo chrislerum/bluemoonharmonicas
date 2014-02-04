@@ -12,6 +12,6 @@ class OrderMailer < ActionMailer::Base
 
     attachments["Invoice \##{order.id}.pdf"] = OrderPdf.new(order, view_context).render
 
-    mail(to: %w[harpcombs@yahoo.com petryk.steven@gmail.com], subject:"BMH Order \##{order.id}")
+    mail(to: %w[harpcombs@yahoo.com chris.lerum@gmail.com], subject:"BMH Order \##{order.id}")
   end
 end
