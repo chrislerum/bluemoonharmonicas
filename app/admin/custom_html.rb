@@ -1,4 +1,5 @@
 ActiveAdmin.register CustomHtml do
+  menu parent: "Miscellaneous"
   show do
     attributes_table do
       row :content do |custom_html|
