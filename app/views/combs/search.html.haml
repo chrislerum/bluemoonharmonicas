@@ -2,13 +2,13 @@
   %h1 Search results for "#{params[:search]}"
 
   %table#results
-    - if @items.empty?
-      %p No items were found.
+    - if @combs.empty?
+      %p No combs were found.
     %table#results
-      - rows = @items.each_slice(4).to_a
+      - rows = @combs.each_slice(4).to_a
       - rows.each do |row|
         %tr
-          - row.each do |item|
-            = render item
+          - row.each do |comb|
+            = render comb
 
     .clear

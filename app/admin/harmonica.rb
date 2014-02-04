@@ -23,7 +23,7 @@ ActiveAdmin.register Harmonica do
       harmonica.harmonica_images.count.to_s
     end
     column "Price" do |harmonica|
-      number_to_currency(harmonica.price)
+      humanized_money_with_symbol harmonica.price
     end
     column :quantity
     default_actions
@@ -53,7 +53,7 @@ ActiveAdmin.register Harmonica do
       row :name
       row :description
       row :price do |harmonica|
-        number_to_currency(harmonica.price)
+        humanized_money_with_symbol harmonica.price
       end
       row :quantity
       row :brand do |harmonica|

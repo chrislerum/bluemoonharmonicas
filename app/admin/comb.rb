@@ -26,7 +26,7 @@ ActiveAdmin.register Comb do
       comb.comb_images.count.to_s
     end
     column "Price" do |comb|
-      number_to_currency(comb.price)
+      humanized_money_with_symbol comb.price
     end
     column :quantity
     default_actions
@@ -57,7 +57,7 @@ ActiveAdmin.register Comb do
       row :name
       row :description
       row :price do |comb|
-        number_to_currency(comb.price)
+        humanized_money_with_symbol comb.price
       end
       row :quantity
       row :brand do |comb|
