@@ -1,5 +1,7 @@
 class Model < ActiveRecord::Base
-  attr_accessible :brand, :name
+  attr_accessible :name
   has_many :combs
-  validates :name, presence: true
+  has_many :harmonicas
+  has_many :powder_coated_covers
+  validates :name, presence: true, uniqueness: true
 end

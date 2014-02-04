@@ -1,4 +1,5 @@
 ActiveAdmin.register Model do
+  menu parent: "Product Attributes"
 
   index do
     column :name, sortable: :name do |model|
@@ -6,6 +7,12 @@ ActiveAdmin.register Model do
     end
     column "Combs" do |model|
       model.combs.count.to_s
+    end
+    column "Harmonicas" do |model|
+      model.harmonicas.count.to_s
+    end
+    column "Powder Coated Covers" do |model|
+      model.powder_coated_covers.count.to_s
     end
     default_actions
   end

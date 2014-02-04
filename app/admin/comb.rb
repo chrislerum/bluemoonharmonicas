@@ -1,4 +1,5 @@
 ActiveAdmin.register Comb do
+  menu parent: "Products"
 
   config.sort_order = "name_asc"
 

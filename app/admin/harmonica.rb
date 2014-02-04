@@ -1,4 +1,5 @@
 ActiveAdmin.register Harmonica do
+  menu parent: "Products"
 
   config.sort_order = "name_asc"
 
