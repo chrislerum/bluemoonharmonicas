@@ -1,4 +1,5 @@
 ActiveAdmin.register Key do
+  config.sort_order = "name_asc"
   menu parent: "Product Attributes"
 
   index do
