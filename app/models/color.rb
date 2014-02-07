@@ -3,4 +3,5 @@ class Color < ActiveRecord::Base
   has_many :combs
   has_many :powder_coated_covers
   validates :name, presence: true, uniqueness: true
+  default_scope order 'name ASC'
 end
