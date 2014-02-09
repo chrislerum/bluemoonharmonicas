@@ -2,6 +2,8 @@ class SearchController < ApplicationController
 
   def results
     @combs = Comb.search(params[:search])
-    render 'search'
+    @harmonicas = Harmonica.search(params[:search])
+    @powder_coated_covers = PowderCoatedCover.search(params[:search])
+    render 'results'
   end
 end

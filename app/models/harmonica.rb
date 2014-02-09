@@ -10,4 +10,16 @@ class Harmonica < ActiveRecord::Base
   validates :price, :quantity, :name, :description, :brand_id, :model_id, :key_id, presence: true
   validates :price, :quantity, numericality: true
   validates :name, uniqueness: true
+
+  def self.search(query)
+    if query.present?
+      rank = <<-RANK
+        ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
+        ts_rank(to_tsvector(description), plainto_tsquery(#{sanitize(query)}))
+      RANK
+      where("name @@ :q or description @@ :q", q: query).order("#{rank} desc")
+    else
+      scoped
+    end
+  end
 end

@@ -1,0 +1,32 @@
+#products.block.clear
+  %h1 Search results for "#{params[:search]}"
+
+  %table#results
+    - if @combs.empty?
+      %p No combs were found.
+    %table#results
+      - rows = @combs.each_slice(4).to_a
+      - rows.each do |row|
+        %tr
+          - row.each do |comb|
+            = render comb
+  %table#results
+    - if @harmonicas.empty?
+      %p No harmonicas were found.
+    %table#results
+      - rows = @harmonicas.each_slice(4).to_a
+      - rows.each do |row|
+        %tr
+          - row.each do |harmonica|
+            = render harmonica
+  %table#results
+    - if @powder_coated_covers.empty?
+      %p No powder coated covers were found.
+    %table#results
+      - rows = @powder_coated_covers.each_slice(4).to_a
+      - rows.each do |row|
+        %tr
+          - row.each do |powder_coated_cover|
+            = render powder_coated_cover
+
+    .clear
