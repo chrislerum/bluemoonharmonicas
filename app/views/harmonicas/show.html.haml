@@ -15,7 +15,7 @@
 
   %ul#photos(data-id="#{@harmonica.id}")
     #photos-inner
-      = render partial: 'photos/tile', collection: @harmonica.harmonica_images, as: 'harmonica_image'
+      = render partial: 'photos/harmonica_tile', collection: @harmonica.harmonica_images, as: 'harmonica_image'
     .clear
   .clear
 

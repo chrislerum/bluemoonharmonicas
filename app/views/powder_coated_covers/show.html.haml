@@ -15,7 +15,7 @@
 
   %ul#photos(data-id="#{@powder_coated_cover.id}")
     #photos-inner
-      = render partial: 'photos/tile', collection: @powder_coated_cover.powder_coated_cover_images, as: 'powder_coated_cover_image'
+      = render partial: 'photos/powder_coated_cover_tile', collection: @powder_coated_cover.powder_coated_cover_images, as: 'powder_coated_cover_image'
     .clear
   .clear
 

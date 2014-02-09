@@ -14,7 +14,7 @@
 
   %ul#photos(data-id="#{@comb.id}")
     #photos-inner
-      = render partial: 'photos/tile', collection: @comb.comb_images, as: 'comb_image'
+      = render partial: 'photos/comb_tile', collection: @comb.comb_images, as: 'comb_image'
     .clear
   .clear
 
