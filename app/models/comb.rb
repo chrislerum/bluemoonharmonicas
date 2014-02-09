@@ -12,4 +12,16 @@ class Comb < ActiveRecord::Base
   validates :price_cents, :quantity, :name, :description, :brand_id, :model_id, :material_type_id, :color_id, presence: true
   validates :price_cents, :quantity, numericality: true
   validates :name, uniqueness: true
+
+  def self.search(query)
+    if query.present?
+      rank = <<-RANK
+        ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
+        ts_rank(to_tsvector(description), plainto_tsquery(#{sanitize(query)}))
+      RANK
+      where("name @@ :q or description @@ :q", q: query).order("#{rank} desc")
+    else
+      scoped
+    end
+  end
 end
