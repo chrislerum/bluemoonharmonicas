@@ -44,4 +44,5 @@ BlueMoonHarmonicas::Application.routes.draw do
   match '/login' => 'sessions#new', as: :login
   match '/register' => 'users#new', as: :registration
   match '/logout' => 'sessions#destroy', as: :logout
+  match '/search_results' => 'search#results', as: :search_results
 end

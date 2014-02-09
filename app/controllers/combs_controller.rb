@@ -8,8 +8,7 @@ class CombsController < ApplicationController
       @combs = @model.combs.order(:quantity)
       render 'index'
     else
-      @combs = Comb.search(params[:search])
-      render 'search'
+      redirect_to search_results_path
     end
   end
 
