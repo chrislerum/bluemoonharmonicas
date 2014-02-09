@@ -11,4 +11,5 @@ class Comb < ActiveRecord::Base
   accepts_nested_attributes_for :comb_images, allow_destroy: true
   validates :price_cents, :quantity, :name, :description, :brand_id, :model_id, :material_type_id, :color_id, presence: true
   validates :price_cents, :quantity, numericality: true
+  validates :name, uniqueness: true
 end

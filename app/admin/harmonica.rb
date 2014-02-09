@@ -77,4 +77,23 @@ ActiveAdmin.register Harmonica do
     end
   end
 
+  action_item :only => :show do
+    link_to "New based on this", special_new_admin_harmonica_path(harmonica)
+  end
+
+  member_action :special_new do
+    x = Harmonica.find(params[:id])
+    y = Harmonica.new
+
+    y.name = "#{x.name} copy #{rand(10000000000) + 10000}"
+    y.description = x.description
+    y.brand = x.brand
+    y.model = x.model
+    y.key = x.key
+    y.price_cents = x.price_cents
+    y.quantity = 0
+
+    y.save!
+    redirect_to edit_admin_harmonica_path y
+  end
 end

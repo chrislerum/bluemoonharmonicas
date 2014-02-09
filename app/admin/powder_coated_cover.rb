@@ -77,4 +77,23 @@ ActiveAdmin.register PowderCoatedCover do
     end
   end
 
+  action_item :only => :show do
+    link_to "New based on this", special_new_admin_powder_coated_cover_path(powder_coated_cover)
+  end
+
+  member_action :special_new do
+    x = PowderCoatedCover.find(params[:id])
+    y = PowderCoatedCover.new
+
+    y.name = "#{x.name} copy #{rand(10000000000) + 10000}"
+    y.description = x.description
+    y.brand = x.brand
+    y.model = x.model
+    y.color = x.color
+    y.price_cents = x.price_cents
+    y.quantity = 0
+
+    y.save!
+    redirect_to edit_admin_powder_coated_cover_path y
+  end
 end
