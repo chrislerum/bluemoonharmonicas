@@ -19,12 +19,6 @@ ActiveAdmin.register Color do
     default_actions
   end
 
-  form do |f|
-    f.inputs "Color Details" do
-      f.input :name
-    end
-  end
-
   show do
     attributes_table do
       row :name
