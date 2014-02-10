@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe "home page shows harp model, and a harp with a main image" do
-  it "shows the item when click on that model" do
+describe "home page shows comb model, and a comb with a main image" do
+  it "shows the comb when click on that model" do
     model = create(:model, name: 'MS Series')
-    item = create(:item, model: model)
-    item_image = create(:item_image, item: item)
+    comb = create(:comb, model: model)
+    comb_image = create(:comb_image, comb: comb)
     visit root_path
     click_on 'Products'
     click_on 'MS Series'
@@ -12,9 +12,9 @@ describe "home page shows harp model, and a harp with a main image" do
 end
 
 describe "home page shows harp model, and a harp without a main image(shows default image instead)" do
-  it "shows the item when click on that model" do
+  it "shows the comb when click on that model" do
     model = create(:model, name: 'MS Series')
-    item = create(:item, model: model)
+    comb = create(:comb, model: model)
     visit root_path
     click_on 'Products'
     click_on 'MS Series'

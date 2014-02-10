@@ -1,6 +1,6 @@
 #slides
   = image_tag('slides/guarantee_slide.png')
 .block.white.css3{style: 'padding: 10px;'}
-  =@top_bit.content.html_safe
+  =@top_bit && @top_bit.content.html_safe
 .block.white.css3{style: 'padding: 10px;'}
-  =@bottom_bit.content.html_safe
+  =@bottom_bit && @bottom_bit.content.html_safe

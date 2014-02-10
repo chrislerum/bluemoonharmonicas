@@ -3,7 +3,7 @@ FactoryGirl.define do
   factory :model do
   end
 
-  factory :item_image do
+  factory :comb_image do
     photo Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/myfiles/test_harp_image.jpg')))
   end
 
@@ -14,12 +14,14 @@ FactoryGirl.define do
     password_confirmation { |u| "#{u.password}" }
   end
 
-  factory :item do
+  factory :comb do
     sequence(:name) { |n| "Test Item #{n}" }
-    sequence(:shortname) { |n| "TI#{n}" }
-    price 14.95
     description "This is just an items inventory test."
+    price 14.95
     quantity 10
+    brand
+    material_type
+    color
   end
 
   factory :line_item do
@@ -60,5 +62,17 @@ FactoryGirl.define do
   factory :snippet do
     shortcut "hello"
     text "This is just a snippet. If there's markdown in here, so be it."
+  end
+
+  factory :brand do
+    name "Brand 1"
+  end
+
+  factory :material_type do
+    name "Material Type 1"
+  end
+
+  factory :color do
+    name "Color 1"
   end
 end
