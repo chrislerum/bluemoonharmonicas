@@ -7,7 +7,7 @@ gem 'redcarpet'
 gem 'unicorn'
 gem 'prawn'
 gem 'acts_as_tree_rails3'
-gem 'haml'
+gem 'haml-rails'
 gem 'yaml_db'
 gem 'guard', '~> 1.0.1'
 gem "jquery-rails", "< 3.0.0"
@@ -44,6 +44,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 0.7.3'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'thin'
 end
 group :production do
   gem 'therubyracer'
