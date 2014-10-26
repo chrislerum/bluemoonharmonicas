@@ -55,13 +55,13 @@ ActiveAdmin.register Order do
           #end
         end
       end
-      panel "Total" do
-        total = 0
-        order.cart.line_items.each do |li|
-          total += li.quantity * li.unit_price
-        end
-        humanized_money_with_symbol total
-      end
+      #panel "Total" do
+        #total = 0
+        #order.cart.line_items.each do |li|
+          #total += li.quantity * li.unit_price
+        #end
+        #humanized_money_with_symbol total
+      #end
     end
   end
 
