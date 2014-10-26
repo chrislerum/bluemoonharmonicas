@@ -25,6 +25,7 @@ gem 'carrierwave'
 gem 'money-rails'
 gem 'quiet_assets'
 gem 'pry-rails'
+gem 'awesome_print'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -33,7 +34,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 group :development do
-  gem 'awesome_print'
   gem 'letter_opener'
   gem 'binding_of_caller'
 end
