@@ -8,6 +8,15 @@ ActiveAdmin.register Order do
     default_actions
   end
 
+  form do |f|
+    f.inputs "Order Details" do
+      f.input :first_name
+      f.input :last_name
+      f.input :email
+    end
+    f.actions
+  end
+
   show do
     attributes_table do
       row :id
