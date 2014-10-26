@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
     response = GATEWAY.setup_purchase(current_cart.build_order.price_in_cents,
       :ip                => request.remote_ip,
       :return_url        => new_order_url,
-      :cancel_return_url => root_url,
+      :cancel_return_url => current_cart_url,
       :description       => "Purchasing #{view_context.pluralize(current_cart.number_of_items, 'product')} from Blue Moon Harmonicas, LLC.",
       :amount            => current_cart.total_price,
       :currency          => "USD"
