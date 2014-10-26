@@ -30,21 +30,27 @@ ActiveAdmin.register Order do
         order.address.map{|k,v| "#{v}" }.join(' ')
       end
       panel "Purchased Items" do
-        table_for order.cart.line_items.each do
-          column "Type" do |line_item|
-            line_item.purchasable.class
-          end
-          column "Name" do |line_item|
-            line_item.purchasable.name
-          end
-          column "Quantity" do |line_item|
-            line_item.quantity.to_s
-          end
-          column "Unit Price" do |line_item|
-            humanized_money_with_symbol line_item.unit_price
-          end
-          column "Subtotal" do |line_item|
-            humanized_money_with_symbol line_item.quantity * line_item.unit_price
+        if order.cart.nil?
+          "This order has no cart."
+        elsif order.cart.line_items.count == 0
+          "This order's cart has no items."
+        else
+          table_for order.cart.line_items.each do
+            column "Type" do |line_item|
+              line_item.purchasable.class
+            end
+            column "Name" do |line_item|
+              line_item.purchasable.name
+            end
+            column "Quantity" do |line_item|
+              line_item.quantity.to_s
+            end
+            column "Unit Price" do |line_item|
+              humanized_money_with_symbol line_item.unit_price
+            end
+            column "Subtotal" do |line_item|
+              humanized_money_with_symbol line_item.quantity * line_item.unit_price
+            end
           end
         end
       end

@@ -2,10 +2,10 @@ class OrderTransaction < ActiveRecord::Base
   belongs_to :order
   attr_accessible :action, :amount, :authorization, :message, :params, :success, :response
 
-  serialize :params 
+  serialize :params
 
 
-   def response=(response)
+  def response=(response)
     self.success       = response.success?
     self.authorization = response.authorization
     self.message       = response.message
