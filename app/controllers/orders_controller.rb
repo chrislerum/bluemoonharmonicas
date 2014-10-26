@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
     response = GATEWAY.setup_purchase(current_cart.build_order.price_in_cents,
       :ip                => request.remote_ip,
       :return_url        => new_order_url,
-      :cancel_return_url => products_url,
+      :cancel_return_url => root_url,
       :description       => "Purchasing #{view_context.pluralize(current_cart.number_of_items, 'product')} from Blue Moon Harmonicas, LLC.",
       :amount            => current_cart.total_price,
       :currency          => "USD"
@@ -49,7 +49,7 @@ class OrdersController < ApplicationController
       @cart = @order.cart
       respond_to do |format|
         format.html
-        format.pdf do 
+        format.pdf do
           pdf = OrderPdf.new(@order, view_context)
           send_data pdf.render, filename: "order_#{@order.id}.pdf",
                                 type: "application/pdf",
