@@ -31,10 +31,11 @@ ActiveAdmin.register Order do
       end
       panel "Purchased Items" do
         if order.cart.nil?
-          "This order has no cart."
+          "This order is invalid: it has no cart."
         elsif order.cart.line_items.count == 0
-          "This order's cart has no items."
+          "This order's is invalid: its cart has no items."
         else
+          ap order
           table_for order.cart.line_items.each do
             column "Type" do |line_item|
               line_item.purchasable.class
