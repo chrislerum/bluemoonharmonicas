@@ -72,21 +72,12 @@ BlueMoonHarmonicas::Application.configure do
   config.active_support.deprecation = :log
 
   config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = :test
+    ActiveMerchant::Billing::Base.mode = :production
 
     ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new({
-      :login => "merch_1340915417_biz_api1.stevenpetryk.com",
-      :password => "1340915441",
-      :signature => "An5ns1Kso7MWUdW4ErQKJJJ4qi4-AF7VnPNw76HDnDWLNK9UZXeSf5Il"
+      :login => "harpcombs_api1.yahoo.com",
+      :password => "JSGE4MZ3872X94U5",
+      :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31AhNpvzS54XWCzCC-oaDj8O6wG-RU"
     })
   end
-  #config.after_initialize do
-    #ActiveMerchant::Billing::Base.mode = :production
-
-    #::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new({
-      #:login => "harpcombs_api1.yahoo.com",
-      #:password => "JSGE4MZ3872X94U5",
-      #:signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31AhNpvzS54XWCzCC-oaDj8O6wG-RU"
-    #})
-  #end
 end
