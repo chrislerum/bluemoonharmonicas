@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
+  validates :cart_id, presence: true
   belongs_to :cart
   belongs_to :user
   has_many :transactions, class_name: 'OrderTransaction'

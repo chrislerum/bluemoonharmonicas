@@ -29,13 +29,16 @@ ActiveAdmin.register Order do
       row :address do |order|
         order.address.map{|k,v| "#{v}" }.join(' ')
       end
-      panel "Purchased Items" do
-        if order.cart.nil?
+      if order.cart.nil?
+        panel "Error" do
           "This order is invalid: it has no cart."
-        elsif order.cart.line_items.count == 0
-          "This order's is invalid: its cart has no items."
-        else
-          ap order
+        end
+      elsif order.cart.line_items.count == 0
+        panel "Error" do
+          "This order is invalid: its cart has no items."
+        end
+      else
+        panel "Purchased Items" do
           table_for order.cart.line_items.each do
             column "Type" do |line_item|
               line_item.purchasable.class
@@ -53,16 +56,15 @@ ActiveAdmin.register Order do
               humanized_money_with_symbol line_item.quantity * line_item.unit_price
             end
           end
-          panel "Total" do
-            total = 0
-            order.cart.line_items.each do |li|
-              total += li.quantity * li.unit_price
-            end
-            humanized_money_with_symbol total
+        end
+        panel "Total" do
+          total = 0
+          order.cart.line_items.each do |li|
+            total += li.quantity * li.unit_price
           end
+          humanized_money_with_symbol total
         end
       end
     end
   end
-
 end
