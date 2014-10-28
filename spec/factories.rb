@@ -50,7 +50,7 @@ FactoryGirl.define do
 
   factory :link do
     title "Test Link"
-    link "http://stevenpetryk.com"
+    link "http://google.com"
     description "The best guy I know."
   end
 
