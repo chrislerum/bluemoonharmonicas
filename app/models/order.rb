@@ -46,7 +46,7 @@ class Order < ActiveRecord::Base
   def in_usa?
     # Everything is lowercased for case insensitivity purposes
     list_of_states = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), 'states.yml'))
-    self.address && list_of_states.include?(self.address["StateOrProvince"].downcase)
+    self.address && self.address["StateOrProvince"] && list_of_states.include?(self.address["StateOrProvince"].downcase)
   end
 
   def purchase
