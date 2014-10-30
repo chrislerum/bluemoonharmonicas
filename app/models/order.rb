@@ -20,7 +20,7 @@ class Order < ActiveRecord::Base
   end
 
   def price_with_shipping
-    cart.total_price# + shipping_price
+    cart.total_price + shipping_price
   end
 
   def order_number
@@ -28,11 +28,12 @@ class Order < ActiveRecord::Base
   end
 
   def self.calculate_shipping_price(num_items, opts)
-    if opts[:domestic]
-      4.95 + 1 * (num_items - 1)
-    else
-      10 + 1 * (num_items - 1)
-    end
+    0.1
+    #if opts[:domestic]
+      #4.95 + 1 * (num_items - 1)
+    #else
+      #10 + 1 * (num_items - 1)
+    #end
   end
 
   def shipping_price(opts = nil)
