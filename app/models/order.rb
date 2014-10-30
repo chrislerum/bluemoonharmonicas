@@ -28,12 +28,11 @@ class Order < ActiveRecord::Base
   end
 
   def self.calculate_shipping_price(num_items, opts)
-    0.1
-    #if opts[:domestic]
-      #4.95 + 1 * (num_items - 1)
-    #else
-      #10 + 1 * (num_items - 1)
-    #end
+    if opts[:domestic]
+      4.95 + 1 * (num_items - 1)
+    else
+      10 + 1 * (num_items - 1)
+    end
   end
 
   def shipping_price(opts = nil)
