@@ -20,7 +20,7 @@ class Order < ActiveRecord::Base
   end
 
   def price_with_shipping
-    cart.total_price + shipping_price
+    cart.total_price# + shipping_price
   end
 
   def order_number
