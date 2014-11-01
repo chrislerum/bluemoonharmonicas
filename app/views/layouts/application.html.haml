@@ -33,7 +33,6 @@
     - if flash.now[:error]
       #error.block.black
         = raw flash.now[:error]
-    = yield
     #products_dropdown
       %ul#roots{style: "padding: 20px;"}
         %li
@@ -57,5 +56,6 @@
               - if model.powder_coated_covers.any?
                 %li.menu_link
                   = link_to model.name, powder_coated_covers_model_list_path(model)
+    = yield
     = render 'layouts/footer'
     = javascript_include_tag "application"
