@@ -21,8 +21,8 @@ BlueMoonHarmonicas::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'bluemoonharmonicas.com',
-    :domain               => 'bluemoonharmonicas.com',
     :user_name            => "harpcombs@gmail.com",
+    :password             => 'Special20'
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
