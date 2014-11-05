@@ -22,7 +22,7 @@ BlueMoonHarmonicas::Application.configure do
     :port                 => 587,
     :domain               => 'bluemoonharmonicas.com',
     :user_name            => "harpcombs@gmail.com",
-    :password             => 'Special20'
+    :password             => 'Special20',
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
