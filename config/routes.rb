@@ -31,7 +31,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   resources :line_items
   resource :session
   match '/newsletter' => 'static#newsletter', as: :newsletter
-  match '/about' => 'static#about', as: :about
+  match '/list_users' => 'static#list_users', as: :list_users
   resources :products, controller: 'items' # FIXME this resource is unnecessary
   match 'cart' => 'carts#show', as: :current_cart
 
