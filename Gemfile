@@ -41,12 +41,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'guard-rspec', '~> 0.7.3'
+  gem 'guard-rspec'
   gem 'launchy'
   gem 'database_cleaner'
   gem 'thin'
-  gem "teaspoon"
-  gem "guard-teaspoon"
+  gem 'capybara-webkit'
 end
 group :production do
   gem 'therubyracer'

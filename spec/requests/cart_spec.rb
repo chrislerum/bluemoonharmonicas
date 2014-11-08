@@ -7,7 +7,7 @@ describe 'Cart' do
     expect(page).to have_text 'The cart is empty'
   end
 
-  it "can have an item added to it with the right price" do
+  it "can have an item added to it with the right price", js: true do
     click_on 'Products'
   end
 end
