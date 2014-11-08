@@ -9,7 +9,7 @@ gem 'prawn'
 gem 'acts_as_tree_rails3'
 gem 'haml-rails'
 gem 'yaml_db'
-gem 'guard', '~> 1.0.1'
+gem 'guard'
 gem "jquery-rails", "< 3.0.0"
 gem 'mini_magick'
 gem "jquery-ui-rails"
@@ -45,6 +45,8 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'thin'
+  gem "teaspoon"
+  gem "guard-teaspoon"
 end
 group :production do
   gem 'therubyracer'
