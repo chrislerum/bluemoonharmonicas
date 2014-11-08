@@ -7,7 +7,7 @@ describe "home page shows comb model, and a comb with a main image" do
     comb_image = create(:comb_image, comb: comb)
     visit root_path
     click_on 'Products'
-    click_on 'MS Series'
+    expect(page).to have_link('MS Series')
   end
 end
 

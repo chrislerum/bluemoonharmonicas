@@ -12,6 +12,10 @@ class OrderMailer < ActionMailer::Base
 
     attachments["Invoice \##{order.id}.pdf"] = OrderPdf.new(order, view_context).render
 
-    mail(to: %w[harpcombs@yahoo.com chris.lerum@gmail.com], subject:"BMH Order \##{order.id}")
+    if Rails.env.production?
+      mail(to: %w[harpcombs@yahoo.com chris.lerum@gmail.com], subject:"BMH Order \##{order.id}")
+    else
+      mail(to: %w[chris.lerum@gmail.com], subject:"TEST ORDER: BMH Order \##{order.id}")
+    end
   end
 end
