@@ -9,7 +9,7 @@ jQuery ->
   products.update_dropdowns()
   $('select').change( ->( $(this).prev().html($(this).find(':selected').html()) ) )
 
-products = 
+products =
   init: ->
     if (form = $('#add_to_cart')).length > 0
       @control_quantity(form)
@@ -38,7 +38,10 @@ products =
       if y > initial
         lines++
 
-    block.parent().addClass("lines_#{lines}")
+    if lines == 1 or lines == 2
+      block.parent().addClass("lines_#{lines}")
+    else
+      block.parent().addClass("lines_3")
     block.html original_html
 
   control_quantity: (form) ->
