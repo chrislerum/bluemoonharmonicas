@@ -57,5 +57,12 @@
               - if model.powder_coated_covers.any?
                 %li.menu_link
                   = link_to model.name, powder_coated_covers_model_list_path(model)
+        %li
+          SUB-30 Customization Kits
+          %ul.menu_list
+            -Model.all.each do |model|
+              - if model.sub_kits.any?
+                %li.menu_link
+                  = link_to model.name, sub_kits_model_list_path(model)
     = render 'layouts/footer'
     = javascript_include_tag "application"

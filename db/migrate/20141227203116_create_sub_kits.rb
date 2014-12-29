@@ -1,6 +1,6 @@
-class CreateSub30CustomizationKits < ActiveRecord::Migration
+class CreateSubKits < ActiveRecord::Migration
   def change
-    create_table :sub_30_customization_kits do |t|
+    create_table :sub_kits do |t|
       t.string   :name
       t.text     :description
       t.integer  :model_id,          :default => 0, :null => false

@@ -14,7 +14,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   resources :comb_images
   resources :harmonica_images
   resources :powder_coated_cover_images
-  resources :sub_customization_kits
+  resources :sub_kits
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -40,7 +40,7 @@ BlueMoonHarmonicas::Application.routes.draw do
   match 'combs_models/:model_id' => 'combs#index', as: :combs_model_list
   match 'harmonicas_models/:model_id' => 'harmonicas#index', as: :harmonicas_model_list
   match 'powder_coated_covers_models/:model_id' => 'powder_coated_covers#index', as: :powder_coated_covers_model_list
-  match 'sub_customization_kits_models/:model_id' => 'sub_customization_kits#index', as: :sub_customization_kits_model_list
+  match 'sub_kits_models/:model_id' => 'sub_kits#index', as: :sub_kits_model_list
 
   match 'account' => 'users#show', as: :account, id: 'current'
   match 'account/edit' => 'users#edit', as: :edit_account, id: 'current'

@@ -1,0 +1,10 @@
+%td
+  = link_to sub_kit do
+    - if sub_kit.sub_kit_images.first
+      = image_tag sub_kit.sub_kit_images.first.photo, width: 250
+    - else
+      = image_tag 'default_main_image.jpg', width: 250
+    %h3
+      %span.controls
+        = humanized_money_with_symbol sub_kit.price
+      = link_to sub_kit.name, sub_kit

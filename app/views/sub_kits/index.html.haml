@@ -1,0 +1,11 @@
+- provide :title, @model.name
+
+#products.block.clear
+  %h1= @model.name
+  %table#results
+    - rows = @sub_kits.each_slice(4).to_a
+    - rows.each do |row|
+      %tr
+        - row.each do |comb|
+          = render comb
+  .clear

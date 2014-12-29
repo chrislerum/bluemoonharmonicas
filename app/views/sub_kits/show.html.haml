@@ -1,0 +1,22 @@
+- provide :title, @sub_kit.name
+
+#main_product.photos
+  #product_information
+    #title_pricetag
+      %h1= @sub_kit.name
+      %h2= number_to_currency @sub_kit.price
+    = render 'line_items/form'
+  #product_main_photo
+    - if @sub_kit.sub_kit_images.any?
+      = image_tag(@sub_kit.sub_kit_images.first.photo)
+    - else
+      = image_tag("default_main_image.jpg")
+
+  %ul#photos(data-id="#{@sub_kit.id}")
+    #photos-inner
+      = render partial: 'photos/sub_kit_tile', collection: @sub_kit.sub_kit_images, as: 'sub_kit_image'
+    .clear
+  .clear
+
+.block.white.css3#description{style: 'padding: 10px;'}
+  = markdown_and_replace @sub_kit.description

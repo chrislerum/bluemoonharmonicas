@@ -8,6 +8,7 @@ class Ability
     can :read, Comb
     can :read, Harmonica
     can :read, PowderCoatedCover
+    can :read, SubKit
     can [:new, :create, :express], Order, user_id: user.try(:id)
 
     if user.id
