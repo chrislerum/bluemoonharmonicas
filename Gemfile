@@ -45,7 +45,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'thin'
-  gem 'capybara-webkit'
+  #gem 'capybara-webkit'
 end
 group :production do
   gem 'therubyracer'
