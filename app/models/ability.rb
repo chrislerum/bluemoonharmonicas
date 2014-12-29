@@ -9,6 +9,8 @@ class Ability
     can :read, Harmonica
     can :read, PowderCoatedCover
     can :read, SubKit
+    can :read, ExternalValvePlate
+
     can [:new, :create, :express], Order, user_id: user.try(:id)
 
     if user.id

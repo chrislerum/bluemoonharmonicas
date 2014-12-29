@@ -1,0 +1,11 @@
+- provide :title, @model.name
+
+#products.block.clear
+  %h1= @model.name
+  %table#results
+    - rows = @external_valve_plates.each_slice(4).to_a
+    - rows.each do |row|
+      %tr
+        - row.each do |external_valve_plate|
+          = render external_valve_plate
+  .clear

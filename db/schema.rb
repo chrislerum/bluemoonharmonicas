@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141229183432) do
+ActiveRecord::Schema.define(:version => 20141229193303) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -91,6 +91,24 @@ ActiveRecord::Schema.define(:version => 20141229183432) do
     t.integer  "display_order"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "external_valve_plate_images", :force => true do |t|
+    t.string   "photo"
+    t.integer  "external_valve_plate_id"
+    t.integer  "display_order"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  create_table "external_valve_plates", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "model_id",    :default => 0, :null => false
+    t.integer  "price_cents", :default => 0, :null => false
+    t.integer  "quantity",    :default => 0, :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "faqs", :force => true do |t|

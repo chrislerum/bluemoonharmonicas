@@ -1,0 +1,10 @@
+%td
+  = link_to external_valve_plate do
+    - if external_valve_plate.external_valve_plate_images.first
+      = image_tag external_valve_plate.external_valve_plate_images.first.photo, width: 250
+    - else
+      = image_tag 'default_main_image.jpg', width: 250
+    %h3
+      %span.controls
+        = humanized_money_with_symbol external_valve_plate.price
+      = link_to external_valve_plate.name, external_valve_plate

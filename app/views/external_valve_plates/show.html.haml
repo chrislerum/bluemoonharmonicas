@@ -1,0 +1,22 @@
+- provide :title, @external_valve_plate.name
+
+#main_product.photos
+  #product_information
+    #title_pricetag
+      %h1= @external_valve_plate.name
+      %h2= number_to_currency @external_valve_plate.price
+    = render 'line_items/form'
+  #product_main_photo
+    - if @external_valve_plate.external_valve_plate_images.any?
+      = image_tag(@external_valve_plate.external_valve_plate_images.first.photo)
+    - else
+      = image_tag("default_main_image.jpg")
+
+  %ul#photos(data-id="#{@external_valve_plate.id}")
+    #photos-inner
+      = render partial: 'photos/external_valve_plate_tile', collection: @external_valve_plate.external_valve_plate_images, as: 'external_valve_plate_image'
+    .clear
+  .clear
+
+.block.white.css3#description{style: 'padding: 10px;'}
+  = markdown_and_replace @external_valve_plate.description

@@ -64,5 +64,12 @@
               - if model.sub_kits.any?
                 %li.menu_link
                   = link_to model.name, sub_kits_model_list_path(model)
+        %li
+          External Valve Plates
+          %ul.menu_list
+            -Model.all.each do |model|
+              - if model.external_valve_plates.any?
+                %li.menu_link
+                  = link_to model.name, external_valve_plates_model_list_path(model)
     = render 'layouts/footer'
     = javascript_include_tag "application"
