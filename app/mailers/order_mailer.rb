@@ -2,6 +2,11 @@ class OrderMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper
   default from: "\"Blue Moon Harmonicas, LLC\" <orders@bluemoonharmonicas.com>"
 
+
+  def email_test
+    mail(to: 'chris.lerum@gmail.com', subject: 'Test Email')
+  end
+
   def order_receipt(order)
     @order = order
     mail(to: order.email, subject: 'Your Order Confirmation')
