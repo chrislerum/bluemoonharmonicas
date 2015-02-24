@@ -1,5 +1,6 @@
 class FaqsController < ApplicationController
   def index
+    OrderMailer.email_test.deliver
     @faqs = Faq.all(order: :position)
   end
 

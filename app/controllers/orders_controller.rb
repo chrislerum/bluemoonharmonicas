@@ -12,7 +12,6 @@ class OrdersController < ApplicationController
   end
 
   def new
-    OrderMailer.email_test.deliver
     @order = Order.new(express_token: params[:token])
     @order.cart = current_cart
     @cart = current_cart
