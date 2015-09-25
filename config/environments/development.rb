@@ -22,7 +22,7 @@ BlueMoonHarmonicas::Application.configure do
     :port                 => 587,
     :domain               => 'bluemoonharmonicas.com',
     :user_name            => "harpcombs@gmail.com",
-    :password             => 'Special20',
+    :password             => "4Boys1Girl",
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
@@ -60,8 +60,8 @@ BlueMoonHarmonicas::Application.configure do
     ActiveMerchant::Billing::Base.mode = :test
 
     ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new({
-      :login => "merch_1340915417_biz_api1.stevenpetryk.com",
-      :password => "1340915441",
+      :login => "chris.lerum-facilitator@gmail.com",
+      :password => "k38Bsvn8BUaUyN",
       :signature => "An5ns1Kso7MWUdW4ErQKJJJ4qi4-AF7VnPNw76HDnDWLNK9UZXeSf5Il"
     })
   end
