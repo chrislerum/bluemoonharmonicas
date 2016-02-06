@@ -4,7 +4,7 @@ gem 'pg'
 gem 'valid_email'
 gem 'cancan'
 gem 'redcarpet'
-gem 'eventmachine', '1.0.4'
+gem 'unicorn'
 gem 'prawn'
 gem 'acts_as_tree_rails3'
 gem 'haml-rails'
@@ -48,6 +48,5 @@ group :development, :test do
   #gem 'capybara-webkit'
 end
 group :production do
-  gem 'unicorn'
   gem 'therubyracer'
 end
